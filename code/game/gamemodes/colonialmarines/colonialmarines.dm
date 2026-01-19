@@ -388,19 +388,19 @@
 			switch(human.faction)
 				if(FACTION_MARINE)
 					if(human.assigned_squad && human.assigned_squad.name == SQUAD_LRRP)
-						human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "███<br>" + "█:█, ██<br>" + "Snake Eaters<br>" + "[human.job], ███<br>", /atom/movable/screen/text/screen_text/picture/snake_eater)
+						human.play_screen_text("<span class='maptext' style=text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "███<br>" + "█:█, ██<br>" + "Snake Eaters<br>" + "[human.job], ███<br>", /atom/movable/screen/text/screen_text/picture/snake_eater) // SS220 FONTS FIX
 					else
-						human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "3rd Bat. 'Solar Devils<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/solar_devils)
+						human.play_screen_text("<span class='maptext' style=text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "3rd Bat. 'Solar Devils<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/solar_devils) // SS220 FONTS FIX
 				if(FACTION_UPP)
-					human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "Red Dawn<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/red_dawn)
+					human.play_screen_text("<span class='maptext' style=text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "Red Dawn<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/red_dawn) // SS220 FONTS FIX
 				if(FACTION_PMC)
-					human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "Azure-15<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/azure)
+					human.play_screen_text("<span class='maptext' style=text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "Azure-15<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/azure) // SS220 FONTS FIX
 				if(FACTION_TWE)
-					human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "Gamma Troop<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/gamma_troop)
+					human.play_screen_text("<span class='maptext' style=text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "Gamma Troop<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/gamma_troop) // SS220 FONTS FIX
 			var/admin_names
 			for(var/client/admin in GLOB.admins)
 				admin_names += "[admin.ckey]<br>"
-			human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'>Directed by: <br>[admin_names]", /atom/movable/screen/text/screen_text)
+			human.play_screen_text("<span class='maptext' style=text-align:left valign='top'>Directed by: <br>[admin_names]", /atom/movable/screen/text/screen_text) // SS220 FONTS FIX
 ///////////////////////////
 //Checks to see who won///
 //////////////////////////
