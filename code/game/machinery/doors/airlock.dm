@@ -8,7 +8,7 @@
 #define AIRLOCK_WIRE_SPEED   8
 #define AIRLOCK_WIRE_ELECTRIFY   9
 
-GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
+GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 		AIRLOCK_WIRE_MAIN_POWER   = "Main power",
 		AIRLOCK_WIRE_BACKUP_POWER = "Backup power",
 		AIRLOCK_WIRE_DOOR_BOLTS   = "Door bolts",
@@ -18,7 +18,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 		AIRLOCK_WIRE_SAFETY    = "Proximity sensor",
 		AIRLOCK_WIRE_SPEED = "Motor speed override",
 		AIRLOCK_WIRE_ELECTRIFY = "Ground safety"
-	))
+	)))
 
 /obj/structure/machinery/door/airlock
 	name = "airlock"

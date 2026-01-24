@@ -1,10 +1,10 @@
 #define APC_WIRE_MAIN_POWER 1
 #define APC_WIRE_IDSCAN 2
 
-GLOBAL_LIST_INIT(apc_wire_descriptions, list(
+GLOBAL_LIST_INIT(apc_wire_descriptions, flatten_numeric_alist(alist(
 		APC_WIRE_MAIN_POWER   = "Main power",
 		APC_WIRE_IDSCAN   = "ID scanner"
-	))
+	)))
 
 #define APC_COVER_CLOSED 0
 #define APC_COVER_OPEN 1
@@ -958,10 +958,10 @@ GLOBAL_LIST_INIT(apc_wire_descriptions, list(
 		area.update_power_channels(FALSE, FALSE, FALSE)
 
 /obj/structure/machinery/power/apc/proc/get_wire_descriptions()
-	return list(
+	return flatten_numeric_alist(alist(
 		APC_WIRE_MAIN_POWER   = "Main power",
 		APC_WIRE_IDSCAN    = "ID scanner"
-	)
+	))
 
 /obj/structure/machinery/power/apc/proc/isWireCut(wire)
 	var/wireFlag = getWireFlag(wire)

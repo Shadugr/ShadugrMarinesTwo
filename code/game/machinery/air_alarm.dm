@@ -722,13 +722,13 @@ Nitrous Oxide
 
 		if (AALARM_SCREEN_MODE)
 			output += "<a href='byond://?src=\ref[src];screen=[AALARM_SCREEN_MAIN]'>Main menu</a><br><b>Air machinery mode for the area:</b><ul>"
-			var/list/modes = list(AALARM_MODE_SCRUBBING   = "Filtering - Scrubs out contaminants",\
+			var/list/modes = flatten_numeric_alist(alist(AALARM_MODE_SCRUBBING   = "Filtering - Scrubs out contaminants",\
 				AALARM_MODE_REPLACEMENT = SET_CLASS("Replace Air - Siphons out air while replacing", INTERFACE_BLUE),\
 				AALARM_MODE_PANIC    = SET_CLASS("Panic - Siphons air out of the room", INTERFACE_RED),\
 				AALARM_MODE_CYCLE    = SET_CLASS("Cycle - Siphons air before replacing", INTERFACE_RED),\
 				AALARM_MODE_FILL = SET_CLASS("Fill - Shuts off scrubbers and opens vents", INTERFACE_GREEN),\
 				AALARM_MODE_OFF  = SET_CLASS("Off - Shuts off vents and scrubbers", INTERFACE_BLUE)
-			)
+			))
 			for (var/m=1,m<=length(modes),m++)
 				if (mode==m)
 					output += "<li><A href='byond://?src=\ref[src];mode=[m]'><b>[modes[m]]</b></A> (selected)</li>"

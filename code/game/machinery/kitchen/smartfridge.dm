@@ -397,11 +397,11 @@
 //**************/
 
 /obj/structure/machinery/smartfridge/proc/get_wire_descriptions()
-	return list(
+	return flatten_numeric_alist(alist(
 		FRIDGE_WIRE_SHOCK   = "Ground safety",
 		FRIDGE_WIRE_SHOOT_INV  = "Dispenser motor control",
 		FRIDGE_WIRE_IDSCAN  = "ID scanner"
-	)
+	))
 
 /obj/structure/machinery/smartfridge/proc/cut(wire)
 	wires ^= getWireFlag(wire)
