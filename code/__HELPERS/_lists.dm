@@ -242,3 +242,4 @@
 	var/list/retval = list()
 	for(var/i in 1 to count)
 		retval += to_flatten[i]
+	return retval

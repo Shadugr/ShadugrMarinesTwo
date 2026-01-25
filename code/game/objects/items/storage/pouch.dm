@@ -436,7 +436,7 @@
 	name = "large magazine pouch"
 	desc = "It can carry many magazines."
 	icon_state = "large_ammo_mag"
-	storage_slots = 4
+	storage_slots = 5
 
 /obj/item/storage/pouch/magazine/pistol
 	name = "pistol magazine pouch"
@@ -1026,6 +1026,10 @@
 /obj/item/storage/pouch/pressurized_reagent_canister/tricordrazine/Initialize()
 	. = ..()
 	fill_with("tricordrazine")
+
+/obj/item/storage/pouch/pressurized_reagent_canister/tramadol/Initialize()
+	. = ..()
+	fill_with("tramadol")
 
 /obj/item/storage/pouch/pressurized_reagent_canister/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/reagent_container/glass/pressurized_canister))

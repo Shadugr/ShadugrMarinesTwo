@@ -17,9 +17,6 @@
 	)
 
 /datum/surgery/chestburster_removal/can_start(mob/user, mob/living/carbon/patient, obj/limb/L, obj/item/tool)
-	if(!locate(/obj/structure/machinery/optable) in get_turf(patient))
-		return FALSE
-
 	return locate(/obj/item/alien_embryo) in patient
 
 //------------------------------------

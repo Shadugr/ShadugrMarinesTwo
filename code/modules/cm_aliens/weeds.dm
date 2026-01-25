@@ -388,7 +388,7 @@
 			to_chat(user, SPAN_WARNING("You scrape ineffectively at [src] with [attacking_item]."))
 			return
 		to_chat(user, SPAN_NOTICE("You start clearing [src] away with [attacking_item]..."))
-		var/duration = (20 SECONDS) * (health / attacking_item.force * attacking_item.demolition_mod) //effectively applying attack damage to weed's health spread over 20 seconds
+		var/duration = (1 SECONDS) * (health / attacking_item.force * attacking_item.demolition_mod) //effectively applying attack damage to weed's health spread over 20 seconds
 		if(!do_after(user, duration, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 			return
 		playsound(loc, "alien_resin_break", 25)

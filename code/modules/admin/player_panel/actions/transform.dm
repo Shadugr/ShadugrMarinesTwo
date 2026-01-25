@@ -165,6 +165,11 @@ GLOBAL_LIST_INIT(pp_transformables, list(
 	color = "orange"
 	),
 	list(
+	name = "Bnuy",
+	key = /mob/living/simple_animal/bunny,
+	color = "orange"
+	),
+	list(
 	name = "Corgi",
 	key = /mob/living/simple_animal/corgi,
 	color = "orange"

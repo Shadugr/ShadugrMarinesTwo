@@ -70,6 +70,7 @@
 		/obj/item/attachable/sling,
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/stock/smg/collapsible/brace,
+		/obj/item/attachable/scope/mini_iff,
 	)
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS

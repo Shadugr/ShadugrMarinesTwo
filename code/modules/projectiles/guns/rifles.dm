@@ -652,7 +652,6 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff)
 	))
-	AddComponent(/datum/component/iff_fire_prevention)
 
 /obj/item/weapon/gun/rifle/m46c/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17, "rail_x" = 11, "rail_y" = 19, "under_x" = 24, "under_y" = 12, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 26, "side_rail_y" = 17)

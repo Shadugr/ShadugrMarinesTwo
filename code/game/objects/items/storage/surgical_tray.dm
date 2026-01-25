@@ -4,7 +4,7 @@
 	icon = 'icons/obj/items/storage/medical.dmi'
 	icon_state = "surgical_tray"
 	flags_atom = FPRINT|CONDUCT
-	w_class = SIZE_LARGE //Should not fit in backpacks
+	w_class = SIZE_MEDIUM
 	storage_slots = 14
 	max_storage_space = 24
 	use_sound = "toolbox"

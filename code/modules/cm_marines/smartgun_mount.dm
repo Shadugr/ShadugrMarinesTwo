@@ -532,8 +532,6 @@
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
 	update_icon()
 	AddComponent(/datum/component/automatedfire/autofire, fire_delay, burst_fire_delay, burst_amount, gun_firemode, autofire_slow_mult, CALLBACK(src, PROC_REF(set_burst_firing)), CALLBACK(src, PROC_REF(reset_fire)), CALLBACK(src, PROC_REF(try_fire)), CALLBACK(src, PROC_REF(display_ammo)))
-	if(iff_allowed)
-		AddComponent(/datum/component/iff_fire_prevention)
 
 
 /obj/structure/machinery/m56d_hmg/Destroy(force) //Make sure we pick up our trash.

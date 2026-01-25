@@ -119,6 +119,8 @@
 	handle_direction(APC)
 	APC.update_icon()
 
+	return APC
+
 //PRESET: only wheels installed
 /obj/effect/vehicle_spawner/arc/weaponless/plain/load_hardpoints(obj/vehicle/multitile/apc/arc/weaponless/V)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels/arc)

@@ -67,7 +67,7 @@
 	new /obj/item/weapon/gun/rifle/lmg(src)
 	new /obj/item/ammo_magazine/hpr_box(src)
 	new /obj/item/ammo_magazine/hpr_box(src)
-	new /obj/item/ammo_magazine/hpr_box(src)
+	new /obj/item/ammo_magazine/hpr_box/holo_target(src)
 
 //------------
 /obj/item/storage/box/guncase/m41aMK1
@@ -97,12 +97,21 @@
 //M79 grenade launcher
 /obj/item/storage/box/guncase/m79
 	name = "\improper M79 grenade launcher case"
-	desc = "A gun case containing a modernized M79 grenade launcher. Comes with 3 baton slugs, 3 hornet shells and 3 star shell grenades."
-	storage_slots = 4
+	desc = "A gun case containing a modernized M79 grenade launcher. Comes with 3 smoke shells, 3 hornet shells and 3 star shell grenades."
+	storage_slots = 10
 	can_hold = list(/obj/item/weapon/gun/launcher/grenade/m81/m79, /obj/item/storage/box/packet)
 
 /obj/item/storage/box/guncase/m79/fill_preset_inventory()
 	new /obj/item/weapon/gun/launcher/grenade/m81/m79(src)
+	new /obj/item/explosive/grenade/smokebomb/airburst(src)
+	new /obj/item/explosive/grenade/smokebomb/airburst(src)
+	new /obj/item/explosive/grenade/smokebomb/airburst(src)
+	new /obj/item/explosive/grenade/high_explosive/airburst/starshell(src)
+	new /obj/item/explosive/grenade/high_explosive/airburst/starshell(src)
+	new /obj/item/explosive/grenade/high_explosive/airburst/starshell(src)
+	new /obj/item/explosive/grenade/phosphorus(src)
+	new /obj/item/explosive/grenade/phosphorus(src)
+	new /obj/item/explosive/grenade/phosphorus(src)
 
 /obj/item/storage/box/guncase/heavy/m92_upp
 	name = "\improper OG-60 grenade launcher case"

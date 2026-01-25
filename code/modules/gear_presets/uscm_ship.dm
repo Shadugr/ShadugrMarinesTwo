@@ -650,7 +650,7 @@
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_SO
 	rank = JOB_SO
-	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_MO4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "PltCo"
 	minimum_age = 25
 	skills = /datum/skills/SO
@@ -664,7 +664,7 @@
 
 /datum/equipment_preset/uscm_ship/so/load_status(mob/living/carbon/human/new_human, client/mob_client)
 	. = ..()
-	new_human.nutrition = NUTRITION_VERYLOW
+	new_human.nutrition = NUTRITION_NORMAL
 	if(!new_human.client)
 		return
 
@@ -673,7 +673,7 @@
 
 /datum/equipment_preset/uscm_ship/so/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
-	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_MO3 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm_ship/so/handle_late_join(mob/living/carbon/human/new_human, late_join)
 	if(late_join)
@@ -923,6 +923,131 @@
 /datum/equipment_preset/uscm_ship/di/upper_rank
 	name = parent_type::name + " (Upper Rank)"
 	paygrades = list(PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_0)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/uscm_ship/auxiliary_officer
+	name = "USCM Auxiliary Support Officer (ASO)"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+
+	idtype = /obj/item/card/id/dogtag
+	assignment = JOB_AUXILIARY_OFFICER
+	rank = JOB_AUXILIARY_OFFICER
+	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_MO3 = JOB_PLAYTIME_TIER_3)
+	role_comm_title = "ASO"
+	minimum_age = 27
+	skills = /datum/skills/auxiliary_officer
+
+	minimap_icon = list("cic" = COLOR_SILVER)
+	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
+
+/datum/equipment_preset/uscm_ship/auxiliary_officer/New()
+	. = ..()
+	access = list(
+		ACCESS_MARINE_SENIOR,
+		ACCESS_MARINE_DATABASE,
+		ACCESS_MARINE_ASO,
+		ACCESS_MARINE_COMMAND,
+		ACCESS_MARINE_BRIG,
+		ACCESS_MARINE_ARMORY,
+		ACCESS_MARINE_MEDBAY,
+		ACCESS_MARINE_CE,
+		ACCESS_MARINE_ENGINEERING,
+		ACCESS_MARINE_MAINT,
+		ACCESS_MARINE_OT,
+		ACCESS_MARINE_RO,
+		ACCESS_MARINE_CARGO,
+		ACCESS_MARINE_PREP,
+		ACCESS_MARINE_ALPHA,
+		ACCESS_MARINE_BRAVO,
+		ACCESS_MARINE_CHARLIE,
+		ACCESS_MARINE_DELTA,
+		ACCESS_MARINE_PILOT,
+		ACCESS_MARINE_DROPSHIP,
+		ACCESS_MARINE_KITCHEN,
+		ACCESS_PRESS,
+	)
+
+/datum/equipment_preset/uscm_ship/auxiliary_officer/load_gear(mob/living/carbon/human/new_human)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
+	//head
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/bridge(new_human), WEAR_BODY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/service/aso(new_human), WEAR_JACKET)
+	//waist
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/uscm_ship/gp
+	name = "USCM Gunship Pilot"
+	idtype = /obj/item/card/id/dogtag
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+	access = list(ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_PREP)
+	assignment = JOB_CAS_PILOT
+	rank = JOB_CAS_PILOT
+	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "GP"
+	skills = /datum/skills/pilot
+
+	minimap_icon = "pilot"
+
+/datum/equipment_preset/uscm_ship/gp/load_status(mob/living/carbon/human/new_human)
+	new_human.nutrition = NUTRITION_LOW
+
+/datum/equipment_preset/uscm_ship/gp/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
+	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm_ship/gp/handle_late_join(mob/living/carbon/human/new_human, late_join)
+	if(late_join)
+		return
+
+	change_dropship_camo(new_human.client.prefs.dropship_camo)
+	change_dropship_name(new_human.client.prefs.dropship_name)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/uscm_ship/gp/full
+	name = "USCM Gunship Pilot (GP)"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+
+	utility_under = list(/obj/item/clothing/under/marine/officer/pilot)
+
+/datum/equipment_preset/uscm_ship/gp/full/load_gear(mob/living/carbon/human/new_human)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/marinepilot(new_human), WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/boiler(new_human), WEAR_BODY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/pilot(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/vp70(new_human), WEAR_J_STORE)
+	//waist
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
 
 //*****************************************************************************************************/
 

@@ -254,6 +254,7 @@
 	var/list/icon_data = list(
 		list("Mar", null),
 		list("ass", "hudsquad_ass"),
+		list("engi", "hudsquad_engi"),
 		list("load", "hudsquad_load"),
 		list("Eng", "hudsquad_engi"),
 		list("HM", "hudsquad_med"),

@@ -566,7 +566,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 			return
 		if(medal.recipient_name != new_human.real_name)
 			continue
-		if(medal.recipient_role != new_human.job)
+		if(medal.recipient_role != new_human.job && !(medal.recipient_role == "Engineer" && new_human.job == "Rifleman"))
 			continue
 		var/obj/item/clothing/accessory/medal/given_medal
 		switch(medal.medal_type)
@@ -1322,7 +1322,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		list("Flashlight", 0, /obj/item/device/flashlight, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
 		list("Combat Pack", 0, /obj/item/storage/backpack/lightpack, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),
 
-		list("POUCHES (CHOOSE 2)", 0, null, null, null),
+		list("POUCHES", 0, null, null, null),
 		list("Bayonet Sheath", 0, /obj/item/storage/pouch/bayonet/upp, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Explosive Pouch", 0, /obj/item/storage/pouch/explosive, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("First-Aid Pouch (Refillable Injectors)", 0, /obj/item/storage/pouch/firstaid/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),

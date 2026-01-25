@@ -1,4 +1,6 @@
 
+#define MAJ_VARIANT "Major"
+#define CAPT_VARIANT "Captain"
 #define FIRST_LT_VARIANT "First Lieutenant"
 #define SR_LT_VARIANT "Senior Lieutenant"
 #define SECOND_LT_VARIANT "Second Lieutenant"
@@ -14,7 +16,7 @@
 	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/lesser_rank
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>Your job is to conduct the briefing for the platoon, monitor the operation, and listen to your superior officers.</a> You are in charge of the platoon for the current operation and supported by your Company Command.<br>They will give your orders VIA the telephone in your office once they are ready.<br><b>You remember that you've stored your personal gear are located in your personal quarters.</b><br>Your job involves heavy roleplay and requires you to behave like an officer and to stay in character at all times."
 
-	job_options = list(SECOND_LT_VARIANT = "2ndLt", FIRST_LT_VARIANT = "1stLt")
+	job_options = list(CAPT_VARIANT = "Capt", MAJ_VARIANT = "Maj")
 
 /datum/job/command/bridge/set_spawn_positions(count)
 	spawn_positions = so_slot_formula(count)
@@ -44,7 +46,7 @@
 	GLOB.marine_leaders[JOB_SO] -= M
 
 /datum/job/command/bridge/handle_job_options(option)
-	if(option != SECOND_LT_VARIANT)
+	if(option != CAPT_VARIANT)
 		gear_preset = initial(gear_preset)
 	else
 		gear_preset = gear_preset_secondary
@@ -117,6 +119,8 @@ OverrideTimelock(/datum/job/command/bridge, list(
 	squad = SQUAD_RMC
 	job = /datum/job/command/bridge/ai/rmc
 
+#undef MAJ_VARIANT
+#undef CAPT_VARIANT
 #undef FIRST_LT_VARIANT
 #undef SR_LT_VARIANT
 #undef SECOND_LT_VARIANT

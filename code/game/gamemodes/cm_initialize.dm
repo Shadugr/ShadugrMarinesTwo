@@ -79,9 +79,9 @@ Additional game mode variables.
 	/// Amount of latejoin_tally already awarded as larvas
 	var/latejoin_larva_used = 0
 	/// Multiplier to the amount of marine gear, current value as calculated with modifiers
-	var/gear_scale = 1
+	var/gear_scale = 3
 	/// Multiplier to the amount of marine gear, maximum reached value for
-	var/gear_scale_max = 1
+	var/gear_scale_max = 3
 
 	//Role Authority set up.
 	/// List of role titles to override to different roles when starting game
@@ -962,11 +962,10 @@ Additional game mode variables.
 	for(var/mob/living/carbon/human/human as anything in GLOB.alive_human_list)
 		if(human.faction == FACTION_MARINE)
 			uscm_personnel_count++
-			var/datum/job/job = GET_MAPPED_ROLE(human.job)
-			marine_pop_size += GLOB.RoleAuthority.calculate_role_weight(job)
+			marine_pop_size += 1
 
 	//This gives a decimal value representing a scaling multiplier. Cannot go below 1
-	gear_scale = max(marine_pop_size / MARINE_GEAR_SCALING_NORMAL, 1)
+	gear_scale = marine_pop_size
 	gear_scale_max = gear_scale
 	log_debug("SUPPLY: Game start detected [marine_pop_size] weighted marines (out of [uscm_personnel_count]/[length(GLOB.alive_human_list)] USCM humans), resulting in gear_scale = [gear_scale]")
 	return gear_scale

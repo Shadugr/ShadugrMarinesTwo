@@ -456,7 +456,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 				dat += "<b>You are banned from using character records.</b><br>"
 			else
 				dat += "<b>Records:</b> <a href=\"byond://?src=\ref[user];preference=records;record=1\"><b>Character Records</b></a><br>"
-			
+
 			// SS220 ADDITION START - TTS220
 			if((SStts220.is_enabled))
 				dat += {"
@@ -977,6 +977,18 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 	return jobs_to_return
 
+
+/datum/preferences/proc/get_job_by_priority(priority)
+	if(!length(job_preference_list))
+		ResetJobs()
+		return null
+
+	for(var/job in job_preference_list)
+		if(job_preference_list[job] == priority)
+			return job
+
+	return null
+
 /// Returns TRUE if any job has a priority other than NEVER, FALSE otherwise.
 /datum/preferences/proc/has_job_priorities()
 	if(!length(job_preference_list))
@@ -1335,10 +1347,13 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 							human.set_selected_ability(ability)
 				if("plat_name")
 					var/raw_name = input(user, "Choose your Platoon's name:", "Character Preference")  as text|null
-					if(length(raw_name) > 16 || !length(raw_name)) // Check to ensure that the user entered text (rather than cancel.)
-						to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
-					else
-						platoon_name = raw_name
+					if(raw_name) // Check to ensure that the user entered text (rather than cancel.)
+						var/new_name = reject_bad_name(raw_name)
+						if(new_name)
+							platoon_name = new_name
+						else
+							to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
+
 
 				if ("dropship_camo")
 					var/new_camo = tgui_input_list(user, "Choose your platoon's dropship camo:", "Character Preferences", GLOB.dropship_camos)
@@ -1348,10 +1363,12 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 				if("dropship_name")
 					var/raw_name = input(user, "Choose your Platoon's Dropship name:", "Character Preference")  as text|null
-					if(length(raw_name) > 10 || !length(raw_name)) // Check to ensure that the user entered text (rather than cancel.)
-						to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
-					else
-						dropship_name = raw_name
+					if(raw_name) // Check to ensure that the user entered text (rather than cancel.)
+						var/new_name = reject_bad_name(raw_name)
+						if(new_name)
+							dropship_name = new_name
+						else
+							to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
 
 				if("synth_name")
 					var/raw_name = input(user, "Choose your Synthetic's name:", "Character Preference")  as text|null

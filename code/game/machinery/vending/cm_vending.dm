@@ -538,7 +538,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 			var/turf/target_turf = get_appropriate_vend_turf(user)
 			if(vend_flags & VEND_CLUTTER_PROTECTION)
 				if(length(target_turf.contents) > 25)
-					to_chat(usr, SPAN_WARNING("The floor is too cluttered, make some space."))
+					to_chat(user, SPAN_WARNING("The floor is too cluttered, make some space."))
 					vend_fail()
 					return FALSE
 			if(HAS_TRAIT(user,TRAIT_OPPOSABLE_THUMBS)) // the big monster 7 ft with thumbs does not care for squads
@@ -904,7 +904,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 /obj/structure/machinery/cm_vending/sorted/Initialize()
 	. = ..()
-	populate_product_list_and_boxes(1.2)
+	populate_product_list_and_boxes(3.0)
 	cm_build_inventory(get_listed_products(), 1, 3)
 	corresponding_types_list = GLOB.cm_vending_gear_corresponding_types_list
 	GLOB.cm_vending_vendors += src
@@ -917,7 +917,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 /obj/structure/machinery/cm_vending/sorted/proc/populate_product_list_and_boxes(scale)
 	dynamic_stock_multipliers = list()
 	if(vend_flags & VEND_STOCK_DYNAMIC)
-		populate_product_list(1.0)
+		populate_product_list(3.0)
 		for(var/list/vendspec in listed_products)
 			var/multiplier = vendspec[2]
 			if(multiplier > 0)

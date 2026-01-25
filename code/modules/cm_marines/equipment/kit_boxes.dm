@@ -27,6 +27,10 @@
 	kit_overlay = "demo"
 
 /obj/item/storage/box/spec/rocketeer/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/clothing/suit/storage/marine/M3T(src)
 	new /obj/item/clothing/head/helmet/marine/M3T(src)
 	new /obj/item/weapon/gun/launcher/rocket/marine(src)
 	new /obj/item/storage/backpack/marine/rocketpack(src)
@@ -70,6 +74,9 @@
 
 /obj/item/storage/box/spec/sniper/fill_preset_inventory()
 	// sniper
+	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/clothing/suit/storage/marine/ghillie(src)
 	new /obj/item/clothing/head/helmet/marine/ghillie(src)
 	new /obj/item/clothing/glasses/night/ghillie_goggles(src)
@@ -87,6 +94,9 @@
 	name = "\improper Scout-Sniper (AMR Shooter) equipment case"
 	desc = "A large case containing an experimental XM43E1, a set of M45 ghillie armor and helmet, M3 day/night gogglest, ammunition and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "amr"
+	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/clothing/suit/storage/marine/ghillie(src)
 	new /obj/item/clothing/head/helmet/marine/ghillie(src)
 	new /obj/item/clothing/glasses/night/ghillie_goggles(src)
@@ -105,6 +115,9 @@
 	kit_overlay = "spotter"
 
 /obj/item/storage/box/spec/spotter/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/clothing/suit/storage/marine/ghillie(src)
 	new /obj/item/clothing/head/helmet/marine/ghillie(src)
 	new /obj/item/clothing/glasses/night/M49A(src)
@@ -130,6 +143,9 @@
 	kit_overlay = "pyro"
 
 /obj/item/storage/box/spec/pyro/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/clothing/suit/storage/marine/M35(src)
 	new /obj/item/clothing/head/helmet/marine/pyro(src)
 	new /obj/item/storage/large_holster/fuelpack(src)
@@ -145,6 +161,9 @@
 	kit_overlay = "grenadier"
 
 /obj/item/storage/box/spec/heavy_grenadier/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/weapon/gun/launcher/grenade/m92(src)
 	new /obj/item/storage/belt/grenade/large/full(src)
 	new /obj/item/storage/backpack/marine/grenadepack(src)

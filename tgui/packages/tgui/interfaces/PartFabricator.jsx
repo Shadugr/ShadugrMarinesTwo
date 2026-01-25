@@ -35,8 +35,8 @@ const GeneralPanel = (props) => {
                       tooltipPosition="left"
                       onClick={() =>
                         act('produce', {
-                          path: Equipment.path,
-                          cost: Equipment.cost,
+                          index: Equipment.index,
+                          is_ammo: Equipment.is_ammo,
                         })
                       }
                     >

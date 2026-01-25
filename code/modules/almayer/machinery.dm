@@ -346,6 +346,13 @@
 	unslashable = TRUE
 	unacidable = TRUE
 
+/obj/structure/prop/almayer/ship_memorial/New()
+	. = ..()
+	desc += " The following names are written here:\n"
+	var/list/all_memorial_names = CONFIG_GET(str_list/memorial_name)
+	for(var/name in all_memorial_names)
+		desc += "<b>[name]</b>\n"
+
 /obj/structure/prop/almayer/ship_memorial/golden_arrow
 	name = "memorial"
 	desc = "A memorial plaque dedicated to those of the Golden Arrow who have fallen in combat. It's an unfortunately long list of names."
@@ -357,29 +364,6 @@
 
 /obj/structure/prop/almayer/ship_memorial/centcomm/admin
 	desc = "A memorial to all Admins and Moderators who have retired from CM. No mentor names are present."
-
-
-/obj/structure/prop/almayer/ship_memorial/attackby(obj/item/I, mob/user)
-	if(istype(I, /obj/item/dogtag))
-		var/obj/item/dogtag/D = I
-		if(D.fallen_names)
-			to_chat(user, SPAN_NOTICE("You add [D] to [src]."))
-			GLOB.fallen_list += D.fallen_names
-			qdel(D)
-		return TRUE
-	else
-		. = ..()
-
-/obj/structure/prop/almayer/ship_memorial/get_examine_text(mob/user)
-	. = ..()
-	if((isobserver(user) || ishuman(user)) && GLOB.fallen_list)
-		var/faltext = ""
-		for(var/i = 1 to length(GLOB.fallen_list))
-			if(i != length(GLOB.fallen_list))
-				faltext += "[GLOB.fallen_list[i]], "
-			else
-				faltext += GLOB.fallen_list[i]
-		. += SPAN_NOTICE("To our fallen soldiers: <b>[faltext]</b>.")
 
 /obj/structure/prop/almayer/particle_cannon
 	name = "\improper 75cm/140 Mark 74 General Atomics railgun"

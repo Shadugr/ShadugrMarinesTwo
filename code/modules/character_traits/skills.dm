@@ -54,6 +54,21 @@
 	trait_desc = "Boosts the engineering skill to 1. Crewmember received basic training in repairing simple machinery and fortifications."
 	skill = SKILL_ENGINEER
 
+/datum/character_trait/skills/engi
+	trait_name = "Complete Engineering Training"
+	trait_desc = "Boosts the engineering and construction skill to 3. Crewmember received basic training in repairing simple machinery and fortifications."
+	skill = SKILL_ENGINEER
+	secondary_skill = SKILL_CONSTRUCTION
+	skill_increment = 3
+	skill_cap = 3
+
+/datum/character_trait/skills/defib
+	trait_name = "Complete First Aid And Defibrillator Training"
+	trait_desc = "Boosts the Medical skill to 2. Crewmember has attended several first aid training sessions, learned basic medical care, defibrillator use."
+	skill = SKILL_MEDICAL
+	skill_increment = 2
+	skill_cap = 2
+
 /datum/character_trait/skills/construction
 	trait_name = "Basic Construction Training"
 	trait_desc = "Boosts the construction skill to 1. Crewmember received training in constructing simple fortifications."

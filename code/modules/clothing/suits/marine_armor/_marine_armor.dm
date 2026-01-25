@@ -80,7 +80,7 @@
 		/obj/item/storage/belt/gun/m39,
 		/obj/item/storage/belt/gun/xm51,
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PONCHO)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
 
 	light_power = 3
 	light_range = 4
@@ -342,7 +342,19 @@
 	item_state_slots = list(WEAR_JACKET = "bridge_coat_armored")
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_RANK)
 
-/obj/item/clothing/suit/storage/marine/medium/leader
+
+/obj/item/clothing/suit/storage/marine/medium/rto //броня в ФайрТимЛид Шкафу
+	icon_state = "io"
+	armor_variation = 0
+	name = "\improper M4 pattern marine armor"
+	desc = "A well tinkered and crafted hybrid of Smart-Gunner mesh and M3 pattern plates. Robust, yet nimble, with room for all your pouches."
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	storage_slots = 4
+	light_range = 5 //slightly higher
+	specialty = "M4 pattern marine"
+
+/obj/item/clothing/suit/storage/marine/medium/leader //броня СекшСержанта
 	name = "\improper B12 pattern marine armor"
 	desc = "Semi-experimental body armor system similar to M3, incorporating primarily carbon fiber instead of boron carbide. \nDesigned in a lovely olive green, slightly improved protection against blunt impact and biological hazards."
 	icon_state = "7"
@@ -350,6 +362,7 @@
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUM
 	specialty = "B12 pattern marine"
@@ -367,7 +380,7 @@
 
 // M3 pattern marine armor
 /obj/item/clothing/suit/storage/marine/medium
-	armor_variation = 6
+	armor_variation = 0
 	light_power = 4
 
 /obj/item/clothing/suit/storage/marine/medium/padless_lines
@@ -388,7 +401,7 @@
 	desc = "A lighter, cut down version of the standard M3 pattern armor. It sacrifices durability for more speed."
 	specialty = "\improper M3-L pattern light"
 	icon_state = "L1"
-	armor_variation = 6
+	armor_variation = 0
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
@@ -494,7 +507,7 @@
 	desc_lore = "This configuration of the iconic armor was developed during the Canton War in 2160 between the UPP and USCM - Designed in response to a need for higher protection for ComTechs assigned as EODs during the conflict, this is the pinnacle of protection for your average marine. The shoulders and kneepads have both been expanded upon heavily, covering up the arteries on each limb. A special spall liner was developed for this suit, with the same technology being used in the M70 Flak Jacket being developed at the same time."
 	specialty = "\improper M3-H pattern"
 	icon_state = "H1"
-	armor_variation = 6
+	armor_variation = 0
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
 	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
@@ -857,7 +870,7 @@
 	desc = "A lighter, cut down version of the standard M3 pattern armor. It sacrifices durability for less weight."
 	specialty = "\improper M3-L pattern light"
 	icon_state = "L1"
-	armor_variation = 3
+	armor_variation = 0
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
@@ -887,7 +900,7 @@
 	desc = "M3 armor vest with a rheological liner behind the chestplate, additional armor over the limbs to improve protection ballistic and blast protections. \nMarginal improvement in other areas, and the mass of the extra plates degrades agility, especially in null-gee."
 	specialty = "\improper M3-H pattern"
 	icon_state = "H1"
-	armor_variation = 3
+	armor_variation = 0
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
 	armor_bomb = CLOTHING_ARMOR_HIGHPLUS

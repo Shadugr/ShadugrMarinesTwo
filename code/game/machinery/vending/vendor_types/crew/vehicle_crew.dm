@@ -56,10 +56,20 @@
 	UnregisterSignal(SSdcs, COMSIG_GLOB_VEHICLE_ORDERED)
 
 	if(!selected_vehicle)
-		selected_vehicle = "TANK" // The whole thing seems to be based upon the assumption you unlock tank as an override, defaulting to APC
+		if(istype(V, /obj/effect/vehicle_spawner/tank/plain))
+			selected_vehicle = "TANK"
+		else if(istype(V, /obj/effect/vehicle_spawner/arc/fixed))
+			selected_vehicle = "ARC"
+		else
+			selected_vehicle = "APC"
+
 	if(selected_vehicle == "TANK")
 		available_categories &= ~(VEHICLE_INTEGRAL_AVAILABLE) //APC lacks these, so we need to remove these flags to be able to access spare parts section
 		marine_announcement("A tank is being sent up to reinforce this operation.")
+	else if(selected_vehicle == "ARC")
+		marine_announcement("An ARC is being sent up to reinforce this operation.")
+	else if(selected_vehicle == "APC")
+		marine_announcement("An APC is being sent up to reinforce this operation.")
 
 /obj/structure/machinery/cm_vending/gear/vehicle_crew/get_listed_products(mob/user)
 	var/list/display_list = list()
@@ -76,7 +86,7 @@
 	else if(selected_vehicle == "ARC")
 		display_list = GLOB.cm_vending_vehicle_crew_arc
 
-	else if(selected_vehicle == "TANK")
+	else if(selected_vehicle == "APC")
 		if(available_categories)
 			display_list = GLOB.cm_vending_vehicle_crew_apc
 		else //APC stuff costs more to prevent 4000 points spent on shitton of ammunition
@@ -190,8 +200,24 @@ GLOBAL_LIST_INIT(cm_vending_vehicle_crew_apc_spare, list(
 GLOBAL_LIST_INIT(cm_vending_vehicle_crew_arc, list(
 	list("STARTING KIT SELECTION:", 0, null, null, null),
 
-	list("WHEELS", 0, null, null, null),
+	list("ARC:", 0, null, null, null),
+	list("ARC Ammo", 0, /obj/effect/essentials_set/arc/ammo, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_MANDATORY),
 	list("Replacement ARC Wheels", 0, /obj/item/hardpoint/locomotion/arc_wheels, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_MANDATORY)))
+
+
+/obj/effect/essentials_set/arc/ammo
+	spawned_gear_list = list(
+		/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+		/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+		/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+		/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+		/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+		/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+		/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+		/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+		/obj/item/ammo_magazine/hardpoint/flare_launcher,
+		/obj/item/ammo_magazine/hardpoint/flare_launcher,
+	)
 
 //------------WEAPONS RACK---------------
 
@@ -274,7 +300,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_vehicle_crew, list(
 		list("M276 Shotgun Shell Loading Rig", 0, /obj/item/storage/belt/shotgun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 Toolbelt Rig (Full)", 0, /obj/item/storage/belt/utility/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 
-		list("POUCHES (CHOOSE 2)", 0, null, null, null),
+		list("POUCHES", 0, null, null, null),
 		list("First-Aid Pouch (Refillable Injectors)", 0, /obj/item/storage/pouch/firstaid/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("First-Aid Pouch (Splints, Gauze, Ointment)", 0, /obj/item/storage/pouch/firstaid/full/alternate, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("First-Aid Pouch (Pill Packets)", 0, /obj/item/storage/pouch/firstaid/full/pills, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
@@ -287,12 +313,13 @@ GLOBAL_LIST_INIT(cm_vending_clothing_vehicle_crew, list(
 		list("Sling Pouch", 0, /obj/item/storage/pouch/sling, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Tools Pouch (Full)", 0, /obj/item/storage/pouch/tools/tank, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 
-		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
-		list("Brown Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest/brown_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
-		list("Black Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("Shoulder Holster", 0, /obj/item/clothing/accessory/storage/holster, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("Webbing", 0, /obj/item/clothing/accessory/storage/webbing, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("ACCESSORIES FOR CLOTHING (CHOOSE 1)", 0, null, null, null),
+		list("Black Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest, MARINE_CAN_BUY_CLOTHING_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Brown Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest/brown_vest, MARINE_CAN_BUY_CLOTHING_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Webbing", 0, /obj/item/clothing/accessory/storage/webbing, MARINE_CAN_BUY_CLOTHING_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
+		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch, MARINE_CAN_BUY_CLOTHING_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Leg Pouch", 0, /obj/item/clothing/accessory/storage/smallpouch, MARINE_CAN_BUY_CLOTHING_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Shoulder Holster", 0, /obj/item/clothing/accessory/storage/holster, MARINE_CAN_BUY_CLOTHING_ACCESSORY, VENDOR_ITEM_REGULAR),
 
 		list("MASK (CHOOSE 1)", 0, null, null, null),
 		list("Gas Mask", 0, /obj/item/clothing/mask/gas, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
@@ -332,6 +359,12 @@ GLOBAL_LIST_INIT(cm_vending_clothing_vehicle_crew, list(
 		list("Plastic Explosive", 10, /obj/item/explosive/plastic, null, VENDOR_ITEM_REGULAR),
 		list("Roller Bed", 5, /obj/item/roller, null, VENDOR_ITEM_REGULAR),
 		list("Whistle", 5, /obj/item/device/whistle, null, VENDOR_ITEM_REGULAR),
+
+		list("RADIO KEYS", 0, null, null, null),
+		list("Engineering Radio Encryption Key", 5, /obj/item/device/encryptionkey/engi, null, VENDOR_ITEM_REGULAR),
+		list("Intel Radio Encryption Key", 5, /obj/item/device/encryptionkey/intel, null, VENDOR_ITEM_REGULAR),
+		list("JTAC Radio Encryption Key", 5, /obj/item/device/encryptionkey/jtac, null, VENDOR_ITEM_REGULAR),
+		list("Medical Radio Encryption Key", 5, /obj/item/device/encryptionkey/med, null, VENDOR_ITEM_REGULAR),
 	))
 
 //MARINE_CAN_BUY_SHOES MARINE_CAN_BUY_UNIFORM currently not used
@@ -355,6 +388,9 @@ GLOBAL_LIST_INIT(cm_vending_clothing_vehicle_crew, list(
 		/obj/item/ammo_magazine/hardpoint/ltb_cannon,
 		/obj/item/ammo_magazine/hardpoint/ltb_cannon,
 		/obj/item/ammo_magazine/hardpoint/ltb_cannon,
+		/obj/item/ammo_magazine/hardpoint/ltb_cannon,
+		/obj/item/ammo_magazine/hardpoint/ltb_cannon,
+		/obj/item/ammo_magazine/hardpoint/ltb_cannon,
 	)
 
 /obj/effect/essentials_set/tank/gatling
@@ -362,11 +398,17 @@ GLOBAL_LIST_INIT(cm_vending_clothing_vehicle_crew, list(
 		/obj/item/hardpoint/primary/minigun,
 		/obj/item/ammo_magazine/hardpoint/ltaaap_minigun,
 		/obj/item/ammo_magazine/hardpoint/ltaaap_minigun,
+		/obj/item/ammo_magazine/hardpoint/ltaaap_minigun,
+		/obj/item/ammo_magazine/hardpoint/ltaaap_minigun,
+		/obj/item/ammo_magazine/hardpoint/ltaaap_minigun,
+		/obj/item/ammo_magazine/hardpoint/ltaaap_minigun,
 	)
 
 /obj/effect/essentials_set/tank/dragonflamer
 	spawned_gear_list = list(
 		/obj/item/hardpoint/primary/flamer,
+		/obj/item/ammo_magazine/hardpoint/primary_flamer,
+		/obj/item/ammo_magazine/hardpoint/primary_flamer,
 		/obj/item/ammo_magazine/hardpoint/primary_flamer,
 		/obj/item/ammo_magazine/hardpoint/primary_flamer,
 	)
@@ -378,11 +420,16 @@ GLOBAL_LIST_INIT(cm_vending_clothing_vehicle_crew, list(
 		/obj/item/ammo_magazine/hardpoint/ace_autocannon,
 		/obj/item/ammo_magazine/hardpoint/ace_autocannon,
 		/obj/item/ammo_magazine/hardpoint/ace_autocannon,
+		/obj/item/ammo_magazine/hardpoint/ace_autocannon,
+		/obj/item/ammo_magazine/hardpoint/ace_autocannon,
+		/obj/item/ammo_magazine/hardpoint/ace_autocannon,
 	)
 
 /obj/effect/essentials_set/tank/tankflamer
 	spawned_gear_list = list(
 		/obj/item/hardpoint/secondary/small_flamer,
+		/obj/item/ammo_magazine/hardpoint/secondary_flamer,
+		/obj/item/ammo_magazine/hardpoint/secondary_flamer,
 		/obj/item/ammo_magazine/hardpoint/secondary_flamer,
 	)
 
@@ -391,17 +438,26 @@ GLOBAL_LIST_INIT(cm_vending_clothing_vehicle_crew, list(
 		/obj/item/hardpoint/secondary/towlauncher,
 		/obj/item/ammo_magazine/hardpoint/towlauncher,
 		/obj/item/ammo_magazine/hardpoint/towlauncher,
+		/obj/item/ammo_magazine/hardpoint/towlauncher,
+		/obj/item/ammo_magazine/hardpoint/towlauncher,
 	)
 
 /obj/effect/essentials_set/tank/m56cupola
 	spawned_gear_list = list(
 		/obj/item/hardpoint/secondary/m56cupola,
 		/obj/item/ammo_magazine/hardpoint/m56_cupola,
+		/obj/item/ammo_magazine/hardpoint/m56_cupola,
+		/obj/item/ammo_magazine/hardpoint/m56_cupola,
+		/obj/item/ammo_magazine/hardpoint/m56_cupola,
+		/obj/item/ammo_magazine/hardpoint/m56_cupola,
+		/obj/item/ammo_magazine/hardpoint/m56_cupola,
 	)
 
 /obj/effect/essentials_set/tank/tankgl
 	spawned_gear_list = list(
 		/obj/item/hardpoint/secondary/grenade_launcher,
+		/obj/item/ammo_magazine/hardpoint/tank_glauncher,
+		/obj/item/ammo_magazine/hardpoint/tank_glauncher,
 		/obj/item/ammo_magazine/hardpoint/tank_glauncher,
 		/obj/item/ammo_magazine/hardpoint/tank_glauncher,
 		/obj/item/ammo_magazine/hardpoint/tank_glauncher,
@@ -413,6 +469,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_vehicle_crew, list(
 		/obj/item/hardpoint/holder/tank_turret,
 		/obj/item/ammo_magazine/hardpoint/turret_smoke,
 		/obj/item/ammo_magazine/hardpoint/turret_smoke,
+		/obj/item/ammo_magazine/hardpoint/turret_smoke,
 	)
 
 /obj/effect/essentials_set/apc/dualcannon
@@ -422,11 +479,17 @@ GLOBAL_LIST_INIT(cm_vending_clothing_vehicle_crew, list(
 		/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
 		/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
 		/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
+		/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
+		/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
 	)
 
 /obj/effect/essentials_set/apc/frontalcannon
 	spawned_gear_list = list(
 		/obj/item/hardpoint/secondary/frontalcannon,
+		/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+		/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+		/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+		/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
 		/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
 	)
 

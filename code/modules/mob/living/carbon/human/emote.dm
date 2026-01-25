@@ -151,7 +151,7 @@
 	key = "medic"
 	message = "calls for a Corpsman!"
 	alt_message = "shouts something"
-	cooldown = 10 SECONDS
+	cooldown = 5 SECONDS
 	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
 
 /datum/emote/living/carbon/human/medic/get_sound(mob/living/user)
@@ -225,14 +225,14 @@
 	message = "salutes."
 	message_param = "salutes to %t."
 	sound = 'sound/misc/salute.ogg'
-	audio_cooldown = 10 SECONDS
+	audio_cooldown = 5 SECONDS
 	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
 
 /datum/emote/living/carbon/human/scream
 	key = "scream"
 	key_third_person = "screams"
 	message = "screams!"
-	audio_cooldown = 10 SECONDS
+	audio_cooldown = 5 SECONDS
 	species_type_blacklist_typecache = list(/datum/species/synthetic)
 	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
 
@@ -379,7 +379,7 @@
 /datum/emote/living/carbon/human/whistle
 	key = "whistle"
 	key_third_person = "whistles"
-	message = "whistles."
+	message = "свистит."
 	emote_type = EMOTE_AUDIBLE
 	sound = "whistle"
 

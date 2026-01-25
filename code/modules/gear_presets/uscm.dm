@@ -1108,7 +1108,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tank
-	name = "USCM Vehicle Crewman (Equipped)"
+	name = "USCM Vehicle Crewman"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	access = list(
 		ACCESS_MARINE_PREP,
@@ -1120,41 +1120,17 @@
 	)
 	assignment = "Vehicle Crewmember"
 	rank = JOB_TANK_CREW
-	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "CRMN"
 	skills = /datum/skills/tank_crew
 	minimap_icon = "vc"
 
-/datum/equipment_preset/uscm/tank/load_gear(mob/living/carbon/human/new_human)
-	new_human.underwear = "Marine Boxers"
-	new_human.undershirt = "Marine Undershirt"
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
-	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/M3T(new_human), WEAR_HEAD)
-	add_uscm_cover(new_human)
-	add_uscm_goggles(new_human)
-	//uniform
-	add_uscm_uniform(new_human)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/pilot(new_human), WEAR_JACKET)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	add_combat_gloves(new_human)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
+/datum/equipment_preset/uscm/tank/load_status(mob/living/carbon/human/new_human)
+	new_human.nutrition = NUTRITION_LOW
 
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
-
+/datum/equipment_preset/uscm/tank/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/marsoc
 	name = "USCM Marine Raider"

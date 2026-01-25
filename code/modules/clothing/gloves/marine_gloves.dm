@@ -28,6 +28,12 @@
 	siemens_coefficient = 1
 	permeability_coefficient = 1
 
+/obj/item/clothing/gloves/marine/medical
+	name = "marine medical combat gloves"
+	desc = "Standard issue marine sterile gloves, offers regular protection whilst offering the user a better grip when performing medical work."
+	icon_state = "marine_white"
+	item_state = "marine_white"
+
 /obj/item/clothing/gloves/marine/brown
 	name = "combat gloves"
 	desc = "A pair of brown combat gloves. Both insulated from electrical currents and capable of shrugging off shrapnel, the only downside is how sweaty your hands'll be from wearing them all the time."
