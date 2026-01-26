@@ -210,7 +210,7 @@
 	name = SQUAD_MARINE_2
 	equipment_color = "#ffc32d"
 	chat_color = "#ffe650"
-	access = list(ACCESS_MARINE_ALPHA)
+	access = list(ACCESS_MARINE_BRAVO)
 	radio_freq = BRAVO_FREQ
 	use_stripe_overlay = FALSE
 	minimap_color = MINIMAP_SQUAD_BRAVO

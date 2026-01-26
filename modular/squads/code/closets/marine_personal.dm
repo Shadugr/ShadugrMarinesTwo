@@ -183,3 +183,23 @@
 	icon_opened = "secureopen-so"
 	icon_broken = "securebroken-so"
 	icon_off = "secureoff-so"
+
+//TC
+/obj/structure/closet/secure_closet/marine_personal/tank_crew
+	icon = 'modular/squads/icons/closet.dmi'
+	icon_state = "secure1-tc"
+	icon_closed = "secure-tc"
+	icon_locked = "secure1-tc"
+	icon_opened = "secureopen-tc"
+	icon_broken = "securebroken-tc"
+	icon_off = "secureoff-tc"
+
+//PO
+/obj/structure/closet/secure_closet/marine_personal/gp_pilot
+	icon = 'modular/squads/icons/closet.dmi'
+	icon_state = "secure1-gp"
+	icon_closed = "secure-gp"
+	icon_locked = "secure1-gp"
+	icon_opened = "secureopen-gp"
+	icon_broken = "securebroken-gp"
+	icon_off = "secureoff-gp"

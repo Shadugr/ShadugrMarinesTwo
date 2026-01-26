@@ -42,7 +42,7 @@
 
 	// --- титульник ---
 	var/alert_type = /atom/movable/screen/text/screen_text/picture/starting
-	var/platoon = "3rd Bat. 'Banda Troopers"
+	var/platoon = "3rd Bat. 'Solar Devils"
 
 	switch(faction)
 		if(FACTION_MARINE)

@@ -10,7 +10,14 @@
 /obj/structure/machinery/recharger{
 	pixel_x = -5
 	},
-/obj/item/device/defibrillator,
+/obj/effect/landmark/interior/spawn/interior_viewport{
+	pixel_x = -6;
+	pixel_y = -11;
+	dir = 1
+	},
+/obj/item/device/defibrillator{
+	pixel_y = 8
+	},
 /turf/open/shuttle/vehicle/dark_sterile_green_11,
 /area/interior/vehicle/apc/med)
 "c" = (
@@ -212,10 +219,9 @@
 /obj/structure/machinery/iv_drip{
 	anchored = 1
 	},
-/obj/structure/bed/roller,
-/obj/effect/landmark/interior/spawn/interior_viewport{
-	pixel_x = -6;
-	pixel_y = 23
+/obj/structure/vehicle_locker/med{
+	pixel_y = 27;
+	pixel_x = -7
 	},
 /turf/open/shuttle/vehicle/dark_sterile_green_12,
 /area/interior/vehicle/apc/med)
@@ -232,17 +238,32 @@
 	pixel_x = -5;
 	pixel_y = 16
 	},
+/obj/structure/machinery/optable,
+/obj/item/tank/anesthetic,
+/obj/item/tank/anesthetic,
+/obj/item/tank/anesthetic,
 /turf/open/shuttle/vehicle/dark_sterile,
 /area/interior/vehicle/apc/med)
 "E" = (
-/obj/structure/vehicle_locker{
-	pixel_y = 28
-	},
 /obj/structure/bed/chair/vehicle{
 	pixel_x = -8
 	},
 /obj/structure/bed/chair/vehicle{
 	pixel_x = 8
+	},
+/obj/structure/vehicle_locker/movie{
+	pixel_y = 31;
+	layer = 2.9;
+	pixel_x = -13
+	},
+/obj/structure/vehicle_locker/movie{
+	pixel_y = 20;
+	layer = 2.9;
+	pixel_x = -13
+	},
+/obj/structure/vehicle_locker{
+	pixel_y = 28;
+	pixel_x = 10
 	},
 /turf/open/shuttle/vehicle/floor_3_8_1,
 /area/interior/vehicle/apc/med)
@@ -377,12 +398,12 @@
 	name = "APC reciever";
 	phone_category = "Vehicles";
 	phone_id = "M577-MED Armoured Personnel Carrier";
-	pixel_x = 5;
+	pixel_x = 1;
 	pixel_y = 30
 	},
 /obj/structure/extinguisher_cabinet/lifeboat{
 	icon = 'icons/obj/vehicles/interiors/general.dmi';
-	pixel_x = -8;
+	pixel_x = -11;
 	pixel_y = 28
 	},
 /turf/open/shuttle/vehicle/floor_3_13,
