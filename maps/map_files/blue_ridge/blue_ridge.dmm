@@ -5775,6 +5775,10 @@
 	dir = 4;
 	pixel_x = 2
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3;
+	brightness = 9
+	},
 /turf/open/floor/almayer/red,
 /area/golden_arrow/platoonarmory)
 "are" = (
@@ -8371,6 +8375,10 @@
 	dir = 4;
 	pixel_x = 2
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	brightness = 9
+	},
 /turf/open/floor/almayer/orange/north,
 /area/golden_arrow/platoonarmory)
 "aCx" = (
@@ -10708,11 +10716,11 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
 "aMI" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	light_power = 0.3;
-	brightness = 9
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/charlie{
+	req_one_access = list(17,19);
+	req_access = list()
 	},
-/turf/open/floor/almayer/red,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
 "aMK" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11656,14 +11664,12 @@
 	pixel_x = 8;
 	pixel_y = 32
 	},
-/obj/structure/target{
-	name = "punching bag";
-	pixel_y = 18;
-	layer = 3.6;
-	pixel_x = -3
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "2-8"
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	brightness = 9
 	},
 /turf/open/floor/almayer/orange/north,
 /area/golden_arrow/platoonarmory)
@@ -12911,19 +12917,11 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "aWl" = (
-/obj/structure/sign/poster{
-	pixel_y = 32
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/alpha{
+	req_access = list();
+	req_one_access = list(15,19)
 	},
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25;
-	dir = 1;
-	pixel_y = 8
-	},
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	dir = 1;
-	pixel_y = 8
-	},
-/turf/open/floor/almayer/orange/north,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
 "aWm" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
@@ -13090,6 +13088,9 @@
 	dir = 4;
 	pixel_x = 2
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
+	},
 /turf/open/floor/almayer/blue,
 /area/golden_arrow/platoonarmory)
 "aXr" = (
@@ -13243,14 +13244,11 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aYp" = (
-/obj/structure/sign/poster{
-	pixel_y = 32
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/delta{
+	req_one_access = list(18,19);
+	req_access = list()
 	},
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
-	brightness = 9
-	},
-/turf/open/floor/almayer/emerald/north,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
 "aYq" = (
 /obj/effect/decal/cleanable/dirt{
@@ -16055,6 +16053,10 @@
 	dir = 4;
 	pixel_x = 2
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	brightness = 9
+	},
 /turf/open/floor/almayer/emerald/north,
 /area/golden_arrow/platoonarmory)
 "fHq" = (
@@ -18457,6 +18459,13 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/lower_cargo)
+"kyP" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/bravo{
+	req_access = list();
+	req_one_access = list(16,19)
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/platoonarmory)
 "kzj" = (
 /obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/almayer,
@@ -37535,7 +37544,7 @@ aEG
 aEG
 aEG
 act
-uBJ
+aYp
 lPm
 arh
 ati
@@ -37549,9 +37558,9 @@ aGC
 kUR
 mvw
 lPm
-aoc
+aMI
 act
-ihf
+aWl
 lPm
 ayn
 ati
@@ -37565,7 +37574,7 @@ wja
 ati
 aHZ
 lPm
-fIY
+kyP
 act
 vRh
 cWj
@@ -38424,13 +38433,13 @@ aAu
 lPm
 arh
 ati
-kVV
+aDL
+aDW
+uBJ
 act
-act
-act
-act
-act
-aYp
+aoc
+lPm
+eow
 ati
 mvw
 lPm
@@ -38440,13 +38449,13 @@ dID
 lPm
 ayn
 ati
-aMI
+gsQ
+aDW
+ihf
 act
-act
-act
-act
-act
-aWl
+fIY
+lPm
+aRF
 ati
 aHZ
 lPm
@@ -38603,9 +38612,9 @@ aGS
 aHc
 aXq
 act
-abA
-abA
-abA
+act
+act
+act
 act
 fFj
 alS
@@ -38619,9 +38628,9 @@ azT
 aZx
 arc
 act
-abA
-abA
-abA
+act
+act
+act
 act
 aCw
 adV
