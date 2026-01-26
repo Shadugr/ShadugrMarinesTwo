@@ -81,7 +81,7 @@
 /obj/item/device/encryptionkey/secsrg
 	name = "\improper Section Sergeant Radio Encryption Key"
 	icon_state = "jtac_key"
-	channels = list(RADIO_CHANNEL_INTEL = TRUE, RADIO_CHANNEL_JTAC = TRUE, RADIO_CHANNEL_REQ = TRUE, RADIO_CHANNEL_MEDSCI = TRUE, RADIO_CHANNEL_ENGI = TRUE)
+	channels = list(RADIO_CHANNEL_JTAC = TRUE)
 
 //MARINE ENCRYPTION KEYS
 
@@ -203,7 +203,7 @@
 /obj/item/device/encryptionkey/vc
 	name = "\improper Marine Vehicle Crewman Radio Encryption Key"
 	icon_state = "cap_key"
-	channels = list(RADIO_CHANNEL_COMMAND = TRUE, RADIO_CHANNEL_ENGI = TRUE, RADIO_CHANNEL_MEDSCI = TRUE, RADIO_CHANNEL_REQ = TRUE)
+	channels = list(RADIO_CHANNEL_COMMAND = TRUE, RADIO_CHANNEL_ENGI = TRUE, RADIO_CHANNEL_MEDSCI = TRUE, RADIO_CHANNEL_JTAC = TRUE)
 
 /obj/item/device/encryptionkey/req/mst
 	name = "Supply Radio Encryption Key"

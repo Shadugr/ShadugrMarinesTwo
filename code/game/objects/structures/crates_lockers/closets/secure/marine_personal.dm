@@ -225,3 +225,19 @@
 
 /obj/structure/closet/secure_closet/marine_personal/rmc/troop_commander
 	job = JOB_TWE_RMC_LIEUTENANT
+
+/obj/structure/closet/secure_closet/marine_personal/tank_crew
+	job = JOB_TANK_CREW
+
+/obj/structure/closet/secure_closet/marine_personal/tank_crew/spawn_gear()
+	new /obj/item/clothing/under/marine(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/vc(src)
+
+/obj/structure/closet/secure_closet/marine_personal/gp_pilot
+	job = JOB_CAS_PILOT
+
+/obj/structure/closet/secure_closet/marine_personal/gp_pilot/spawn_gear()
+	new /obj/item/clothing/under/marine(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/po(src)

@@ -674,7 +674,15 @@
 	initial_keys = list(/obj/item/device/encryptionkey/squadlead)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/pltco
-	initial_keys = list(/obj/item/device/encryptionkey/mcom/alt/squads, /obj/item/device/encryptionkey/squadlead) // SS220 EDIT - squads
+	initial_keys = list(/obj/item/device/encryptionkey/mcom/alt/squads, /obj/item/device/encryptionkey/squadlead, /obj/item/device/encryptionkey/medres, /obj/item/device/encryptionkey/engi) // SS220 EDIT - squads
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/vc
+	frequency = JTAC_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/vc)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/po
+	frequency = JTAC_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/po)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/forecon
 	name = "USCM SOF headset"

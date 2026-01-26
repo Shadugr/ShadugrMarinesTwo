@@ -418,7 +418,9 @@
 /obj/structure/shuttle/part/tornado/transparent{
 	icon_state = "61"
 	},
-/obj/effect/attach_point/weapon/tornado/left_wing,
+/obj/effect/attach_point/weapon/tornado/left_wing{
+	pixel_y = -10
+	},
 /turf/template_noop,
 /area/shuttle/tornado)
 "EI" = (
@@ -619,7 +621,9 @@
 /obj/structure/shuttle/part/tornado/transparent{
 	icon_state = "65"
 	},
-/obj/effect/attach_point/weapon/tornado/right_wing,
+/obj/effect/attach_point/weapon/tornado/right_wing{
+	pixel_y = -10
+	},
 /turf/template_noop,
 /area/shuttle/tornado)
 "RH" = (

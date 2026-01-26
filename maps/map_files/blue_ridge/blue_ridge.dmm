@@ -983,7 +983,9 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "ace" = (
-/obj/structure/machinery/cm_vending/clothing/leader/delta,
+/obj/structure/machinery/cm_vending/clothing/leader/delta{
+	vendor_role = list()
+	},
 /turf/open/floor/almayer/blue/north,
 /area/golden_arrow/platoonarmory)
 "acf" = (
@@ -1484,7 +1486,9 @@
 /turf/open/floor/almayer/emerald,
 /area/golden_arrow/platoon_commander_rooms)
 "adl" = (
-/obj/structure/machinery/cm_vending/clothing/smartgun/bravo,
+/obj/structure/machinery/cm_vending/clothing/smartgun/bravo{
+	vendor_role = list()
+	},
 /turf/open/floor/almayer/orange,
 /area/golden_arrow/platoonarmory)
 "adm" = (
@@ -2435,7 +2439,8 @@
 /area/golden_arrow/cryo_cells)
 "afk" = (
 /obj/structure/machinery/cm_vending/gear/smartgun{
-	req_access = list(14,17)
+	req_access = list(14,17);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/emerald,
 /area/golden_arrow/platoonarmory)
@@ -6427,7 +6432,8 @@
 	brightness = 9
 	},
 /obj/structure/machinery/cm_vending/gear/leader{
-	req_access = list(12,16)
+	req_access = list(12,16);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/orange,
 /area/golden_arrow/platoonarmory)
@@ -6554,7 +6560,8 @@
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/supply)
 "auO" = (
-/turf/closed/wall/almayer/white/hull,
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "auP" = (
 /turf/open/floor/almayer/emeraldcorner/west,
@@ -6570,11 +6577,10 @@
 "auV" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
 	pixel_y = 0;
-	density = 0;
 	req_access = null;
 	req_one_access = list(27)
 	},
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "avb" = (
 /obj/effect/decal/warning_stripes{
@@ -6633,9 +6639,12 @@
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "avq" = (
-/obj/structure/machinery/light/small/blue/golden_arrow{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	brightness = 7
+	light_power = 0.7;
+	pixel_x = -6;
+	pixel_y = 3;
+	layer = 2.97
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
@@ -6788,11 +6797,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25;
-	brightness = 7
-	},
 /obj/structure/pipes/standard/manifold/hidden/supply,
+/obj/structure/machinery/light/double/blue/golden_arrow,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/motor_pool)
 "aww" = (
@@ -6855,6 +6861,9 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
 "awW" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1
+	},
 /turf/open/floor/almayer/redcorner/north,
 /area/golden_arrow/cryo_cells)
 "awZ" = (
@@ -7299,8 +7308,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "ayx" = (
-/turf/open/space/basic,
-/turf/closed/wall/almayer/outer,
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8
+	},
+/turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/motor_pool)
 "ayy" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -7820,7 +7832,8 @@
 "aAu" = (
 /obj/structure/machinery/cm_vending/clothing/tl/delta{
 	req_access = list();
-	req_one_access = list(18,19)
+	req_one_access = list(18,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -8162,6 +8175,7 @@
 	layer = 2.52
 	},
 /obj/structure/pipes/vents/pump,
+/obj/structure/machinery/light/double/blue/golden_arrow,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "aBK" = (
@@ -8490,8 +8504,10 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "aCS" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/vehicle_crew,
-/turf/open/floor/almayer/mono,
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/vehicle_crew{
+	vendor_role = list()
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "aCT" = (
 /obj/effect/decal/cleanable/dirt{
@@ -8576,7 +8592,8 @@
 	brightness = 9
 	},
 /obj/structure/machinery/cm_vending/gear/smartgun{
-	req_access = list(14,16)
+	req_access = list(14,16);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/orange,
 /area/golden_arrow/platoonarmory)
@@ -8852,14 +8869,16 @@
 "aEr" = (
 /obj/structure/machinery/cm_vending/gear/spec{
 	req_access = list();
-	req_one_access = list(18,19)
+	req_one_access = list(18,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
 "aEs" = (
 /obj/structure/machinery/cm_vending/clothing/specialist/bravo{
 	req_one_access = list(16,19);
-	req_access = list()
+	req_access = list();
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -8903,9 +8922,7 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
 "aED" = (
-/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
-	roundstart_template = /datum/map_template/shuttle/tornado220_long
-	},
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "aEE" = (
@@ -9875,25 +9892,18 @@
 	},
 /turf/open/floor/almayer/orange/north,
 /area/golden_arrow/platoonarmory)
-"aIy" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
-	dir = 1;
-	name = "\improper Prep Lockers"
-	},
-/turf/closed/wall/almayer,
-/area/golden_arrow/dorms)
 "aIC" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "door_warning";
-	dir = 1
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 4;
+	id = "vehicle_elevator_railing_aux"
 	},
-/obj/structure/machinery/door_control{
-	id = "shuttersouth";
-	name = "Shutter control";
-	pixel_x = 25
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8
 	},
-/turf/open/floor/almayer,
-/area/golden_arrow/dorms)
+/turf/open/floor/almayer/edge/smooth/north{
+	dir = 8
+	},
+/area/golden_arrow/motor_pool)
 "aIG" = (
 /obj/effect/decal/medical_decals{
 	icon_state = "triagedecaltopleft";
@@ -11036,7 +11046,9 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aOt" = (
-/obj/structure/machinery/cm_vending/clothing/leader/bravo,
+/obj/structure/machinery/cm_vending/clothing/leader/bravo{
+	vendor_role = list()
+	},
 /turf/open/floor/almayer/orange,
 /area/golden_arrow/platoonarmory)
 "aOu" = (
@@ -11098,6 +11110,10 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"aOP" = (
+/obj/structure/dropship_equipment/fulton_system,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "aOQ" = (
 /obj/structure/closet/secure_closet{
 	pixel_x = -5;
@@ -11115,7 +11131,6 @@
 "aOR" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
 	pixel_y = 0;
-	density = 0;
 	req_access = null;
 	req_one_access = list(22)
 	},
@@ -11856,7 +11871,9 @@
 	dir = 1;
 	brightness = 9
 	},
-/obj/structure/machinery/cm_vending/clothing/smartgun/alpha,
+/obj/structure/machinery/cm_vending/clothing/smartgun/alpha{
+	vendor_role = list()
+	},
 /turf/open/floor/almayer/red/north,
 /area/golden_arrow/platoonarmory)
 "aRL" = (
@@ -12167,7 +12184,9 @@
 	light_power = 0.3;
 	brightness = 9
 	},
-/obj/structure/machinery/cm_vending/clothing/smartgun/charlie,
+/obj/structure/machinery/cm_vending/clothing/smartgun/charlie{
+	vendor_role = list()
+	},
 /turf/open/floor/almayer/emerald,
 /area/golden_arrow/platoonarmory)
 "aSD" = (
@@ -12198,10 +12217,12 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aSR" = (
-/obj/structure/machinery/cm_vending/clothing/vehicle_crew,
-/turf/open/space/basic,
-/turf/open/floor/almayer/mono,
-/area/golden_arrow/motor_pool)
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
+	pixel_y = 0;
+	req_one_access = list(10)
+	},
+/turf/open/floor/almayer/sterile_green_side,
+/area/golden_arrow/medical)
 "aSS" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/cargo_arrow/north,
@@ -12988,13 +13009,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "aWU" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
-	light_power = 0.7;
-	pixel_y = 22
-	},
 /obj/structure/machinery/chem_dispenser/soda/beer{
 	icon_state = "dispenser"
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -13391,7 +13410,8 @@
 "aZk" = (
 /obj/structure/machinery/cm_vending/gear/spec{
 	req_access = list();
-	req_one_access = list(16,19)
+	req_one_access = list(16,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -13622,7 +13642,8 @@
 	},
 /obj/structure/machinery/cm_vending/gear/tl{
 	req_access = list();
-	req_one_access = list(15,19)
+	req_one_access = list(15,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -13819,9 +13840,8 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
-/obj/structure/machinery/light/small/blue,
-/turf/open/space/basic,
-/turf/open/floor/almayer/mono,
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "bBB" = (
 /turf/closed/wall/almayer/outer,
@@ -13949,11 +13969,7 @@
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8
 	},
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
-	pixel_y = 0;
-	density = 0;
-	req_one_access = list(10)
-	},
+/obj/structure/machinery/cm_vending/gear/medic,
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/golden_arrow/medical)
 "bKv" = (
@@ -14326,7 +14342,8 @@
 	brightness = 9
 	},
 /obj/structure/machinery/cm_vending/gear/leader{
-	req_access = list(12,17)
+	req_access = list(12,17);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/emerald,
 /area/golden_arrow/platoonarmory)
@@ -14470,7 +14487,8 @@
 "cyt" = (
 /obj/structure/machinery/cm_vending/clothing/tl/bravo{
 	req_access = list();
-	req_one_access = list(16,19)
+	req_one_access = list(16,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -14607,9 +14625,7 @@
 "cWj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/dropship_equipment/weapon/minirocket_pod,
-/obj/structure/dropship_equipment/weapon/minirocket_pod{
-	pixel_y = 15
-	},
+/obj/structure/dropship_equipment/weapon/minirocket_pod,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "cWH" = (
@@ -14731,12 +14747,7 @@
 /turf/open/floor/almayer/green/east,
 /area/golden_arrow/cryo_cells)
 "dlJ" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
-	pixel_y = 0;
-	density = 0;
-	req_access = null;
-	req_one_access = list(10)
-	},
+/obj/structure/machinery/cm_vending/gear/medic,
 /turf/open/floor/almayer/sterile_green_corner/west,
 /area/golden_arrow/medical)
 "dmP" = (
@@ -14789,7 +14800,8 @@
 	brightness = 9
 	},
 /obj/structure/machinery/cm_vending/gear/smartgun{
-	req_access = list(14,18)
+	req_access = list(14,18);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/blue/north,
 /area/golden_arrow/platoonarmory)
@@ -14874,7 +14886,8 @@
 /area/golden_arrow/platoonprep)
 "dAO" = (
 /obj/structure/machinery/cm_vending/gear/smartgun{
-	req_access = list(14,15)
+	req_access = list(14,15);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/red/north,
 /area/golden_arrow/platoonarmory)
@@ -14976,10 +14989,15 @@
 "dGv" = (
 /obj/structure/machinery/cm_vending/gear/spec{
 	req_access = list();
-	req_one_access = list(15,19)
+	req_one_access = list(15,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
+"dGT" = (
+/obj/structure/dropship_equipment/paradrop_system,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "dHj" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -14999,7 +15017,8 @@
 "dID" = (
 /obj/structure/machinery/cm_vending/clothing/tl/alpha{
 	req_access = list();
-	req_one_access = list(15,19)
+	req_one_access = list(15,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -15175,8 +15194,7 @@
 	req_one_access = list();
 	req_access = list(27)
 	},
-/turf/open/space/basic,
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "dXT" = (
 /obj/structure/roof/cargocrane_tracks/vertical{
@@ -15421,11 +15439,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
 	},
-/obj/structure/machinery/door_control{
-	id = "shuttersouth";
-	name = "Shutter control";
-	pixel_x = 25
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "exa" = (
@@ -15653,7 +15666,8 @@
 	light_power = 0.7;
 	pixel_y = 6
 	},
-/turf/open/floor/almayer,
+/obj/structure/dropship_equipment/paradrop_system,
+/turf/open/floor/almayer/cargo/southwest,
 /area/golden_arrow/hangar)
 "eJA" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -15852,9 +15866,17 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "fiN" = (
-/obj/structure/pipes/vents/pump,
-/turf/open/space/basic,
-/turf/open/floor/almayer/mono,
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 8;
+	id = "vehicle_elevator_railing_aux"
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/edge/smooth/north{
+	dir = 4
+	},
 /area/golden_arrow/motor_pool)
 "fiV" = (
 /obj/structure/cable/heavyduty{
@@ -16050,9 +16072,9 @@
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/hangar)
 "fHG" = (
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25;
-	dir = 1
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
@@ -16482,9 +16504,7 @@
 /area/golden_arrow/platoonarmory)
 "gCc" = (
 /obj/structure/dropship_equipment/weapon/laser_beam_gun,
-/obj/structure/dropship_equipment/weapon/laser_beam_gun{
-	pixel_y = 9
-	},
+/obj/structure/dropship_equipment/weapon/laser_beam_gun,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "gCT" = (
@@ -16867,7 +16887,8 @@
 "hiU" = (
 /obj/structure/machinery/cm_vending/clothing/specialist/alpha{
 	req_access = list();
-	req_one_access = list(15,19)
+	req_one_access = list(15,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -17246,7 +17267,6 @@
 /area/golden_arrow/hangar)
 "ibH" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	light_power = 0.3;
 	dir = 1
 	},
 /turf/open/floor/almayer/sterile_green_side/north,
@@ -17509,7 +17529,8 @@
 "izB" = (
 /obj/structure/machinery/cm_vending/clothing/specialist/delta{
 	req_access = list();
-	req_one_access = list(18,19)
+	req_one_access = list(18,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -17683,8 +17704,8 @@
 /area/golden_arrow/platoon_commander_rooms)
 "iNe" = (
 /obj/structure/machinery/cm_vending/gear/medic_chemical{
-	density = 0;
-	pixel_y = 0
+	pixel_y = 0;
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/golden_arrow/medical)
@@ -17761,7 +17782,8 @@
 "iSV" = (
 /obj/structure/machinery/cm_vending/clothing/medic{
 	pixel_y = 0;
-	can_block_movement = 0
+	can_block_movement = 0;
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/sterile_green_corner/north,
 /area/golden_arrow/medical)
@@ -18026,6 +18048,9 @@
 "jsW" = (
 /obj/structure/dropship_equipment/fuel/cooling_system,
 /obj/structure/dropship_equipment/fuel/cooling_system,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
+	},
 /turf/open/floor/almayer/cargo/southwest,
 /area/golden_arrow/hangar)
 "jtd" = (
@@ -18192,6 +18217,10 @@
 	},
 /turf/open/floor/almayer/plating_striped,
 /area/golden_arrow/engineering)
+"jWJ" = (
+/obj/structure/dropship_equipment/fulton_system,
+/turf/open/floor/almayer/cargo/southwest,
+/area/golden_arrow/hangar)
 "jWK" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -18483,7 +18512,6 @@
 "kDl" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
 	pixel_y = 0;
-	density = 0;
 	req_one_access = list(22)
 	},
 /turf/open/floor/almayer,
@@ -18665,9 +18693,7 @@
 "kXr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
-	light_power = 0.7;
-	pixel_y = 6
+	dir = 1
 	},
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/golden_arrow/medical)
@@ -18898,7 +18924,8 @@
 "lym" = (
 /obj/structure/machinery/cm_vending/clothing/engi/alpha{
 	req_access = list();
-	req_one_access = list(15,19)
+	req_one_access = list(15,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -18935,7 +18962,8 @@
 "lBT" = (
 /obj/structure/machinery/cm_vending/clothing/specialist/charlie{
 	req_access = list();
-	req_one_access = list(17,19)
+	req_one_access = list(17,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -19337,9 +19365,7 @@
 /area/golden_arrow/dorms)
 "mce" = (
 /obj/structure/dropship_equipment/weapon/heavygun,
-/obj/structure/dropship_equipment/weapon/heavygun{
-	pixel_y = 10
-	},
+/obj/structure/dropship_equipment/weapon/heavygun,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "mcY" = (
@@ -19384,8 +19410,8 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/platoon_commander_rooms)
 "miP" = (
-/turf/open/space/basic,
-/turf/open/floor/almayer/mono,
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/motor_pool)
 "mjG" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_ammo/squad{
@@ -19868,10 +19894,7 @@
 /turf/open/floor/almayer/edge/smooth/corner/west,
 /area/golden_arrow/motor_pool)
 "mZk" = (
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25;
-	brightness = 7
-	},
+/obj/structure/machinery/light/double/blue/golden_arrow,
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
 "mZK" = (
@@ -19987,10 +20010,9 @@
 "nir" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
 	pixel_y = 0;
-	density = 0;
 	req_one_access = list(27)
 	},
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "nja" = (
 /obj/effect/decal/warning_stripes{
@@ -20491,7 +20513,8 @@
 	brightness = 9
 	},
 /obj/structure/machinery/cm_vending/gear/leader{
-	req_access = list(12,18)
+	req_access = list(12,18);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/blue/north,
 /area/golden_arrow/platoonarmory)
@@ -20670,6 +20693,10 @@
 /obj/item/hardpoint/locomotion/treads{
 	pixel_y = 17
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	light_power = 0.7
+	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/motor_pool)
 "oxf" = (
@@ -20819,8 +20846,10 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "oQp" = (
-/obj/structure/machinery/cm_vending/clothing/vehicle_crew,
-/turf/open/floor/almayer/mono,
+/obj/structure/machinery/cm_vending/clothing/vehicle_crew{
+	vendor_role = list()
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "oRK" = (
 /obj/structure/flora/pottedplant,
@@ -21327,7 +21356,8 @@
 	brightness = 9
 	},
 /obj/structure/machinery/cm_vending/gear/leader{
-	req_access = list(12,15)
+	req_access = list(12,15);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/red/north,
 /area/golden_arrow/platoonarmory)
@@ -21379,10 +21409,6 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
 "pXl" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	light_power = 0.3;
-	dir = 1
-	},
 /obj/structure/machinery/door_control{
 	id = "or1privacyshutter";
 	name = "Surgery and Blast Doors";
@@ -21429,7 +21455,8 @@
 	},
 /obj/structure/machinery/cm_vending/gear/tl{
 	req_access = list();
-	req_one_access = list(18,19)
+	req_one_access = list(18,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -21584,8 +21611,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/turf/open/space/basic,
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "qlw" = (
 /obj/effect/decal/warning_stripes{
@@ -21698,7 +21724,8 @@
 /obj/structure/machinery/door_control{
 	id = "shutternorth";
 	name = "Shutter control";
-	pixel_x = 25
+	pixel_x = 25;
+	req_one_access = list(12,19)
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
@@ -21712,9 +21739,10 @@
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1
 	},
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/vehicle_crew,
-/turf/open/space/basic,
-/turf/open/floor/almayer/mono,
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/vehicle_crew{
+	vendor_role = list()
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "qDU" = (
 /obj/structure/cable/heavyduty{
@@ -22040,7 +22068,8 @@
 "rhh" = (
 /obj/structure/machinery/cm_vending/clothing/engi/bravo{
 	req_access = list();
-	req_one_access = list(16,19)
+	req_one_access = list(16,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -22100,7 +22129,8 @@
 "rly" = (
 /obj/structure/machinery/cm_vending/gear/spec{
 	req_access = list();
-	req_one_access = list(17,19)
+	req_one_access = list(17,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -22210,7 +22240,8 @@
 "rzz" = (
 /obj/structure/machinery/cm_vending/clothing/medic{
 	pixel_y = 0;
-	can_block_movement = 0
+	can_block_movement = 0;
+	vendor_role = list()
 	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8
@@ -22701,7 +22732,9 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/motor_pool)
 "ssW" = (
-/obj/structure/machinery/cm_vending/clothing/smartgun/delta,
+/obj/structure/machinery/cm_vending/clothing/smartgun/delta{
+	vendor_role = list()
+	},
 /turf/open/floor/almayer/blue/north,
 /area/golden_arrow/platoonarmory)
 "stf" = (
@@ -23120,8 +23153,13 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
 "tuh" = (
-/turf/closed/wall/almayer/white/hull,
-/area/space)
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
+	pixel_y = 0;
+	req_access = null;
+	req_one_access = list(10)
+	},
+/turf/open/floor/almayer/sterile_green_side,
+/area/golden_arrow/medical)
 "tuL" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -23243,7 +23281,8 @@
 "tBX" = (
 /obj/structure/machinery/cm_vending/clothing/engi/charlie{
 	req_access = list();
-	req_one_access = list(17,19)
+	req_one_access = list(17,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -23854,7 +23893,8 @@
 	},
 /obj/structure/machinery/cm_vending/gear/tl{
 	req_access = list();
-	req_one_access = list(16,19)
+	req_one_access = list(16,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -23902,7 +23942,9 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/engineering)
 "uMR" = (
-/obj/structure/machinery/cm_vending/clothing/leader/charlie,
+/obj/structure/machinery/cm_vending/clothing/leader/charlie{
+	vendor_role = list()
+	},
 /turf/open/floor/almayer/emerald,
 /area/golden_arrow/platoonarmory)
 "uNN" = (
@@ -23970,7 +24012,8 @@
 	},
 /obj/structure/machinery/cm_vending/clothing/engi/delta{
 	req_access = list();
-	req_one_access = list(18,19)
+	req_one_access = list(18,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -24397,7 +24440,9 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/dorms)
 "vHQ" = (
-/obj/structure/machinery/cm_vending/clothing/leader/alpha,
+/obj/structure/machinery/cm_vending/clothing/leader/alpha{
+	vendor_role = list()
+	},
 /turf/open/floor/almayer/red/north,
 /area/golden_arrow/platoonarmory)
 "vIn" = (
@@ -24605,7 +24650,8 @@
 "wlT" = (
 /obj/structure/machinery/cm_vending/clothing/tl/charlie{
 	req_access = list();
-	req_one_access = list(17,19)
+	req_one_access = list(17,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -25020,7 +25066,8 @@
 	},
 /obj/structure/machinery/cm_vending/gear/tl{
 	req_access = list();
-	req_one_access = list(17,19)
+	req_one_access = list(17,19);
+	vendor_role = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -25228,8 +25275,7 @@
 	req_one_access = list();
 	req_access = list(27)
 	},
-/turf/open/space/basic,
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "xDV" = (
 /obj/structure/cable/heavyduty{
@@ -25397,9 +25443,7 @@
 /area/golden_arrow/hangar)
 "xTB" = (
 /obj/structure/dropship_equipment/weapon/minirocket_pod,
-/obj/structure/dropship_equipment/weapon/minirocket_pod{
-	pixel_y = 15
-	},
+/obj/structure/dropship_equipment/weapon/minirocket_pod,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "xTE" = (
@@ -25476,7 +25520,8 @@
 /obj/structure/machinery/door_control{
 	id = "shutternorth";
 	name = "Shutter control";
-	pixel_x = 25
+	pixel_x = 25;
+	req_one_access = list(12,19)
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
@@ -32955,12 +33000,12 @@ aLP
 kNp
 kNp
 kNp
-kNp
+avq
 kNp
 kNp
 kNp
 aLP
-kNp
+avq
 aFK
 afv
 eGp
@@ -33126,7 +33171,7 @@ abP
 abP
 abF
 mbc
-aFK
+lPW
 aoX
 aoX
 aoX
@@ -33138,7 +33183,7 @@ kNp
 aLZ
 aLZ
 aLZ
-aFK
+auO
 afv
 eGp
 kNp
@@ -34023,7 +34068,7 @@ kNp
 aLZ
 aLZ
 aLZ
-aFK
+auO
 afv
 eGp
 kNp
@@ -34182,24 +34227,24 @@ mKN
 aGt
 aCm
 aEB
-aIy
+afv
 gGG
 aXf
 aat
 aCi
 afv
 aJa
-kNp
+ngb
 kNp
 kNp
 kNp
 hbe
 hbe
+ngb
 kNp
 kNp
 kNp
-kNp
-kNp
+ngb
 aFK
 afv
 eGp
@@ -34896,7 +34941,7 @@ vrc
 aCm
 ewe
 kNp
-aIC
+aJf
 hbe
 hbe
 kNp
@@ -35071,7 +35116,7 @@ aWC
 aWC
 aWC
 aWC
-arC
+bfM
 aJs
 arC
 aTC
@@ -35248,7 +35293,7 @@ iNe
 ayN
 bIC
 dlJ
-auO
+ozg
 aEG
 aEG
 aEG
@@ -35425,7 +35470,7 @@ aKW
 aKW
 aKW
 aaT
-auO
+ozg
 aEG
 aEG
 aEG
@@ -35601,7 +35646,7 @@ aKW
 dRK
 aSV
 aKW
-aaT
+aSR
 ozg
 aEG
 aEG
@@ -35778,7 +35823,7 @@ aKW
 xbG
 rAj
 aKW
-aaT
+tuh
 ozg
 aEG
 aEG
@@ -36310,7 +36355,7 @@ aWC
 aWC
 ozg
 ozg
-tuh
+ozg
 aEG
 aEG
 aEG
@@ -37004,7 +37049,7 @@ ozg
 ozg
 ozg
 ozg
-acR
+ibH
 wJT
 abt
 abt
@@ -38053,8 +38098,8 @@ tnV
 lPm
 aEs
 act
-aWa
-aWa
+jWJ
+aOP
 aWa
 aWa
 voH
@@ -38231,7 +38276,7 @@ lPm
 aZk
 act
 eIl
-aWa
+dGT
 aWa
 aWa
 adz
@@ -45784,7 +45829,7 @@ adz
 aBE
 ezh
 ezh
-ezh
+aIC
 ezh
 ezh
 jDX
@@ -46323,7 +46368,7 @@ tLA
 aPz
 adQ
 aPz
-ayu
+miP
 rYI
 aEG
 aEG
@@ -46846,7 +46891,7 @@ adz
 shJ
 ast
 ast
-ast
+fiN
 ast
 ast
 aak
@@ -47200,7 +47245,7 @@ adz
 eBM
 dhC
 mFk
-dNn
+ayx
 dNn
 mFk
 pIe
@@ -47916,7 +47961,7 @@ tLA
 jhU
 fxp
 jhU
-ayu
+miP
 rYI
 aEG
 aEG
@@ -50384,7 +50429,7 @@ rOB
 rOB
 rYI
 dXf
-miP
+cWH
 qkD
 rYI
 rOB
@@ -50561,7 +50606,7 @@ rOB
 rOB
 aXV
 xDO
-fiN
+dFm
 bAy
 aXV
 rOB
@@ -50738,8 +50783,8 @@ rYI
 rYI
 rYI
 qBd
-miP
-aSR
+cWH
+oQp
 rYI
 rYI
 rYI
@@ -50913,11 +50958,11 @@ aEG
 aEG
 aEG
 aEG
-ayx
+rYI
 aCS
-aPz
+cWH
 oQp
-ayx
+rYI
 aEG
 aEG
 aEG
@@ -51092,7 +51137,7 @@ aEG
 aEG
 rYI
 nir
-aPz
+cWH
 auV
 rYI
 aEG

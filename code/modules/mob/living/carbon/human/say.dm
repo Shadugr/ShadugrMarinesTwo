@@ -29,7 +29,7 @@
 			.["fail_with"] = "You've used the multi-broadcast system too recently, wait [floor(multibroadcast_cooldown / 10)] more seconds."
 		return
 
-	if(length(message) >= 2 && (message[1] == "." || message[1] == ":" || message[1] == "#"))
+	if(length(message) >= 2 && (message[1] == "." || message[1] == ":" || message[1] == "#" || message[1] == "№"))
 		var/channel_prefix = lowertext(copytext_char(message, 1, 3)) // SS220 EDIT - RU fix
 		if(channel_prefix in GLOB.department_radio_keys)
 			.["message_and_language"] = trim_left(copytext_char(message, 3)) // SS220 EDIT - RU fix

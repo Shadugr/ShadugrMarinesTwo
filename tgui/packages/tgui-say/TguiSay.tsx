@@ -32,6 +32,8 @@ type State = {
   size: WindowSize;
 };
 
+const CHANNEL_REGEX = /^[:.#№][a-zA-Zfа-яА-Я0-9_]\s/;
+
 export class TguiSay extends Component<{}, State> {
   private channelIterator: ChannelIterator;
   private chatHistory: ChatHistory;
