@@ -1,6 +1,6 @@
 from flask import Flask, json
 from flask import request
-from local_coqui import tts_creator
+from local_coqui import tts_creator, SOUND_EFFECT_NONE
 
 api = Flask(__name__)
 
@@ -41,11 +41,16 @@ def process_tts():
     text = request_data['text']
     speaker = request_data.get('speaker', None)
     sample_rate = request_data.get('sample_rate', 24000)
+    effect = request_data.get('effect', SOUND_EFFECT_NONE)
 
-    print(f'Got request with text "{text}" and speaker: "{speaker}"')
+    # Convert effect to int if it's a string
+    if isinstance(effect, str):
+        effect = int(effect) if effect.isdigit() else SOUND_EFFECT_NONE
+
+    print(f'Got request with text "{text}", speaker: "{speaker}", effect: {effect}')
 
     try:
-        audio = tts_module.make_ogg_base64(text=text, speaker=speaker, sample_rate=sample_rate)
+        audio = tts_module.make_ogg_base64(text=text, speaker=speaker, sample_rate=sample_rate, effect=effect)
         payload = build_response(audio)
         return json.dumps(payload)
     except Exception as e:

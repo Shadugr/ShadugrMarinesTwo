@@ -1,16 +1,19 @@
 /datum/tts_provider/coqui
 	name = "Coqui"
 	is_enabled = TRUE
+	supports_server_effects = TRUE  // Coqui server applies effects
 
-/datum/tts_provider/coqui/request(text, datum/tts_seed/coqui/seed, datum/callback/proc_callback)
+/datum/tts_provider/coqui/request(text, datum/tts_seed/coqui/seed, datum/callback/proc_callback, effect = 0)
 	if(throttle_check())
 		return FALSE
 
 	// Coqui TTS doesn't support SSML, so we send plain text
+	// Include effect parameter for server-side audio processing
 	var/list/req_body = list(
 		"text" = text,
 		"sample_rate" = 24000,
-		"speaker" = seed.value
+		"speaker" = seed.value,
+		"effect" = effect
 	)
 
 	SShttp.create_async_request(

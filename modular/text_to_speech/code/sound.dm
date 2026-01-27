@@ -93,6 +93,7 @@
 		taskset = "taskset -ac [CONFIG_GET(string/ffmpeg_cpuaffinity)]"
 
 	var/list/output
+
 	switch(effect)
 		if(SOUND_EFFECT_RADIO)
 			output = world.shelleo({"[taskset] ffmpeg -y -hide_banner -loglevel error -i [filename_input] -filter:a "highpass=f=1000, lowpass=f=3000, acrusher=1:1:50:0:log" [filename_output]"})

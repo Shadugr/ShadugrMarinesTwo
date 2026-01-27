@@ -306,8 +306,9 @@ SUBSYSTEM_DEF(tts220)
 		var/text = request[1]
 		var/datum/tts_seed/seed = request[2]
 		var/datum/callback/proc_callback = request[3]
+		var/effect = request[4]
 		var/datum/tts_provider/provider = seed.provider
-		provider.request(text, seed, proc_callback)
+		provider.request(text, seed, proc_callback, effect)
 		tts_rps_counter++
 	tts_requests_queue.Cut(1, clamp(LAZYLEN(tts_requests_queue), 0, free_rps) + 1)
 
@@ -325,7 +326,7 @@ SUBSYSTEM_DEF(tts220)
 	tts_request_succeeded = SStts220.tts_request_succeeded
 	tts_reused = SStts220.tts_reused
 
-/datum/controller/subsystem/tts220/proc/queue_request(text, datum/tts_seed/seed, datum/callback/proc_callback)
+/datum/controller/subsystem/tts220/proc/queue_request(text, datum/tts_seed/seed, datum/callback/proc_callback, effect = 0)
 	if(LAZYLEN(tts_requests_queue) > tts_requests_queue_limit)
 		is_enabled = FALSE
 		to_chat(world, span_announcement("SERVER: очередь запросов превысила лимит, подсистема SStts220 принудительно отключена!"))
@@ -333,11 +334,11 @@ SUBSYSTEM_DEF(tts220)
 
 	if(tts_rps_counter < tts_rps_limit)
 		var/datum/tts_provider/provider = seed.provider
-		provider.request(text, seed, proc_callback)
+		provider.request(text, seed, proc_callback, effect)
 		tts_rps_counter++
 		return TRUE
 
-	tts_requests_queue += list(list(text, seed, proc_callback))
+	tts_requests_queue += list(list(text, seed, proc_callback, effect))
 	return TRUE
 
 /datum/controller/subsystem/tts220/proc/get_tts(atom/speaker, mob/listener, message, datum/tts_seed/tts_seed, localyze_type = TTS_LOCALYZE_LOCAL, effect = SOUND_EFFECT_NONE, traits = TTS_TRAIT_RATE_FASTER, preSFX = null, postSFX = null)
@@ -377,7 +378,9 @@ SUBSYSTEM_DEF(tts220)
 		text = provider.pitch_whisper(text)
 
 	var/hash = rustg_hash_string(RUSTG_HASH_MD5, lowertext(text))
-	var/filename = "data/tts_cache/[tts_seed.name]/[hash]"
+	// For providers with server-side effects, include effect in cache path
+	var/effect_suffix = (provider.supports_server_effects && effect) ? "_e[effect]" : ""
+	var/filename = "data/tts_cache/[tts_seed.name]/[hash][effect_suffix]"
 
 
 	if(fexists("[filename].ogg"))
@@ -394,9 +397,13 @@ SUBSYSTEM_DEF(tts220)
 		LAZYADD(tts_queue[filename], play_tts_cb)
 		return
 
-	var/datum/callback/cb = CALLBACK(src, PROC_REF(get_tts_callback), speaker, listener, filename, tts_seed, localyze_type, effect, preSFX, postSFX)
-	queue_request(text, tts_seed, cb)
-	LAZYADD(tts_queue[filename], play_tts_cb)
+	// For providers with server-side effects, pass effect to request; otherwise apply locally
+	var/request_effect = provider.supports_server_effects ? effect : 0
+	var/play_effect = provider.supports_server_effects ? SOUND_EFFECT_NONE : effect
+	var/datum/callback/play_tts_cb_final = CALLBACK(src, PROC_REF(play_tts), speaker, listener, filename, localyze_type, play_effect, preSFX, postSFX)
+	var/datum/callback/cb = CALLBACK(src, PROC_REF(get_tts_callback), speaker, listener, filename, tts_seed, localyze_type, play_effect, preSFX, postSFX)
+	queue_request(text, tts_seed, cb, request_effect)
+	LAZYADD(tts_queue[filename], play_tts_cb_final)
 
 /datum/controller/subsystem/tts220/proc/get_tts_callback(atom/speaker, mob/listener, filename, datum/tts_seed/seed, localyze_type, effect, preSFX, postSFX, datum/http_response/response)
 	var/datum/tts_provider/provider = seed.provider
