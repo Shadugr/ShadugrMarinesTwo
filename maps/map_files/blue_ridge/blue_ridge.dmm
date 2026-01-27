@@ -10688,6 +10688,7 @@
 	pixel_y = 6
 	},
 /obj/item/device/whistle,
+/obj/item/weapon/twohanded/breacher,
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "aMw" = (
@@ -12294,6 +12295,8 @@
 	pixel_y = 0
 	},
 /obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/pouch/pressurized_reagent_canister/tricordrazine,
+/obj/item/storage/pouch/pressurized_reagent_canister/tricordrazine,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "aTf" = (
@@ -12684,6 +12687,7 @@
 	pixel_x = 3;
 	pixel_y = 6
 	},
+/obj/item/storage/large_holster/m39,
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "aVg" = (
@@ -15133,6 +15137,10 @@
 	},
 /obj/item/book/manual/medical_diagnostics_manual,
 /obj/structure/surface/table/reinforced/prison,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "dRV" = (
@@ -22507,6 +22515,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
+"rYi" = (
+/obj/item/storage/large_holster/m39,
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "rYB" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8
@@ -31705,7 +31717,7 @@ apS
 dhv
 abC
 atI
-afz
+rYi
 afz
 acz
 aum
