@@ -4,7 +4,7 @@
 	AddComponent(/datum/component/tts_component)
 
 /mob/living/simple_animal/add_tts_component()
-	AddComponent(/datum/component/tts_component, /datum/tts_seed/silero/angel)
+	AddComponent(/datum/component/tts_component, /datum/tts_seed/coqui/claribel_dervla)
 
 /mob/living/silicon/add_tts_component()
 	AddComponent(/datum/component/tts_component, null, TTS_TRAIT_ROBOTIZE)

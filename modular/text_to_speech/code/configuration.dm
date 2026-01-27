@@ -13,6 +13,11 @@
 	config_entry_value = "http://127.0.0.1:5000/tts/"
 	protection = CONFIG_ENTRY_HIDDEN
 
+/// TTS API url for Coqui TTS provider
+/datum/config_entry/string/tts_api_url_coqui
+	config_entry_value = "http://127.0.0.1:5000/tts/"
+	protection = CONFIG_ENTRY_HIDDEN
+
 /// Should oggs be cached
 /datum/config_entry/flag/tts_cache_enabled
 	config_entry_value = TRUE

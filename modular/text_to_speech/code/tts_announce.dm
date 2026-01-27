@@ -1,7 +1,7 @@
-#define TTS_SEED_DEFAULT_ANNOUNCE /datum/tts_seed/silero/kalechos_echo
-#define TTS_SEED_ARES_ANNOUNCE /datum/tts_seed/silero/volibear
-#define TTS_SEED_YAUTJA_ANNOUNCE /datum/tts_seed/silero/wrathion_echo
-#define TTS_SEED_QUEEN_MOTHER_ANNOUNCE /datum/tts_seed/silero/alextraza_echo
+#define TTS_SEED_DEFAULT_ANNOUNCE /datum/tts_seed/coqui/andrew_chipper
+#define TTS_SEED_ARES_ANNOUNCE /datum/tts_seed/coqui/viktor_eka
+#define TTS_SEED_YAUTJA_ANNOUNCE /datum/tts_seed/coqui/zacharie_aimilios
+#define TTS_SEED_QUEEN_MOTHER_ANNOUNCE /datum/tts_seed/coqui/brenda_stern
 
 /datum/announcer
 	var/tts_seed = TTS_SEED_DEFAULT_ANNOUNCE

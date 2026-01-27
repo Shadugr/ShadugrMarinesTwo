@@ -24,7 +24,7 @@
 	if(!get_tts_seed())
 		if(alert(chooser, "Отсутствует TTS компонент. Создать?", "Изменение TTS", "Да", "Нет") == "Нет")
 			return
-		AddComponent(/datum/component/tts_component, /datum/tts_seed/silero/angel)
+		AddComponent(/datum/component/tts_component, /datum/tts_seed/coqui/claribel_dervla)
 	SEND_SIGNAL(src, COMSIG_ATOM_TTS_SEED_CHANGE, chooser, override, fancy_voice_input_tgui, new_traits)
 
 /atom/proc/tts_trait_add(trait)

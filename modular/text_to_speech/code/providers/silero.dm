@@ -1,6 +1,6 @@
 /datum/tts_provider/silero
 	name = "Silero"
-	is_enabled = TRUE
+	is_enabled = FALSE
 
 /datum/tts_provider/silero/request(text, datum/tts_seed/silero/seed, datum/callback/proc_callback)
 	if(throttle_check())
