@@ -3995,10 +3995,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "ajA" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 4;
-	brightness = 9
-	},
 /obj/structure/machinery/cm_vending/sorted/attachments/squad{
 	req_one_access = list();
 	req_one_access_txt = "8;12;39;40;22;27";
@@ -5114,6 +5110,10 @@
 /obj/structure/machinery/cm_vending/sorted/tech/comtech_tools{
 	req_access = list();
 	req_one_access = list(17,19)
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 9
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -14808,10 +14808,6 @@
 /turf/open/floor/almayer/sterile_green_side,
 /area/golden_arrow/medical)
 "dwZ" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 4;
-	brightness = 9
-	},
 /obj/structure/machinery/cm_vending/sorted/attachments/squad{
 	req_one_access = list(16,19);
 	req_access = list()
@@ -16085,6 +16081,10 @@
 	req_access = list();
 	req_one_access = list(16,19)
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 9
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
 "fJT" = (
@@ -17323,6 +17323,10 @@
 	req_access = list();
 	req_one_access = list(15,19)
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 9
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
 "ihT" = (
@@ -17353,10 +17357,6 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "ijk" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 4;
-	brightness = 9
-	},
 /obj/structure/machinery/cm_vending/sorted/attachments/squad{
 	req_one_access = list(18,19);
 	req_access = list()
@@ -23008,10 +23008,6 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/platoon_commander_rooms)
 "tcu" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 4;
-	brightness = 9
-	},
 /obj/structure/machinery/cm_vending/sorted/attachments/squad{
 	req_one_access = list(17,19);
 	req_access = list()
@@ -23889,6 +23885,10 @@
 /obj/structure/machinery/cm_vending/sorted/tech/comtech_tools{
 	req_access = list();
 	req_one_access = list(18,19)
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 9
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
