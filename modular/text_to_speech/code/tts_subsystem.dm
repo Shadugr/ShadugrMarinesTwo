@@ -382,14 +382,17 @@ SUBSYSTEM_DEF(tts220)
 	var/effect_suffix = (provider.supports_server_effects && effect) ? "_e[effect]" : ""
 	var/filename = "data/tts_cache/[tts_seed.name]/[hash][effect_suffix]"
 
+	// Determine if we need to apply effect locally or if server already applied it
+	var/play_effect = provider.supports_server_effects ? SOUND_EFFECT_NONE : effect
+	var/request_effect = provider.supports_server_effects ? effect : 0
 
 	if(fexists("[filename].ogg"))
 		tts_reused++
 		tts_rrps_counter++
-		play_tts(speaker, listener, filename, localyze_type, effect, preSFX, postSFX)
+		play_tts(speaker, listener, filename, localyze_type, play_effect, preSFX, postSFX)
 		return
 
-	var/datum/callback/play_tts_cb = CALLBACK(src, PROC_REF(play_tts), speaker, listener, filename, localyze_type, effect, preSFX, postSFX)
+	var/datum/callback/play_tts_cb = CALLBACK(src, PROC_REF(play_tts), speaker, listener, filename, localyze_type, play_effect, preSFX, postSFX)
 
 	if(LAZYLEN(tts_queue[filename]))
 		tts_reused++
@@ -397,13 +400,9 @@ SUBSYSTEM_DEF(tts220)
 		LAZYADD(tts_queue[filename], play_tts_cb)
 		return
 
-	// For providers with server-side effects, pass effect to request; otherwise apply locally
-	var/request_effect = provider.supports_server_effects ? effect : 0
-	var/play_effect = provider.supports_server_effects ? SOUND_EFFECT_NONE : effect
-	var/datum/callback/play_tts_cb_final = CALLBACK(src, PROC_REF(play_tts), speaker, listener, filename, localyze_type, play_effect, preSFX, postSFX)
 	var/datum/callback/cb = CALLBACK(src, PROC_REF(get_tts_callback), speaker, listener, filename, tts_seed, localyze_type, play_effect, preSFX, postSFX)
 	queue_request(text, tts_seed, cb, request_effect)
-	LAZYADD(tts_queue[filename], play_tts_cb_final)
+	LAZYADD(tts_queue[filename], play_tts_cb)
 
 /datum/controller/subsystem/tts220/proc/get_tts_callback(atom/speaker, mob/listener, filename, datum/tts_seed/seed, localyze_type, effect, preSFX, postSFX, datum/http_response/response)
 	var/datum/tts_provider/provider = seed.provider

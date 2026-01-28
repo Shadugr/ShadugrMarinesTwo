@@ -108,7 +108,6 @@
 		list("Marine Uniform, Camo Conforming", floor(scale * 15), /obj/item/clothing/under/marine, VENDOR_ITEM_REGULAR),
 		list("Marine Uniform, Jungle BDU", floor(scale * 15), /obj/item/clothing/under/marine/standard, VENDOR_ITEM_REGULAR),
 		list("Marine Combat Gloves", floor(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
-		list("Marine Radio Headset", floor(scale * 15), /obj/item/device/radio/headset/almayer/marine/solardevils, VENDOR_ITEM_REGULAR),
 		list("M5 Pattern Camera Headset", floor(scale * 15), /obj/item/device/overwatch_camera, VENDOR_ITEM_REGULAR),
 		list("Utility Cap, Jungle", floor(scale * 15), /obj/item/clothing/head/cmcap, VENDOR_ITEM_REGULAR),
 		list("Utility Cap, Snow", floor(scale * 15), /obj/item/clothing/head/cmcap/snow, VENDOR_ITEM_REGULAR),
@@ -635,6 +634,13 @@
 	req_access = list(ACCESS_MARINE_PREP)
 	req_one_access = list(ACCESS_MARINE_ALPHA, ACCESS_MARINE_DATABASE, ACCESS_MARINE_CARGO)
 
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/alpha/populate_product_list(scale)
+	..()
+	listed_products += list(
+		list("HEADSET", -1, null, null),
+		list("Marine Alpha Radio Headset", 99, /obj/item/device/radio/headset/almayer/marine/solardevils, VENDOR_ITEM_REGULAR),
+		)
+
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/bravo
 	req_access = list(ACCESS_MARINE_PREP)
 	req_one_access = list(ACCESS_MARINE_BRAVO, ACCESS_MARINE_DATABASE, ACCESS_MARINE_CARGO)
@@ -643,7 +649,7 @@
 	..()
 	listed_products += list(
 		list("HEADSET", -1, null, null),
-		list("Marine Bravo Radio Headset", 10, /obj/item/device/radio/headset/almayer/marine/bravo, VENDOR_ITEM_REGULAR),
+		list("Marine Bravo Radio Headset", 99, /obj/item/device/radio/headset/almayer/marine/bravo, VENDOR_ITEM_REGULAR),
 		)
 
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/charlie
@@ -654,7 +660,7 @@
 	..()
 	listed_products += list(
 		list("HEADSET", -1, null, null),
-		list("Marine Charlie Radio Headset", 10, /obj/item/device/radio/headset/almayer/marine/charlie, VENDOR_ITEM_REGULAR),
+		list("Marine Charlie Radio Headset", 99, /obj/item/device/radio/headset/almayer/marine/charlie, VENDOR_ITEM_REGULAR),
 		)
 
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/delta
@@ -665,7 +671,7 @@
 	..()
 	listed_products += list(
 		list("HEADSET", -1, null, null),
-		list("Marine Delta Radio Headset", 10, /obj/item/device/radio/headset/almayer/marine/delta, VENDOR_ITEM_REGULAR),
+		list("Marine Delta Radio Headset", 99, /obj/item/device/radio/headset/almayer/marine/delta, VENDOR_ITEM_REGULAR),
 		)
 
 //--------------SQUAD MUNITION VENDOR--------------

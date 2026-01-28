@@ -862,14 +862,14 @@
 /area/golden_arrow/cryo_cells)
 "abO" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/phone_base/rotary/no_dnd{
-	name = "Bravo Overwatch Telephone";
-	phone_category = "Command";
-	phone_id = "Bravo Overwatch"
-	},
 /obj/item/device/flashlight/lamp{
 	pixel_x = 5;
 	pixel_y = 14
+	},
+/obj/structure/phone_base/rotary/overwatch{
+	name = "Bravo Overwatch Telephone";
+	phone_category = "Command";
+	phone_id = "Bravo Overwatch"
 	},
 /turf/open/floor/almayer/orange/west,
 /area/golden_arrow/platoon_commander_rooms)
@@ -12114,14 +12114,14 @@
 /area/golden_arrow/medical)
 "aSt" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/phone_base/rotary/no_dnd{
-	name = "Alpha Overwatch Telephone";
-	phone_category = "Command";
-	phone_id = "Alpha Overwatch"
-	},
 /obj/item/device/flashlight/lamp{
 	pixel_x = 6;
 	pixel_y = 14
+	},
+/obj/structure/phone_base/rotary/overwatch{
+	phone_id = "Alpha Overwatch";
+	phone_category = "Command";
+	name = "Alpha Overwatch Telephone"
 	},
 /turf/open/floor/almayer/red/east,
 /area/golden_arrow/platoon_commander_rooms)
@@ -12351,13 +12351,12 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "aTs" = (
-/obj/structure/phone_base/rotary/no_dnd{
-	name = "Combat Information Center Telephone";
+/obj/structure/phone_base/overwatch{
 	phone_category = "Command";
 	phone_id = "Combat Information Center";
+	name = "Combat Information Center Telephone";
 	pixel_x = -22;
-	pixel_y = 30;
-	icon_state = "wall_phone"
+	pixel_y = 30
 	},
 /turf/open/floor/almayer/edge/northwest,
 /area/golden_arrow/platoon_commander_rooms)
@@ -13911,16 +13910,16 @@
 	pixel_y = 9;
 	layer = 3.4
 	},
-/obj/structure/phone_base/rotary/no_dnd{
+/obj/item/clothing/glasses/night/medhud/no_nvg{
+	pixel_y = -9;
+	pixel_x = 6
+	},
+/obj/structure/phone_base/rotary/overwatch{
 	name = "Charlie Overwatch Telephone";
 	phone_category = "Command";
 	phone_id = "Charlie Overwatch";
 	pixel_x = -6;
 	pixel_y = -2
-	},
-/obj/item/clothing/glasses/night/medhud/no_nvg{
-	pixel_y = -9;
-	pixel_x = 6
 	},
 /turf/open/floor/almayer/emerald/southeast,
 /area/golden_arrow/platoon_commander_rooms)
@@ -19110,13 +19109,6 @@
 /area/golden_arrow/platoon_commander_rooms)
 "lJP" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/phone_base/rotary/no_dnd{
-	name = "Delta Overwatch Telephone";
-	phone_category = "Command";
-	phone_id = "Delta Overwatch";
-	pixel_x = 7;
-	pixel_y = -2
-	},
 /obj/structure/machinery/computer/crew/alt{
 	dir = 4;
 	pixel_x = -4;
@@ -19126,6 +19118,13 @@
 /obj/item/clothing/glasses/night/medhud/no_nvg{
 	pixel_y = -8;
 	pixel_x = -5
+	},
+/obj/structure/phone_base/rotary/overwatch{
+	name = "Delta Overwatch Telephone";
+	phone_category = "Command";
+	phone_id = "Delta Overwatch";
+	pixel_x = 7;
+	pixel_y = -2
 	},
 /turf/open/floor/almayer/blue/southwest,
 /area/golden_arrow/platoon_commander_rooms)
