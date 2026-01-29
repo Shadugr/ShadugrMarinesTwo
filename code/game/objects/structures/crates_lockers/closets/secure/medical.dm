@@ -189,10 +189,7 @@
 	new /mob/living/carbon/human/professor_dummy(src)
 
 /obj/structure/closet/secure_closet/professor_dummy/togglelock(mob/living/user)
-	if(user.job == JOB_CMO || user.job == JOB_DI)
-		return ..()
-
-	to_chat(user, SPAN_WARNING("Only the [JOB_CMO] or the [JOB_DI] can toggle this lock."))
+	return ..()
 
 /obj/structure/closet/secure_closet/professor_dummy/dump_contents()
 	if(locate(/mob/living/carbon/human/professor_dummy) in src)
