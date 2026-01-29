@@ -437,6 +437,11 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
 "aaS" = (
@@ -5682,6 +5687,11 @@
 	open_layer = 3.3;
 	id = "squadblastdoor"
 	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 8;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/platoonarmory)
 "aqN" = (
@@ -8769,11 +8779,13 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
 "aDW" = (
+/obj/structure/window/framed/almayer,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Equipment Locker";
-	id = "squadarmory"
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
 	},
-/turf/open/floor/almayer/test_floor4,
+/turf/open/floor/plating,
 /area/golden_arrow/platoonarmory)
 "aDX" = (
 /turf/open/floor/almayer/uscm/directional/up_down/southwest,
@@ -9343,6 +9355,11 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
 "aGo" = (
@@ -9497,10 +9514,6 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Equipment Locker";
-	id = "squadarmory"
-	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
 "aGZ" = (
@@ -9585,6 +9598,11 @@
 	layer = 3.3;
 	open_layer = 3.3;
 	id = "squadblastdoor"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 8;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
 	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/platoonarmory)
@@ -12701,6 +12719,11 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
 "aVj" = (
@@ -15175,6 +15198,11 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
 "dVD" = (
@@ -15580,6 +15608,11 @@
 	layer = 3.3;
 	open_layer = 3.3;
 	id = "squadblastdoor"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 8;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
 	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/platoonarmory)
@@ -16804,6 +16837,11 @@
 	open_layer = 3.3;
 	id = "squadblastdoor"
 	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 8;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/platoonarmory)
 "hag" = (
@@ -17253,6 +17291,11 @@
 	open_layer = 3.3;
 	id = "squadblastdoor"
 	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 8;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/platoonarmory)
 "hZw" = (
@@ -17626,7 +17669,7 @@
 	req_one_access_txt = "19;27"
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 2;
+	dir = 4;
 	id = "squadarmory";
 	name = "\improper Gear Lockers"
 	},
@@ -17956,6 +17999,11 @@
 	open_layer = 3.3;
 	id = "squadblastdoor"
 	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 8;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/platoonarmory)
 "jff" = (
@@ -18185,6 +18233,11 @@
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
@@ -19226,11 +19279,6 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "lPm" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 2;
-	id = "squadarmory";
-	name = "\improper Gear Lockers"
-	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
 "lPH" = (
@@ -20391,6 +20439,11 @@
 /obj/structure/window/framed/almayer,
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/platoonarmory)
@@ -21998,6 +22051,20 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
+"qYe" = (
+/obj/structure/window/framed/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/platoonarmory)
 "qZf" = (
 /obj/structure/flora/bush/ausbushes/lavendergrass,
 /obj/structure/flora/bush/ausbushes/var3/sunnybush,
@@ -22724,6 +22791,11 @@
 "sru" = (
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
@@ -23529,6 +23601,11 @@
 	layer = 3.3;
 	open_layer = 3.3;
 	id = "squadblastdoor"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 8;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
 	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/platoonarmory)
@@ -35974,25 +36051,25 @@ nXt
 sru
 aaR
 act
-oWU
-oWU
-oWU
+aDW
+aDW
+aDW
 act
 sru
 aVi
 nXt
 act
-oWU
-oWU
-oWU
+aDW
+qYe
+aDW
 act
 nXt
 sru
 dTR
 act
-oWU
-oWU
-oWU
+aDW
+aDW
+aDW
 act
 jOP
 aGm
@@ -38097,7 +38174,7 @@ lPm
 cty
 ati
 aDL
-aDW
+lPm
 aZD
 act
 bvm
@@ -38113,7 +38190,7 @@ lPm
 ayn
 ati
 gsQ
-aDW
+lPm
 amm
 act
 mjG
@@ -38274,7 +38351,7 @@ lPm
 arh
 ati
 aDL
-aDW
+lPm
 ijk
 act
 tcu
@@ -38290,7 +38367,7 @@ lPm
 ayn
 kUR
 gsQ
-aDW
+lPm
 ajA
 act
 dwZ
@@ -38451,7 +38528,7 @@ lPm
 arh
 ati
 aDL
-aDW
+lPm
 uBJ
 act
 aoc
@@ -38467,7 +38544,7 @@ lPm
 ayn
 ati
 gsQ
-aDW
+lPm
 ihf
 act
 fIY
