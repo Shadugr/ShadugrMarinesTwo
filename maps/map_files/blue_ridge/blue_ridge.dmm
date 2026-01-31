@@ -9350,7 +9350,8 @@
 "aGm" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/shared/alpha_bravo/yellow{
 	dir = 2;
-	req_one_access = list(16,19)
+	req_one_access = list(16,19);
+	name = "\improper Bravo Squads Preparations"
 	},
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
@@ -9968,8 +9969,14 @@
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/cryo_cells)
 "aIR" = (
-/obj/structure/closet/crate/green,
-/turf/open/floor/almayer/cargo,
+/obj/item/stack/sheet/metal/large_stack,
+/obj/item/stack/sheet/metal/large_stack{
+	pixel_y = 0
+	},
+/obj/item/stack/sheet/metal/large_stack,
+/obj/item/stack/sheet/metal/large_stack,
+/obj/item/stack/sheet/metal/large_stack,
+/turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "aIS" = (
 /obj/effect/decal/medical_decals{
@@ -10222,13 +10229,10 @@
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/motor_pool)
 "aKi" = (
-/obj/structure/surface/table/almayer,
-/obj/item/prop/tableflag{
-	pixel_y = 13;
-	layer = 5
-	},
+/obj/item/stack/sheet/plasteel/large_stack,
+/obj/item/stack/sheet/plasteel/large_stack,
 /turf/open/floor/almayer,
-/area/golden_arrow/dorms)
+/area/golden_arrow/supply)
 "aKk" = (
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/almayer/green/south,
@@ -12548,8 +12552,7 @@
 /turf/open/floor/almayer/edge/smooth/endcap_left/west,
 /area/golden_arrow/cryo_cells)
 "aUl" = (
-/obj/structure/bed/chair{
-	can_buckle = 0;
+/obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
 /turf/open/floor/almayer,
@@ -12714,7 +12717,8 @@
 "aVi" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/shared/charlie_delta{
 	dir = 2;
-	req_one_access = list(17,19)
+	req_one_access = list(17,19);
+	name = "\improper Charlie Squads Preparations"
 	},
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
@@ -15193,7 +15197,8 @@
 "dTR" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/shared/alpha_bravo{
 	dir = 2;
-	req_one_access = list(15,19)
+	req_one_access = list(15,19);
+	name = "\improper Alpha Squads Preparations"
 	},
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
@@ -17019,6 +17024,11 @@
 	dir = 1
 	},
 /area/golden_arrow/motor_pool)
+"hqf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/green,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/cargo_shuttle/upper)
 "hqq" = (
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/motor_pool)
@@ -18561,6 +18571,7 @@
 /area/golden_arrow/hangar)
 "kBG" = (
 /obj/structure/closet/crate,
+/obj/structure/largecrate/supply/explosives/mortar_flare,
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/supply)
 "kCG" = (
@@ -23940,11 +23951,13 @@
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/golden_arrow/medical)
 "uww" = (
-/obj/structure/bed/chair{
-	dir = 16
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_y = 13
 	},
-/turf/open/floor/almayer,
-/area/golden_arrow/dorms)
+/obj/item/storage/box/guncase/heavy/sentry,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/supply)
 "uwE" = (
 /obj/structure/closet/secure_closet/professor_dummy{
 	pixel_y = 30
@@ -25581,12 +25594,8 @@
 /area/golden_arrow/platoon_commander_rooms)
 "xZe" = (
 /obj/structure/surface/table/almayer,
-/obj/item/notepad/black{
-	pixel_y = 0;
-	pixel_x = -6
-	},
-/obj/item/tool/pen{
-	pixel_x = 5
+/obj/structure/machinery/computer/overwatch/almayer{
+	dir = 4
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
@@ -31448,7 +31457,7 @@ vQy
 alb
 afz
 afz
-afz
+aKi
 afz
 aWP
 apS
@@ -31976,10 +31985,10 @@ afz
 ass
 abC
 aCR
-afz
+aIR
 aVO
 aum
-acz
+uww
 abn
 aum
 aIo
@@ -32501,7 +32510,7 @@ aEK
 aEK
 aEK
 ife
-gjM
+hqf
 afz
 afz
 rMA
@@ -33038,7 +33047,7 @@ afz
 apS
 lQZ
 lQZ
-aIR
+lQZ
 oFX
 afz
 afz
@@ -33279,9 +33288,9 @@ aoX
 aoX
 aoX
 kNp
+kNp
 aUl
-aUl
-aUl
+kNp
 kNp
 aLZ
 aLZ
@@ -33456,9 +33465,9 @@ aoX
 agc
 aoX
 kNp
-kNp
-kNp
-kNp
+aky
+xZe
+tDA
 kNp
 aLZ
 ggp
@@ -33633,9 +33642,9 @@ aoX
 qES
 aMV
 kNp
-xZe
-uww
-aky
+kNp
+kNp
+kNp
 kNp
 aLZ
 ggp
@@ -33810,9 +33819,9 @@ hkv
 agc
 aoX
 kNp
-aKi
-aoX
-tDA
+alw
+kNp
+alw
 kNp
 aLZ
 ggp
@@ -33987,9 +33996,9 @@ aoX
 agc
 aoX
 kNp
+alw
 kNp
-kNp
-kNp
+alw
 kNp
 aLZ
 ggp
@@ -34164,9 +34173,9 @@ aoX
 aMV
 aoX
 kNp
-alw
-alw
-alw
+kNp
+kNp
+kNp
 kNp
 aLZ
 aLZ
@@ -34339,13 +34348,13 @@ afv
 aJa
 ngb
 kNp
-kNp
-kNp
 hbe
 hbe
+kNp
 ngb
 kNp
-kNp
+hbe
+hbe
 kNp
 ngb
 aFK
@@ -34516,13 +34525,13 @@ afv
 afv
 afv
 afv
-afv
-afv
 axw
 aBo
 afv
 afv
 afv
+axw
+aBo
 afv
 afv
 afv
@@ -34693,13 +34702,13 @@ kNp
 yhA
 kNp
 kNp
-kNp
-kNp
+alW
+alW
 alW
 alW
 aad
-kNp
-kNp
+alW
+alW
 kNp
 kNp
 kNp

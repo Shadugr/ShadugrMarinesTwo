@@ -733,9 +733,10 @@
 		list("M240 Incinerator tank", floor(scale * 3), /obj/item/ammo_magazine/flamer_tank, VENDOR_ITEM_REGULAR),
 		list("M240 Incinerator tank (B-Gel)", floor(scale), /obj/item/ammo_magazine/flamer_tank/gellied, VENDOR_ITEM_REGULAR),
 		list("M240 Incinerator tank (EX)", 1, /obj/item/ammo_magazine/flamer_tank/EX, VENDOR_ITEM_REGULAR),
-		list("M41AE2 ammo box (10x24mm)", floor(scale * 2), /obj/item/ammo_magazine/hpr_box, VENDOR_ITEM_REGULAR),
-		list("M41AE2 ammo box (10x24mm holo-target)", floor(scale * 1), /obj/item/ammo_magazine/hpr_box/holo_target, VENDOR_ITEM_REGULAR),
-		list("M41AE2 AP ammo box (10x24mm)", floor(scale * 1), /obj/item/ammo_magazine/hpr_box/ap, VENDOR_ITEM_REGULAR),
+		list("M41AE2 ammo box (10x24mm)", floor(scale * 3), /obj/item/ammo_magazine/hpr_box, VENDOR_ITEM_REGULAR),
+		list("M41AE2 ammo box (10x24mm holo-target)", floor(scale * 2), /obj/item/ammo_magazine/hpr_box/holo_target, VENDOR_ITEM_REGULAR),
+		list("M41AE2 AP ammo box (10x24mm)", floor(scale * 2), /obj/item/ammo_magazine/hpr_box/ap, VENDOR_ITEM_REGULAR),
+		list("M41AE2 HEAP ammo box (10x24mm)", floor(scale * 1), /obj/item/ammo_magazine/hpr_box/heap, VENDOR_ITEM_REGULAR),
 
 		list("RESTRICTED SIDEARM AMMUNITION", -1, null, null),
 		list("VP78 Magazine", floor(scale * 5), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),

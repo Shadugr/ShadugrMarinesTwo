@@ -33,6 +33,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 		list("M74 AGM-I Incendiary Grenades x6", 40, /obj/effect/essentials_set/agmi_6_pack, null, VENDOR_ITEM_REGULAR),
 		list("M74 AGM-S Smoke Grenades x6", 20, /obj/effect/essentials_set/agms_6_pack, null, VENDOR_ITEM_REGULAR),
 		list("G2 Electroshock Grenade Pack x6", 40, /obj/effect/essentials_set/sebb_6_pack, null, VENDOR_ITEM_REGULAR),
+		list("M15 frag grenade box", 40, /obj/item/ammo_box/magazine/nade_box/m15, null, VENDOR_ITEM_REGULAR),
 
 		list("EXTRA FLAMETHROWER TANKS", 0, null, null, null),
 		list("Large Incinerator Tank", 40, /obj/item/ammo_magazine/flamer_tank/large, null, VENDOR_ITEM_REGULAR),
@@ -108,8 +109,14 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		list("Heat Absorbent Coif", 0, /obj/item/clothing/mask/rebreather/scarf, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
 
 		list("RESTRICTED FIREARMS", 0, null, null, null),
-		list("VP78 Pistol", 15, /obj/item/storage/box/guncase/vp78, null, VENDOR_ITEM_REGULAR),
-		list("SU-6 Smart Pistol", 15, /obj/item/storage/box/guncase/smartpistol, null, VENDOR_ITEM_REGULAR),
+		list("VP78 Pistol", 8, /obj/item/storage/box/guncase/vp78, null, VENDOR_ITEM_REGULAR),
+		list("SU-6 Smart Pistol", 12, /obj/item/storage/box/guncase/smartpistol, null, VENDOR_ITEM_REGULAR),
+		list("M240 Incinerator Unit", 8, /obj/item/storage/box/guncase/flamer, null, VENDOR_ITEM_REGULAR),
+		list("XM99A plasma pulse rifle", 20, /obj/item/storage/box/guncase/heavy/XM99, null, VENDOR_ITEM_REGULAR),
+		list("M79 Grenade Launcher", 24, /obj/item/storage/box/guncase/m79, null, VENDOR_ITEM_REGULAR),
+		list("M41AE2 heavy pulse rifle", 24, /obj/item/storage/box/guncase/lmg, null, VENDOR_ITEM_REGULAR),
+		list("M56D Heavy Machine Gun", 25, /obj/item/storage/box/guncase/m56d, null, VENDOR_ITEM_REGULAR),
+		list("M2C Heavy Machine Gun", 30, /obj/item/storage/box/guncase/m2c, null, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARM AMMUNITION", 0, null, null, null),
 		list("M44 Heavy Speed Loader (.44)", 10, /obj/item/ammo_magazine/revolver/heavy, null, VENDOR_ITEM_REGULAR),

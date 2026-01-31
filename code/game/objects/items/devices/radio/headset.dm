@@ -669,20 +669,22 @@
 	has_tracker = TRUE
 	misc_tracking = TRUE
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
+	initial_keys = list(/obj/item/device/encryptionkey/public)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/seclead
-	initial_keys = list(/obj/item/device/encryptionkey/squadlead)
+	initial_keys = list(/obj/item/device/encryptionkey/squadlead, /obj/item/device/encryptionkey/public)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/pltco
+	frequency = PUB_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/mcom/alt/squads, /obj/item/device/encryptionkey/squadlead, /obj/item/device/encryptionkey/medres, /obj/item/device/encryptionkey/engi) // SS220 EDIT - squads
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/vc
 	frequency = JTAC_FREQ
-	initial_keys = list(/obj/item/device/encryptionkey/vc)
+	initial_keys = list(/obj/item/device/encryptionkey/vc, /obj/item/device/encryptionkey/public)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/po
 	frequency = JTAC_FREQ
-	initial_keys = list(/obj/item/device/encryptionkey/po)
+	initial_keys = list(/obj/item/device/encryptionkey/po, /obj/item/device/encryptionkey/public)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/forecon
 	name = "USCM SOF headset"
