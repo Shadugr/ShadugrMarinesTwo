@@ -23,7 +23,7 @@
 		"primary" = primary_objective,
 		"secondary" = secondary_objective,
 	)
-	data["partial_squad_ref"] = copytext(REF(src), 2, 12)
+	data["partial_squad_ref"] = replacetext("[type]", "/", "-")
 	return data
 
 /datum/squad/proc/get_leadership(mob/user)
