@@ -348,6 +348,7 @@
 	new /obj/item/storage/pill_bottle/inaprovaline(src)
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/storage/pill_bottle/peridaxon(src)
+	new /obj/item/storage/pill_bottle/iron(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
