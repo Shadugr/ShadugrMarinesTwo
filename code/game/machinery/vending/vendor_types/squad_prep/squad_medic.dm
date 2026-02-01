@@ -123,7 +123,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_medic, list(
 	return GLOB.cm_vending_gear_medic
 
 //------------CLOTHING VENDOR---------------
-
+// медшкаф с бронёй и обвесами
 GLOBAL_LIST_INIT(cm_vending_clothing_medic, list(
 
 		list("ARMOR PAINT (CHOOSE 1)", 0, null, null, null),
