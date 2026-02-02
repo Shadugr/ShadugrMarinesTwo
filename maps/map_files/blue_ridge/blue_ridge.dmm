@@ -22350,6 +22350,10 @@
 	pixel_x = 0;
 	pixel_y = 6
 	},
+/obj/item/pamphlet/skill/defib,
+/obj/item/pamphlet/skill/defib,
+/obj/item/pamphlet/skill/defib,
+/obj/item/pamphlet/skill/defib,
 /turf/open/floor/strata/fake_wood,
 /area/golden_arrow/platoon_commander_rooms)
 "rzW" = (
