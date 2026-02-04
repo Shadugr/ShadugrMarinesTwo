@@ -1,9 +1,9 @@
 /datum/squad
 	max_engineers = 3
-	max_medics = 2
+	max_medics = 1
 	max_specialists = 1
 	max_tl = 2
-	max_smartgun = 2
+	max_smartgun = 1
 	max_leaders = 1
 	/// Ограничение количества пехоты на отряд
 	var/max_riflemen = 4
@@ -30,14 +30,6 @@
 /datum/squad/marine/alpha
 	equipment_color = "#db1d1d"
 	chat_color = "#db1d1d"
-	max_riflemen = 6
-	max_engineers = 0
-	max_medics = 2
-	max_specialists = 1
-	max_tl = 2
-	max_smartgun = 2
-	max_leaders = 1
-	max_rto = 1
 
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
@@ -53,15 +45,7 @@
 	usable = FALSE // Включается при ready_players_usable готовых игроков
 	ready_players_usable = 10
 	platoon_associated_type = /datum/squad/marine/alpha
-	max_riflemen = 4
-	max_engineers = 4
-	max_medics = 0
-	max_specialists = 0
-	max_tl = 2
-	max_smartgun = 2
-	max_leaders = 1
-	max_rto = 1
-	
+
 
 /datum/squad/marine/charlie
 	equipment_color = "#c864c8"
@@ -75,14 +59,6 @@
 	usable = FALSE // Включается при ready_players_usable готовых игроков
 	ready_players_usable = 20
 	platoon_associated_type = /datum/squad/marine/alpha
-	max_riflemen = 4
-	max_engineers = 0
-	max_medics = 4
-	max_specialists = 0
-	max_tl = 2
-	max_smartgun = 2
-	max_leaders = 1
-	max_rto = 1
 
 
 /datum/squad/marine/delta
@@ -97,14 +73,6 @@
 	usable = FALSE // Включается при ready_players_usable готовых игроков
 	ready_players_usable = 28
 	platoon_associated_type = /datum/squad/marine/alpha
-	max_riflemen = 8
-	max_engineers = 0
-	max_medics = 2
-	max_specialists = 1
-	max_tl = 2
-	max_smartgun = 2
-	max_leaders = 1
-	max_rto = 1
 
 
 // Предложение как можно переименовать отряды:

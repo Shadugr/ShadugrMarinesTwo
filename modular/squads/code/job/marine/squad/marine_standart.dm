@@ -6,11 +6,6 @@
 	total_positions = 8
 	spawn_positions = 8
 
-// Инженер - у альфы нет, добавляется от тех. отряда
-/datum/job/marine/engineer/ai
-	total_positions = 0
-	spawn_positions = 0
-
 // Медик
 /datum/job/marine/medic/ai
 	total_positions = 2
@@ -20,11 +15,6 @@
 /datum/job/marine/smartgunner/ai
 	total_positions = 2
 	spawn_positions = 2
-
-// Оператор
-/datum/job/marine/standard/ai/rto
-	total_positions = 1
-	spawn_positions = 1
 
 // Лидер группы
 /datum/job/marine/tl
