@@ -157,6 +157,10 @@
 	ID.set_assignment((user.assigned_squad ? (user.assigned_squad.name + " ") : "") + "Engineer")
 	GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "Engineer")
 
+	// Force refresh Squad Info data so the icon updates
+	if(user.assigned_squad)
+		user.assigned_squad.update_all_squad_info()
+
 /obj/item/pamphlet/skill/loader/on_use(mob/living/carbon/human/user)
 	. = ..()
 	user.rank_fallback = "load"

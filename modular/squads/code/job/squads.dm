@@ -1,12 +1,12 @@
 /datum/squad
 	max_engineers = 3
-	max_medics = 1
+	max_medics = 2
 	max_specialists = 1
 	max_tl = 2
-	max_smartgun = 1
+	max_smartgun = 2
 	max_leaders = 1
 	/// Ограничение количества пехоты на отряд
-	var/max_riflemen = 4
+	var/max_riflemen = 6
 	/// Ограничение количества связистов
 	var/max_rto = 0
 	/// Количество уже имеющихся связистов

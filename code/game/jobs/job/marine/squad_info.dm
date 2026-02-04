@@ -178,6 +178,8 @@
 					rank = "RTO"
 				else
 					rank = ""
+			if(H.rank_fallback)
+				rank = H.rank_fallback
 			squad_info_data["fireteams"][team]["sqldr"] += list("rank" = rank)
 		else
 			squad_info_data["fireteams"][team]["sqldr"] += list("paygrade" = "N/A")
@@ -306,6 +308,8 @@
 						rank = "RTO"
 					else
 						rank = ""
+				if(H.rank_fallback)
+					rank = H.rank_fallback
 				mar[H.real_name] += list("rank" = rank)
 			else
 				mar[H.real_name] += list("paygrade" = "N/A")
