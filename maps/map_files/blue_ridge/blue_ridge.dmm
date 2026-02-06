@@ -15164,18 +15164,6 @@
 /obj/structure/prop/almayer/ai_wallmonitor/east,
 /turf/open/floor/almayer/aicore/glowing,
 /area/golden_arrow/ai_interface)
-"dDp" = (
-/obj/structure/largecrate/random/case/double,
-/obj/structure/largecrate/random/case{
-	pixel_x = 3;
-	pixel_y = -12
-	},
-/obj/structure/largecrate/random/case{
-	pixel_x = -3;
-	pixel_y = 20
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/supply)
 "dDq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -33647,7 +33635,7 @@ ahl
 ahl
 ahl
 gAk
-dDp
+aum
 aeg
 ahl
 ahl
@@ -33827,7 +33815,7 @@ aLp
 atH
 aIb
 aRl
-aum
+aMl
 ahl
 aWh
 aWh
