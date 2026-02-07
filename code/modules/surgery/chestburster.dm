@@ -60,7 +60,7 @@
 
 /datum/surgery_step/cut_larval_pseudoroots/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	user.affected_message(target,
-		SPAN_NOTICE("You start carefully cutting the larva's pseudoroots away from [target]'s vital organs with \the [tool]."),
+		SPAN_HELPFUL("You start carefully cutting the larva's pseudoroots away from [target]'s vital organs with \the [tool]."),
 		SPAN_NOTICE("[user] starts to carefully cut the tubes connecting the alien larva to your vital organs with \the [tool]."),
 		SPAN_NOTICE("[user] starts to carefully cut the tubes connecting the alien larva to [target]'s vital organs with \the [tool]."))
 
@@ -69,7 +69,7 @@
 /datum/surgery_step/cut_larval_pseudoroots/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	if(tool_type == /obj/item/tool/surgery/scalpel/pict_system)
 		user.visible_message(SPAN_NOTICE("[user] severs the last of the pseudoroots with \the [tool], without spilling any of the larva's acid blood."),
-			SPAN_NOTICE("You sever the last of the pseudoroots with \the [tool], without spilling any of the larva's acid blood."))
+			SPAN_HELPFUL("You sever the last of the pseudoroots with \the [tool], without spilling any of the larva's acid blood."))
 	else
 		user.visible_message(SPAN_WARNING("Pressurised acid sprays everywhere as [user] severs the larva's tubes!"),
 			SPAN_WARNING("As you sever the larva's pseudoroots, acid sprays through the air, pools in [target]'s [surgery.affected_limb.cavity], and spills sizzling across \his organs!"))
@@ -123,12 +123,12 @@
 /datum/surgery_step/remove_larva/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	if(tool)
 		user.affected_message(target,
-			SPAN_NOTICE("You try to extract the larva from [target]'s chest with \the [tool]."),
+			SPAN_HELPFUL("You try to extract the larva from [target]'s chest with \the [tool]."),
 			SPAN_NOTICE("[user] tries to extract the larva from your chest with \the [tool]."),
 			SPAN_NOTICE("[user] tries to extract the larva from [target]'s chest with \the [tool]."))
 	else
 		user.affected_message(target,
-			SPAN_NOTICE("You try to forcefully rip the larva from [target]'s chest with your bare hand."),
+			SPAN_HELPFUL("You try to forcefully rip the larva from [target]'s chest with your bare hand."),
 			SPAN_NOTICE("[user] tries to forcefully rip the larva from your chest."),
 			SPAN_NOTICE("[user] tries to forcefully rip the larva from [target]'s chest."))
 

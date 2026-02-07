@@ -33,14 +33,14 @@
 /datum/surgery_step/incision/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	if(tool_type == /obj/item/tool/surgery/scalpel/manager)
 		user.affected_message(target,
-			SPAN_NOTICE("You start to construct a prepared incision in [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
+			SPAN_HELPFUL("You start to construct a prepared incision in [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
 			SPAN_NOTICE("[user] starts to construct a prepared incision in your [surgery.affected_limb.display_name] with \the [tool]."),
 			SPAN_NOTICE("[user] starts to construct a prepared incision in [target]'s [surgery.affected_limb.display_name] with \the [tool]."))
 
 		target.custom_pain("You feel a horrible, searing pain in your [surgery.affected_limb.display_name] as it is pushed apart!", 1)
 	else
 		user.affected_message(target,
-			SPAN_NOTICE("You start to make an incision on [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
+			SPAN_HELPFUL("You start to make an incision on [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
 			SPAN_NOTICE("[user] starts making an incision on your [surgery.affected_limb.display_name] with \the [tool]."),
 			SPAN_NOTICE("[user] starts making an incision on [target]'s [surgery.affected_limb.display_name] with \the [tool]."))
 
@@ -53,21 +53,21 @@
 
 	if(tool_type == /obj/item/tool/surgery/scalpel/manager)
 		user.affected_message(target,
-			SPAN_NOTICE("You have constructed a prepared incision in [target]'s [surgery.affected_limb.display_name]."),
+			SPAN_HELPFUL("You have constructed a prepared incision in [target]'s [surgery.affected_limb.display_name]."),
 			SPAN_NOTICE("[user] has constructed a prepared incision in your [surgery.affected_limb.display_name]."),
 			SPAN_NOTICE("[user] has constructed a prepared incision in [target]'s [surgery.affected_limb.display_name]."))
 
 		surgery.status += 2 //IMS completes all steps.
 	else if(tool_type == /obj/item/tool/surgery/scalpel/laser && prob(las_scalpel.bloodlessprob))
 		user.affected_message(target,
-			SPAN_NOTICE("You finish making a bloodless incision on [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
+			SPAN_HELPFUL("You finish making a bloodless incision on [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
 			SPAN_NOTICE("[user] finishes making a bloodless incision on your [surgery.affected_limb.display_name] with \the [tool]."),
 			SPAN_NOTICE("[user] finishes making a bloodless incision on [target]'s [surgery.affected_limb.display_name] with \the [tool]."))
 
 		surgery.status++ //A laser scalpel may cauterise as it cuts.
 	else
 		user.affected_message(target,
-			SPAN_NOTICE("You finish the incision on [target]'s [surgery.affected_limb.display_name]."),
+			SPAN_HELPFUL("You finish the incision on [target]'s [surgery.affected_limb.display_name]."),
 			SPAN_NOTICE("[user] finishes the incision on your [surgery.affected_limb.display_name]."),
 			SPAN_NOTICE("[user] finishes the incision on [target]'s [surgery.affected_limb.display_name]."))
 
@@ -152,12 +152,12 @@
 /datum/surgery_step/clamp_bleeders_step/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	if(tool_type in ligation_tools)
 		user.affected_message(target,
-			SPAN_NOTICE("You begin ligating bleeders in [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
+			SPAN_HELPFUL("You begin ligating bleeders in [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
 			SPAN_NOTICE("[user] begins to tie off bleeders in your [surgery.affected_limb.display_name] with \the [tool]."),
 			SPAN_NOTICE("[user] begins to tie off bleeders in [target]'s [surgery.affected_limb.display_name] with \the [tool]."))
 	else
 		user.affected_message(target,
-			SPAN_NOTICE("You begin clamping bleeders in [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
+			SPAN_HELPFUL("You begin clamping bleeders in [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
 			SPAN_NOTICE("[user] begins to clamp bleeders in your [surgery.affected_limb.display_name] with \the [tool]."),
 			SPAN_NOTICE("[user] begins to clamp bleeders in [target]'s [surgery.affected_limb.display_name] with \the [tool]."))
 
@@ -167,12 +167,12 @@
 /datum/surgery_step/clamp_bleeders_step/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	if(tool_type in ligation_tools)
 		user.affected_message(target,
-			SPAN_NOTICE("You ligate bleeders in [target]'s [surgery.affected_limb.display_name]."),
+			SPAN_HELPFUL("You ligate bleeders in [target]'s [surgery.affected_limb.display_name]."),
 			SPAN_NOTICE("[user] finishes tying off bleeders in your [parse_zone(target_zone)]."),
 			SPAN_NOTICE("[user] finishes tying off bleeders in [target]'s [parse_zone(target_zone)]."))
 	else
 		user.affected_message(target,
-			SPAN_NOTICE("You clamp bleeders in [target]'s [surgery.affected_limb.display_name]."),
+			SPAN_HELPFUL("You clamp bleeders in [target]'s [surgery.affected_limb.display_name]."),
 			SPAN_NOTICE("[user] clamps bleeders in your [parse_zone(target_zone)]."),
 			SPAN_NOTICE("[user] clamps bleeders in [target]'s [parse_zone(target_zone)]."))
 
@@ -233,12 +233,12 @@
 /datum/surgery_step/retract_skin/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	if(target_zone == "groin")
 		user.affected_message(target,
-			SPAN_NOTICE("You begin prying open the incision and rearranging the organs in [target]'s lower abdomen with \the [tool]."),
+			SPAN_HELPFUL("You begin prying open the incision and rearranging the organs in [target]'s lower abdomen with \the [tool]."),
 			SPAN_NOTICE("[user] begins to pry open the incision and rearrange the organs in your lower abdomen with \the [tool]."),
 			SPAN_NOTICE("[user] begins to pry open the incision and rearrange the organs in [target]'s lower abdomen with \the [tool]."))
 	else
 		user.affected_message(target,
-			SPAN_NOTICE("You begin drawing back the skin and tissue around the incision on [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
+			SPAN_HELPFUL("You begin drawing back the skin and tissue around the incision on [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
 			SPAN_NOTICE("[user] begins drawing back the skin and tissue around the incision on your [surgery.affected_limb.display_name] with \the [tool]."),
 			SPAN_NOTICE("[user] begins drawing back the skin and tissue around the incision on [target]'s [surgery.affected_limb.display_name] with \the [tool]."))
 
@@ -256,17 +256,17 @@
 	switch(target_zone)
 		if("head")
 			user.affected_message(target,
-				SPAN_NOTICE("You hold the incision on [target]'s head open with \the [tool], exposing [h_his] skull."),
+				SPAN_HELPFUL("You hold the incision on [target]'s head open with \the [tool], exposing [h_his] skull."),
 				SPAN_NOTICE("[user] holds the incision on your head open with \the [tool], exposing your skull."),
 				SPAN_NOTICE("[user] holds the incision on [target]'s head open with \the [tool], exposing [h_his] skull."))
 		if("groin")
 			user.affected_message(target,
-				SPAN_NOTICE("You hold the incision on [target]'s lower abdomen open with \the [tool], exposing [h_his] viscera."),
+				SPAN_HELPFUL("You hold the incision on [target]'s lower abdomen open with \the [tool], exposing [h_his] viscera."),
 				SPAN_NOTICE("[user] holds the incision on your lower abdomen open with \the [tool], exposing your viscera."),
 				SPAN_NOTICE("[user] holds the incision on [target]'s lower abdomen open with \the [tool], exposing [h_his] viscera."))
 		else
 			user.affected_message(target,
-				SPAN_NOTICE("You hold the incision on [target]'s [surgery.affected_limb.display_name] open with \the [tool]."),
+				SPAN_HELPFUL("You hold the incision on [target]'s [surgery.affected_limb.display_name] open with \the [tool]."),
 				SPAN_NOTICE("[user] holds the incision on your [surgery.affected_limb.display_name] open with \the [tool]."),
 				SPAN_NOTICE("[user] holds the incision on [target]'s [surgery.affected_limb.display_name] open with \the [tool]."))
 
@@ -336,7 +336,7 @@
 
 /datum/surgery_step/cauterize/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	user.affected_message(target,
-		SPAN_NOTICE("You start cauterizing the incision on [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
+		SPAN_HELPFUL("You start cauterizing the incision on [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
 		SPAN_NOTICE("[user] starts to cauterize the incision on your [surgery.affected_limb.display_name] with \the [tool]."),
 		SPAN_NOTICE("[user] starts to cauterize the incision on [target]'s [surgery.affected_limb.display_name] with \the [tool]."))
 
@@ -345,7 +345,7 @@
 
 /datum/surgery_step/cauterize/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	user.affected_message(target,
-		SPAN_NOTICE("You cauterize the incision on [target]'s [surgery.affected_limb.display_name]."),
+		SPAN_HELPFUL("You cauterize the incision on [target]'s [surgery.affected_limb.display_name]."),
 		SPAN_NOTICE("[user] cauterizes the incision on your [surgery.affected_limb.display_name]."),
 		SPAN_NOTICE("[user] cauterizes the incision on [target]'s [surgery.affected_limb.display_name]."))
 
@@ -407,7 +407,7 @@
 
 /datum/surgery_step/saw_encased/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	user.affected_message(target,
-		SPAN_NOTICE("You begin to cut through [target]'s [surgery.affected_limb.encased] with \the [tool]."),
+		SPAN_HELPFUL("You begin to cut through [target]'s [surgery.affected_limb.encased] with \the [tool]."),
 		SPAN_NOTICE("[user] begins to cut through your [surgery.affected_limb.encased] with \the [tool]."),
 		SPAN_NOTICE("[user] begins to cut through [target]'s [surgery.affected_limb.encased] with \the [tool]."))
 
@@ -419,7 +419,7 @@
 
 /datum/surgery_step/saw_encased/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	user.affected_message(target,
-		SPAN_NOTICE("You finish cutting through [target]'s [surgery.affected_limb.encased]."),
+		SPAN_HELPFUL("You finish cutting through [target]'s [surgery.affected_limb.encased]."),
 		SPAN_NOTICE("[user] finishes cutting through your [surgery.affected_limb.encased]."),
 		SPAN_NOTICE("[user] finishes cutting through [target]'s [surgery.affected_limb.encased]."))
 
@@ -429,13 +429,13 @@
 	if(surgery.affected_limb.status & LIMB_BROKEN) //Can't shatter what is already broken.
 		var/affected_bone = surgery.affected_limb.name == "chest" ? "ribs" : "skull"
 		user.affected_message(target,
-			SPAN_WARNING("You hack through [target]'s broken [affected_bone]!"),
+			SPAN_HELPFUL("You hack through [target]'s broken [affected_bone]!"),
 			SPAN_WARNING("[user] hacks through your broken [affected_bone]!"),
 			SPAN_WARNING("[user] hacks through [target]'s broken [affected_bone]!"))
 
 	else
 		user.affected_message(target,
-			SPAN_WARNING("You shatter [target]'s [surgery.affected_limb.encased]!"),
+			SPAN_HELPFUL("You shatter [target]'s [surgery.affected_limb.encased]!"),
 			SPAN_WARNING("[user] shatters your [surgery.affected_limb.encased]!"),
 			SPAN_WARNING("[user] shatters [target]'s [surgery.affected_limb.encased]!"))
 
@@ -466,7 +466,7 @@
 
 /datum/surgery_step/open_encased_step/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	user.affected_message(target,
-		SPAN_NOTICE("You start forcing [target]'s [surgery.affected_limb.encased] open with \the [tool]."),
+		SPAN_HELPFUL("You start forcing [target]'s [surgery.affected_limb.encased] open with \the [tool]."),
 		SPAN_NOTICE("[user] begins to force your [surgery.affected_limb.encased] open with \the [tool]."),
 		SPAN_NOTICE("[user] begins to force [target]'s [surgery.affected_limb.encased] open with \the [tool]."))
 
@@ -476,7 +476,7 @@
 /datum/surgery_step/open_encased_step/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	var/brain = surgery.affected_limb.body_part == BODY_FLAG_HEAD ? TRUE : FALSE
 	user.affected_message(target,
-		SPAN_NOTICE("You use \the [tool] to hold [target]'s [surgery.affected_limb.encased] open, exposing \his [brain ? "brain" : "vital organs"]."),
+		SPAN_HELPFUL("You use \the [tool] to hold [target]'s [surgery.affected_limb.encased] open, exposing \his [brain ? "brain" : "vital organs"]."),
 		SPAN_NOTICE("[user] uses \the [tool] to hold your [surgery.affected_limb.encased] open, exposing your [brain ? "brain" : "vital organs"]."),
 		SPAN_NOTICE("[user] uses \the [tool] to hold [target]'s [surgery.affected_limb.encased] open, exposing \his [brain ? "brain" : "vital organs"]."))
 
@@ -531,7 +531,7 @@
 
 /datum/surgery_step/close_encased_step/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	user.affected_message(target,
-		SPAN_NOTICE("You start bending [target]'s [surgery.affected_limb.encased] back into place with \the [tool]."),
+		SPAN_HELPFUL("You start bending [target]'s [surgery.affected_limb.encased] back into place with \the [tool]."),
 		SPAN_NOTICE("[user] starts bending your [surgery.affected_limb.encased] back into place with \the [tool]."),
 		SPAN_NOTICE("[user] starts bending [target]'s [surgery.affected_limb.encased] back into place with \the [tool]."))
 
@@ -540,7 +540,7 @@
 
 /datum/surgery_step/close_encased_step/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	user.affected_message(target,
-		SPAN_NOTICE("You close [target]'s [surgery.affected_limb.encased]."),
+		SPAN_HELPFUL("You close [target]'s [surgery.affected_limb.encased]."),
 		SPAN_NOTICE("[user] closes your [surgery.affected_limb.encased]."),
 		SPAN_NOTICE("[user] closes [target]'s [surgery.affected_limb.encased]."))
 
@@ -595,14 +595,14 @@
 /datum/surgery_step/mend_encased/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	if(tool_type == /obj/item/tool/surgery/bonegel)
 		user.affected_message(target,
-			SPAN_NOTICE("You start applying \the [tool] to [target]'s [surgery.affected_limb.encased]."),
+			SPAN_HELPFUL("You start applying \the [tool] to [target]'s [surgery.affected_limb.encased]."),
 			SPAN_NOTICE("[user] starts to apply \the [tool] to your [surgery.affected_limb.encased]."),
 			SPAN_NOTICE("[user] starts to apply \the [tool] to [target]'s [surgery.affected_limb.encased]."))
 
 		target.custom_pain("Something stings inside your [surgery.affected_limb.display_name]!", 1)
 	else
 		user.affected_message(target,
-			SPAN_NOTICE("You begin screwing a reinforcing plate to [target]'s [surgery.affected_limb.encased] with \the [tool]."),
+			SPAN_HELPFUL("You begin screwing a reinforcing plate to [target]'s [surgery.affected_limb.encased] with \the [tool]."),
 			SPAN_NOTICE("[user] begins to screw a reinforcing plate to your [surgery.affected_limb.encased] with \the [tool]."),
 			SPAN_NOTICE("[user] begins to screw a reinforcing plate to [target]'s [surgery.affected_limb.encased] with \the [tool]."))
 
@@ -614,13 +614,13 @@
 /datum/surgery_step/mend_encased/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	if(tool_type == /obj/item/tool/surgery/bonegel)
 		user.affected_message(target,
-			SPAN_NOTICE("You mend [target]'s [surgery.affected_limb.encased]."),
+			SPAN_HELPFUL("You mend [target]'s [surgery.affected_limb.encased]."),
 			SPAN_NOTICE("[user] mends your [surgery.affected_limb.encased]."),
 			SPAN_NOTICE("[user] mends [target]'s [surgery.affected_limb.encased]."))
 	else
 		var/improvised_desc = pick("paleolithic surgeon", "UPP torturer", "mad carpenter")
 		user.affected_message(target,
-			SPAN_NOTICE("You haphazardly repair [target]'s [surgery.affected_limb.encased] like some kind of [improvised_desc]."),
+			SPAN_HELPFUL("You haphazardly repair [target]'s [surgery.affected_limb.encased] like some kind of [improvised_desc]."),
 			SPAN_NOTICE("[user] haphazardly repairs your [surgery.affected_limb.encased] like some kind of [improvised_desc]."),
 			SPAN_NOTICE("[user] haphazardly repairs [target]'s [surgery.affected_limb.encased] like some kind of [improvised_desc]."))
 

@@ -30,7 +30,7 @@
 
 /datum/surgery_step/fix_vein/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	user.affected_message(target,
-		SPAN_NOTICE("You start patching the damaged vein in [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
+		SPAN_HELPFUL("You start patching the damaged vein in [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
 		SPAN_NOTICE("[user] starts to patch the damaged vein in your [surgery.affected_limb.display_name] with \the [tool]."),
 		SPAN_NOTICE("[user] starts to patch the damaged vein in [target]'s [surgery.affected_limb.display_name] with \the [tool]."))
 
@@ -42,7 +42,7 @@
 	user.life_ib_total++
 
 	user.affected_message(target,
-		SPAN_NOTICE("You finish repairing [target]'s damaged vein."),
+		SPAN_HELPFUL("You finish repairing [target]'s damaged vein."),
 		SPAN_NOTICE("[user] finishes repairing your damaged vein."),
 		SPAN_NOTICE("[user] finishes repairing [target]'s damaged vein."))
 
