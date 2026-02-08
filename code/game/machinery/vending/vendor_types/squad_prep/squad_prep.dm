@@ -1070,7 +1070,7 @@
 //--------------SQUAD ATTACHMENTS VENDOR--------------
 
 /obj/structure/machinery/cm_vending/sorted/attachments/squad
-	name = "\improper Armat Systems Squad Attachments Vendor"
+	name = "\improper Armat Systems Squad Attachments Vendor" // шкаф с аттачментами
 	desc = "An automated supply rack hooked up to a small storage of weapons attachments. Can be accessed by any Marine Rifleman."
 	req_access = list(ACCESS_MARINE_ALPHA)
 	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_SPECPREP, ACCESS_MARINE_RO)
@@ -1090,6 +1090,7 @@
 		list("Extended Barrel", 6, /obj/item/attachable/extended_barrel, VENDOR_ITEM_REGULAR),
 		list("Recoil Compensator", 6, /obj/item/attachable/compensator, VENDOR_ITEM_REGULAR),
 		list("Suppressor", 6, /obj/item/attachable/suppressor, VENDOR_ITEM_REGULAR),
+		list("Barrel charger", 6, /obj/item/attachable/heavy_barrel, VENDOR_ITEM_REGULAR),
 
 		list("RAIL", -1, null, null),
 		list("B8 Smart-Scope", 10, /obj/item/attachable/scope/mini_iff, VENDOR_ITEM_REGULAR),
@@ -1099,12 +1100,15 @@
 		list("S6 Reflex Sight", 6, /obj/item/attachable/reflex, VENDOR_ITEM_REGULAR),
 		list("S8 4x Telescopic Scope", 4, /obj/item/attachable/scope, VENDOR_ITEM_REGULAR),
 
+		list("SIDERAIL", -1, null, null),
+		list("Laser Sight", 6, /obj/item/attachable/lasersight, VENDOR_ITEM_REGULAR),
+		list("Flashlight", 6, /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
+
 		list("UNDERBARREL", -1, null, null),
 		list("Angled Grip", 6, /obj/item/attachable/angledgrip, VENDOR_ITEM_REGULAR),
 		list("Bipod", 6, /obj/item/attachable/bipod, VENDOR_ITEM_REGULAR),
 		list("Burst Fire Assembly", 4, /obj/item/attachable/burstfire_assembly, VENDOR_ITEM_REGULAR),
 		list("Gyroscopic Stabilizer", 4, /obj/item/attachable/gyro, VENDOR_ITEM_REGULAR),
-		list("Laser Sight", 6, /obj/item/attachable/lasersight, VENDOR_ITEM_REGULAR),
 		list("Mini Flamethrower", 4, /obj/item/attachable/attached_gun/flamer, VENDOR_ITEM_REGULAR),
 		list("XM-VESG-1 Flamer Nozzle", 4, /obj/item/attachable/attached_gun/flamer_nozzle, VENDOR_ITEM_REGULAR),
 		list("U7 Underbarrel Shotgun", 4, /obj/item/attachable/attached_gun/shotgun, VENDOR_ITEM_REGULAR),
