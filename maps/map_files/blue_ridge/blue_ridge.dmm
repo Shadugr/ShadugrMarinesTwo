@@ -5111,13 +5111,13 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "aoc" = (
-/obj/structure/machinery/cm_vending/sorted/tech/comtech_tools{
-	req_access = list();
-	req_one_access = list(17,19)
-	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
 	brightness = 9
+	},
+/obj/structure/machinery/cm_vending/sorted/attachments/squad{
+	req_one_access = list(17,19);
+	req_access = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -10761,9 +10761,9 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
 "aMI" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/charlie{
-	req_one_access = list(17,19);
-	req_access = list()
+/obj/structure/machinery/cm_vending/sorted/tech/comtech_tools{
+	req_access = list();
+	req_one_access = list(17,19)
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -12972,7 +12972,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "aWl" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/alpha{
+/obj/structure/machinery/cm_vending/sorted/tech/comtech_tools{
 	req_access = list();
 	req_one_access = list(15,19)
 	},
@@ -13299,9 +13299,9 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aYp" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/delta{
-	req_one_access = list(18,19);
-	req_access = list()
+/obj/structure/machinery/cm_vending/sorted/tech/comtech_tools{
+	req_access = list();
+	req_one_access = list(18,19)
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -16574,13 +16574,13 @@
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
 "fIY" = (
-/obj/structure/machinery/cm_vending/sorted/tech/comtech_tools{
-	req_access = list();
-	req_one_access = list(16,19)
-	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
 	brightness = 9
+	},
+/obj/structure/machinery/cm_vending/sorted/attachments/squad{
+	req_one_access = list(16,19);
+	req_access = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -18131,13 +18131,14 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
 "ihf" = (
-/obj/structure/machinery/cm_vending/sorted/tech/comtech_tools{
-	req_access = list();
-	req_one_access = list(15,19)
-	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
 	brightness = 9
+	},
+/obj/structure/machinery/cm_vending/sorted/attachments/squad{
+	req_one_access = list();
+	req_one_access_txt = "8;12;39;40;22;27";
+	req_access = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -19533,7 +19534,7 @@
 /turf/open/floor/plating,
 /area/golden_arrow/supply)
 "kyP" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/bravo{
+/obj/structure/machinery/cm_vending/sorted/tech/comtech_tools{
 	req_access = list();
 	req_one_access = list(16,19)
 	},
@@ -26031,13 +26032,13 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "uBJ" = (
-/obj/structure/machinery/cm_vending/sorted/tech/comtech_tools{
-	req_access = list();
-	req_one_access = list(18,19)
-	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
 	brightness = 9
+	},
+/obj/structure/machinery/cm_vending/sorted/attachments/squad{
+	req_one_access = list(18,19);
+	req_access = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
