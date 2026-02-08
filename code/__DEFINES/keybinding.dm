@@ -11,6 +11,7 @@
 #define COMSIG_KB_ADMIN_AGHOST_DOWN "keybinding_admin_aghost_down"
 #define COMSIG_KB_ADMIN_PLAYERPANELNEW_DOWN "keybinding_admin_playerpanelnew_down"
 #define COMSIG_KB_ADMIN_STEALTHMODETOGGLE_DOWN "keybinding_admin_stealthmodetoggle_down"
+#define COMSIG_KB_ADMIN_NOCLIPMODETOGGLE_DOWN "keybinding_admin_noclipmodetoggle_down"
 #define COMSIG_KB_ADMIN_INVISIMINTOGGLE_DOWN "keybinding_admin_invisimintoggle_down"
 #define COMSIG_KB_ADMIN_DEADMIN_DOWN "keybinding_admin_deadmin_down"
 #define COMSIG_KB_ADMIN_READMIN_DOWN "keybinding_admin_readmin_down"

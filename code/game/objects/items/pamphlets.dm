@@ -54,6 +54,36 @@
 	icon_state = "pamphlet_medical"
 	trait = /datum/character_trait/skills/defib
 
+/obj/item/pamphlet/skill/defib/can_use(mob/living/carbon/human/user)
+	var/medical_skill = user.skills.get_skill_level(SKILL_MEDICAL)
+	if(medical_skill == SKILL_MEDICAL_MEDIC || medical_skill == SKILL_MEDICAL_MEDIC || medical_skill == SKILL_MEDICAL_MASTER)
+		to_chat(user, SPAN_WARNING("You don't need to use this! Give it to another marine to make them junior medic."))
+		return FALSE
+
+	var/obj/item/card/id/ID = user.get_idcard()
+	if(!ID) //not wearing an ID
+		to_chat(user, SPAN_WARNING("You should wear your ID before doing this."))
+		return FALSE
+	if(!ID.check_biometrics(user))
+		to_chat(user, SPAN_WARNING("You should wear your ID before doing this."))
+		return FALSE
+	return ..()
+
+
+/obj/item/pamphlet/skill/defib/on_use(mob/living/carbon/human/user)
+	. = ..()
+	var/obj/item/card/id/ID = user.get_idcard()
+	if(ID.rank == JOB_SQUAD_MARINE)
+		user.rank_fallback = "junmed"
+		user.hud_set_squad()
+
+		ID.set_assignment((user.assigned_squad ? (user.assigned_squad.name + " ") : "") + "Junior Medic")
+		GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "Junior Medic")
+
+		// Force refresh Squad Info data so the icon updates
+		if(user.assigned_squad)
+			user.assigned_squad.update_all_squad_info()
+
 /obj/item/pamphlet/skill/engineer
 	name = "engineer instructional pamphlet"
 	desc = "A pamphlet used to quickly impart vital knowledge. This one has an engineering insignia."

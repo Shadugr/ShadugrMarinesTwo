@@ -65,6 +65,21 @@
 	user.invismin()
 	return TRUE
 
+/datum/keybinding/admin/noclip
+	hotkey_keys = list("F9")
+	classic_keys = list("Unbound")
+	name = "noclip_mode"
+	full_name = "Noclip"
+	description = "Toggle noclip"
+	keybind_signal = COMSIG_KB_ADMIN_NOCLIPMODETOGGLE_DOWN
+
+/datum/keybinding/admin/noclip/down(client/user)
+	. = ..()
+	if(.)
+		return
+	user.mob.noclip = !user.mob.noclip
+	return TRUE
+
 /datum/keybinding/admin/deadsay
 	hotkey_keys = list("F10")
 	classic_keys = list("Unbound")
