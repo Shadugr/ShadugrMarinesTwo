@@ -164,13 +164,14 @@
 		list("M276 Pattern M82F Holster Rig", floor(scale * 2), /obj/item/storage/belt/gun/flaregun, VENDOR_ITEM_REGULAR),
 		list("M276 G8-A General Utility Pouch", floor(scale * 5), /obj/item/storage/backpack/general_belt, VENDOR_ITEM_REGULAR),
 
-		list("POUCHES", -1, null, null, null),
+		list("RECOMMENDED POUCHES", -1, null, null, null),
 		list("First-Aid Pouch", floor(scale * 10), /obj/item/storage/pouch/firstaid, VENDOR_ITEM_RECOMMENDED),
 		list("Flare Pouch (Full)", floor(scale * 10), /obj/item/storage/pouch/flare/full, VENDOR_ITEM_REGULAR),
 		list("Magazine Pouch", floor(scale * 10), /obj/item/storage/pouch/magazine, VENDOR_ITEM_REGULAR),
 		list("Medium General Pouch", floor(scale * 10), /obj/item/storage/pouch/general/medium, VENDOR_ITEM_REGULAR),
 		list("Pistol Magazine Pouch", floor(scale * 10), /obj/item/storage/pouch/magazine/pistol, VENDOR_ITEM_REGULAR),
 		list("Pistol Pouch", floor(scale * 10), /obj/item/storage/pouch/pistol, VENDOR_ITEM_REGULAR),
+		list("Shotgun Shell Pouch", floor(scale * 10), /obj/item/storage/pouch/shotgun, VENDOR_ITEM_REGULAR),
 
 		list("RESTRICTED POUCHES", -1, null, null, null),
 		list("Construction Pouch", 2, /obj/item/storage/pouch/construction, VENDOR_ITEM_REGULAR),
@@ -180,7 +181,6 @@
 		list("Tools Pouch", 2, /obj/item/storage/pouch/tools, VENDOR_ITEM_REGULAR),
 		list("Sling Pouch", 2, /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
 		list("Incinerator Fuel Tank Pouch", 2, /obj/item/storage/pouch/flamertank, VENDOR_ITEM_REGULAR),
-		list("Shotgun Shell Pouch", 2, /obj/item/storage/pouch/shotgun, VENDOR_ITEM_REGULAR),
 
 		list("MASK", -1, null, null, null),
 		list("M5 Gas Mask", floor(scale * 3), /obj/item/clothing/mask/gas/military, VENDOR_ITEM_REGULAR),
