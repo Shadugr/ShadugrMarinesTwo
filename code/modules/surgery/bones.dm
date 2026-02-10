@@ -63,14 +63,14 @@
 	if(surgery.affected_bone)
 		if(tool_type == /obj/item/tool/surgery/bonegel)
 			user.affected_message(target,
-				SPAN_NOTICE("You start applying \the [tool] to [target]'s broken [surgery.affected_bone]."),
+				SPAN_HELPFUL("You start applying \the [tool] to [target]'s broken [surgery.affected_bone]."),
 				SPAN_NOTICE("[user] starts to apply \the [tool] to your broken [surgery.affected_bone]."),
 				SPAN_NOTICE("[user] starts to apply \the [tool] to [target]'s broken [surgery.affected_bone]."))
 
 			target.custom_pain("Something stings inside your [surgery.affected_limb.display_name]!", 1)
 		else
 			user.affected_message(target,
-				SPAN_NOTICE("You begin driving reinforcing pins into [target]'s [surgery.affected_bone] with \the [tool]."),
+				SPAN_HELPFUL("You begin driving reinforcing pins into [target]'s [surgery.affected_bone] with \the [tool]."),
 				SPAN_NOTICE("[user] begins to drive reinforcing pins into your [surgery.affected_bone] with \the [tool]."),
 				SPAN_NOTICE("[user] begins to drive reinforcing pins into [target]'s [surgery.affected_bone] with \the [tool]."))
 
@@ -79,14 +79,14 @@
 	else
 		if(tool_type == /obj/item/tool/surgery/bonegel)
 			user.affected_message(target,
-				SPAN_NOTICE("You start applying \the [tool] to the broken bones in [target]'s [surgery.affected_limb.display_name]."),
+				SPAN_HELPFUL("You start applying \the [tool] to the broken bones in [target]'s [surgery.affected_limb.display_name]."),
 				SPAN_NOTICE("[user] starts to apply \the [tool] to the broken bones in your [surgery.affected_limb.display_name]."),
 				SPAN_NOTICE("[user] starts to apply \the [tool] to the broken bones in [target]'s [surgery.affected_limb.display_name]."))
 
 			target.custom_pain("Something stings inside your [surgery.affected_limb.display_name]!", 1)
 		else
 			user.affected_message(target,
-				SPAN_NOTICE("You begin driving reinforcing pins into the broken bones in [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
+				SPAN_HELPFUL("You begin driving reinforcing pins into the broken bones in [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
 				SPAN_NOTICE("[user] begins to drive reinforcing pins into the broken bones in your [surgery.affected_limb.display_name] with \the [tool]."),
 				SPAN_NOTICE("[user] begins to drive reinforcing pins into the broken bones in [target]'s [surgery.affected_limb.display_name] with \the [tool]."))
 
@@ -100,23 +100,23 @@
 	if(surgery.affected_bone)
 		if(tool_type == /obj/item/tool/surgery/bonegel)
 			user.affected_message(target,
-				SPAN_NOTICE("You slather \the [tool] on [target]'s broken [surgery.affected_bone]."),
+				SPAN_HELPFUL("You slather \the [tool] on [target]'s broken [surgery.affected_bone]."),
 				SPAN_NOTICE("[user] slathers \the [tool] on your broken [surgery.affected_bone]."),
 				SPAN_NOTICE("[user] slathers \the [tool] on [target]'s broken [surgery.affected_bone]."))
 		else
 			user.affected_message(target,
-				SPAN_NOTICE("You crudely reinforce [target]'s [surgery.affected_bone] like [improvised_desc]."),
+				SPAN_HELPFUL("You crudely reinforce [target]'s [surgery.affected_bone] like [improvised_desc]."),
 				SPAN_NOTICE("[user] crudely reinforces your [surgery.affected_bone] like [improvised_desc]."),
 				SPAN_NOTICE("[user] crudely reinforces [target]'s [surgery.affected_bone] like [improvised_desc]."))
 	else
 		if(tool_type == /obj/item/tool/surgery/bonegel)
 			user.affected_message(target,
-				SPAN_NOTICE("You slather \the [tool] on the broken bones in [target]'s [surgery.affected_limb.display_name]."),
+				SPAN_HELPFUL("You slather \the [tool] on the broken bones in [target]'s [surgery.affected_limb.display_name]."),
 				SPAN_NOTICE("[user] slathers \the [tool] on the broken bones in your [surgery.affected_limb.display_name]."),
 				SPAN_NOTICE("[user] slathers \the [tool] on the broken bones in [target]'s [surgery.affected_limb.display_name]."))
 		else
 			user.affected_message(target,
-				SPAN_NOTICE("You crudely reinforce the bones in [target]'s [surgery.affected_limb.display_name] like [improvised_desc]."),
+				SPAN_HELPFUL("You crudely reinforce the bones in [target]'s [surgery.affected_limb.display_name] like [improvised_desc]."),
 				SPAN_NOTICE("[user] crudely reinforces the bones in your [surgery.affected_limb.display_name] like [improvised_desc]."),
 				SPAN_NOTICE("[user] crudely reinforces the bones in [target]'s [surgery.affected_limb.display_name] like [improvised_desc]."))
 
@@ -164,22 +164,22 @@
 	switch(surgery.affected_limb.name) //Yet another set of different messages because I just have to be Like This.
 		if("head")
 			user.affected_message(target,
-				SPAN_NOTICE("You begin to piece [target]'s skull together with \the [tool]."),
+				SPAN_HELPFUL("You begin to piece [target]'s skull together with \the [tool]."),
 				SPAN_NOTICE("[user] begins to piece your skull together with \the [tool]."),
 				SPAN_NOTICE("[user] begins to piece [target]'s skull together with \the [tool]."))
 		if("chest")
 			user.affected_message(target,
-				SPAN_NOTICE("You begin to set [target]'s broken ribs with \the [tool]."),
+				SPAN_HELPFUL("You begin to set [target]'s broken ribs with \the [tool]."),
 				SPAN_NOTICE("[user] begins to set your broken ribs with \the [tool]."),
 				SPAN_NOTICE("[user] begins to set [target]'s broken ribs with \the [tool]."))
 		if("groin")
 			user.affected_message(target,
-				SPAN_NOTICE("You begin to set [target]'s fractured pelvis with \the [tool]."),
+				SPAN_HELPFUL("You begin to set [target]'s fractured pelvis with \the [tool]."),
 				SPAN_NOTICE("[user] begins to set your fractured pelvis with \the [tool]."),
 				SPAN_NOTICE("[user] begins to set [target]'s fractured pelvis with \the [tool]."))
 		else
 			user.affected_message(target,
-				SPAN_NOTICE("You begin to set the broken bones in [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
+				SPAN_HELPFUL("You begin to set the broken bones in [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
 				SPAN_NOTICE("[user] begins to set the broken bones in your [surgery.affected_limb.display_name] with \the [tool]."),
 				SPAN_NOTICE("[user] begins to set the broken bones in [target]'s [surgery.affected_limb.display_name] with \the [tool]."))
 
@@ -189,12 +189,12 @@
 /datum/surgery_step/set_bones/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/bone_repair/surgery)
 	if(surgery.affected_bone)
 		user.affected_message(target,
-			SPAN_NOTICE("You set [target]'s [surgery.affected_bone]."),
+			SPAN_HELPFUL("You set [target]'s [surgery.affected_bone]."),
 			SPAN_NOTICE("[user] sets your [surgery.affected_bone]."),
 			SPAN_NOTICE("[user] sets [target]'s [surgery.affected_bone]."))
 	else
 		user.affected_message(target,
-			SPAN_NOTICE("You set the bones in [target]'s [surgery.affected_limb.display_name]."),
+			SPAN_HELPFUL("You set the bones in [target]'s [surgery.affected_limb.display_name]."),
 			SPAN_NOTICE("[user] sets the bones in your [surgery.affected_limb.display_name]."),
 			SPAN_NOTICE("[user] sets the bones in [target]'s [surgery.affected_limb.display_name]."))
 

@@ -48,12 +48,12 @@
 /datum/surgery_step/xenomorph/cut_exoskeleton/preop(mob/living/carbon/human/user, mob/living/carbon/xenomorph/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	if(tool_type == /obj/item/tool/surgery/circular_saw || tool_type == /obj/item/tool/surgery/scalpel/laser/advanced)
 		user.affected_message(target,
-			SPAN_NOTICE("You start to cut [target.caste_type] carapace apart using [tool], carefully, trying to prevent acid leaks."),
+			SPAN_HELPFUL("You start to cut [target.caste_type] carapace apart using [tool], carefully, trying to prevent acid leaks."),
 			SPAN_NOTICE("[user] starts to cut your carapace apart using [tool], carefully, trying to prevent acid leaks."),
 			SPAN_NOTICE("[user] starts to cut [target.caste_type] carapace. [tool], carefully, trying to prevent acid leaks."))
 	else
 		user.affected_message(target,
-			SPAN_NOTICE("You start to [pick("smash", "crack", "break")] [target.caste_type] carapace apart using [tool], Recklessly, with acid splashing on you!"),
+			SPAN_HELPFUL("You start to [pick("smash", "crack", "break")] [target.caste_type] carapace apart using [tool], Recklessly, with acid splashing on you!"),
 			SPAN_NOTICE("[user] starts to [pick("smash", "crack", "break")] your carapace apart using [tool], recklessly splashing acid everywhere!"),
 			SPAN_NOTICE("[user] starts to [pick("smash", "crack", "break")] [target.caste_type] carapace with [tool], recklessly splashing acid everywhere!"))
 		//we dont really need log interact since we're working with dead body... I hope
@@ -61,12 +61,12 @@
 /datum/surgery_step/xenomorph/cut_exoskeleton/success(mob/living/carbon/human/user, mob/living/carbon/xenomorph/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	if(tool_type == /obj/item/tool/surgery/circular_saw)
 		user.affected_message(target,
-			SPAN_NOTICE("You succesfully cut through [target.caste_type] carapace apart using [tool]."),
+			SPAN_HELPFUL("You succesfully cut through [target.caste_type] carapace apart using [tool]."),
 			SPAN_NOTICE("[user] successfully cuts through your carapace using [tool]."),
 			SPAN_NOTICE("[user] successfully cuts [target.caste_type] carapace using [tool]."))
 	else
 		user.affected_message(target,
-			SPAN_NOTICE("You successfully destroy [target.caste_type] carapace into bits and pieces using [tool]."),
+			SPAN_HELPFUL("You successfully destroy [target.caste_type] carapace into bits and pieces using [tool]."),
 			SPAN_NOTICE("[user] successfully destroys your carapace into bits and pieces using [tool]."),,
 			SPAN_NOTICE("[user] successfully destroys [target.caste_type] carapace into bits and pieces using [tool]."))
 	for(var/mob/living/carbon/human/victim in orange(1, target))
@@ -95,19 +95,19 @@
 
 /datum/surgery_step/xenomorph/open_exoskeleton/preop(mob/living/carbon/human/user, mob/living/carbon/xenomorph/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 			user.affected_message(target,
-				SPAN_NOTICE("You start to pry [target.caste_type] carapace open using [tool]"),
+				SPAN_HELPFUL("You start to pry [target.caste_type] carapace open using [tool]"),
 				SPAN_NOTICE("[user] starts to pry your carapace open with [tool] very carefully"),
 				SPAN_NOTICE("[user] starts to pry [target.caste_type] carapace open with [tool] very carefully"))
 
 /datum/surgery_step/xenomorph/open_exoskeleton/success(mob/living/carbon/human/user, mob/living/carbon/xenomorph/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	if(tool_type == /obj/item/tool/surgery/retractor)
 		user.affected_message(target,
-			SPAN_NOTICE("You hold [target.caste_type] carapace and exoskeleton open using [tool], exposing [target.caste_type] vital organs"),
+			SPAN_HELPFUL("You hold [target.caste_type] carapace and exoskeleton open using [tool], exposing [target.caste_type] vital organs"),
 			SPAN_NOTICE("[user] holds your carapace and exoskeleton open with [tool], exposing [target.caste_type] vital organs "),
 			SPAN_NOTICE("[user] holds [target.caste_type] carapace and exoskeleton open with [tool], exposing [target.caste_type] vital organs "))
 	else
 		user.affected_message(target,
-			SPAN_NOTICE("You hold [target.caste_type] carapace open using [tool] like a medieval doctor, exposing [target.caste_type] vital organs"),
+			SPAN_HELPFUL("You hold [target.caste_type] carapace open using [tool] like a medieval doctor, exposing [target.caste_type] vital organs"),
 			SPAN_NOTICE("[user] starts to open your carapace with [tool] very carefully"),
 			SPAN_NOTICE("[user] starts to open [target.caste_type] carapace with [tool] very carefully"))
 
@@ -142,19 +142,19 @@
 
 /datum/surgery_step/xenomorph/severe_connections/preop(mob/living/carbon/human/user, mob/living/carbon/xenomorph/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	user.affected_message(target,
-		SPAN_NOTICE("You start to sever [target.caste_type] organ links using [tool], with confidence"),
+		SPAN_HELPFUL("You start to sever [target.caste_type] organ links using [tool], with confidence"),
 		SPAN_NOTICE("[user] start to sever your organ links using [tool], with confidence"),
 		SPAN_NOTICE("[user] starts to sever [target.caste_type] organ links using [tool], with confidence"))
 
 /datum/surgery_step/xenomorph/severe_connections/success(mob/living/carbon/human/user, mob/living/carbon/xenomorph/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	if(tool_type == /obj/item/tool/surgery/scalpel || tool_type == /obj/item/tool/surgery/scalpel/pict_system)
 		user.affected_message(target,
-			SPAN_NOTICE("You severed [target.caste_type] connections and links to vital organs using [tool]"),
+			SPAN_HELPFUL("You severed [target.caste_type] connections and links to vital organs using [tool]"),
 			SPAN_NOTICE("[user] severed your connections and links to vital organs using [tool]"),
 			SPAN_NOTICE("[user] severed [target.caste_type] connections and links to vital organs using [tool]"))
 	else
 		user.affected_message(target,
-			SPAN_NOTICE("You rip [target.caste_type] connections and links to vital organs apart using [tool]"),
+			SPAN_HELPFUL("You rip [target.caste_type] connections and links to vital organs apart using [tool]"),
 			SPAN_NOTICE("[user] rips your connections and links to vital organs apart using [tool]"),
 			SPAN_NOTICE("[user] rips [target.caste_type] connections and links to vital organs apart using [tool]"))
 
@@ -188,30 +188,30 @@
 /datum/surgery_step/xenomorph/remove_organ/preop(mob/living/carbon/human/user, mob/living/carbon/xenomorph/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	if(tool)
 		user.affected_message(target,
-		SPAN_NOTICE("You start to get a firm grip on the [target.caste_type] organ using [tool] "),
+		SPAN_HELPFUL("You start to get a firm grip on the [target.caste_type] organ using [tool] "),
 		SPAN_NOTICE("[user] start to get a firm grip on your insides using [tool]"),
 		SPAN_NOTICE("[user] starts to get a firm grip on the [target.caste_type] organ using [tool] "))
 	else
 		user.affected_message(target,
-			SPAN_NOTICE("You start to get a firm grip on the [target.caste_type] organ"),
+			SPAN_HELPFUL("You start to get a firm grip on the [target.caste_type] organ"),
 			SPAN_NOTICE("[user] starts to get a firm grip on your insides"),
 			SPAN_NOTICE("[user] starts to get a firm grip on the [target.caste_type] organ"))
 
 /datum/surgery_step/xenomorph/remove_organ/success(mob/living/carbon/human/user, mob/living/carbon/xenomorph/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	if(tool)
 		user.affected_message(target,
-			SPAN_NOTICE("You pulled the [target.caste_type] organ out using [tool]"),
+			SPAN_HELPFUL("You pulled the [target.caste_type] organ out using [tool]"),
 			SPAN_NOTICE("[user] pulled your organ out using [tool]"),
 			SPAN_NOTICE("[user] pulled the [target.caste_type] organ out using [tool]"))
 	else
 		if(istype(user.wear_suit, /obj/item/clothing/suit/bio_suit))
 			user.affected_message(target,
-				SPAN_NOTICE("You pulled the [target.caste_type] organ out!"),
+				SPAN_HELPFUL("You pulled the [target.caste_type] organ out!"),
 				SPAN_NOTICE("[user] pulles your insides out!"),
 				SPAN_NOTICE("[user] pulled the [target.caste_type] organ out."))
 		else
 			user.affected_message(target,
-				SPAN_NOTICE("You burn your hands as you pulled the [target.caste_type] organ out!"),
+				SPAN_HELPFUL("You burn your hands as you pulled the [target.caste_type] organ out!"),
 				SPAN_NOTICE("[user] burns their hands as they pulled your insides out!"),
 				SPAN_NOTICE("[user] burns [user.p_their()] hands as [user.p_they()] pulled the [target.caste_type] organ out."))
 			user.emote("pain")
@@ -230,7 +230,7 @@
 /datum/surgery_step/xenomorph/remove_organ/failure(mob/living/carbon/human/user, mob/living/carbon/xenomorph/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	if(tool)
 		user.affected_message(target,
-			SPAN_NOTICE("You fail to pull the [target.caste_type] organ out using [tool]"),
+			SPAN_HELPFUL("You fail to pull the [target.caste_type] organ out using [tool]"),
 			SPAN_NOTICE("[user] fails to pull your organ out using [tool]"),
 			SPAN_NOTICE("[user] fails to pull the [target.caste_type] organ out using [tool]"))
 	return FALSE

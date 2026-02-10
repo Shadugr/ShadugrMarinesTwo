@@ -34,7 +34,7 @@
 /datum/surgery_step/recalibrate_prosthesis/preop(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	var/nerves = (target.species && (target.species.flags & IS_SYNTHETIC)) ? "control wiring" : "nervous system"
 	user.affected_message(target,
-		SPAN_NOTICE("You start recalibrating [target]'s prosthesis to \his [nerves]."),
+		SPAN_HELPFUL("You start recalibrating [target]'s prosthesis to \his [nerves]."),
 		SPAN_NOTICE("[user] starts recalibrating your prosthesis to your [nerves]."),
 		SPAN_NOTICE("[user] starts recalibrating [target]'s prosthesis to \his [nerves]."))
 
@@ -42,7 +42,7 @@
 
 /datum/surgery_step/recalibrate_prosthesis/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	user.affected_message(target,
-		SPAN_NOTICE("You finish recalibrating [target]'s prosthesis, and it now moves as \he commands once again."),
+		SPAN_HELPFUL("You finish recalibrating [target]'s prosthesis, and it now moves as \he commands once again."),
 		SPAN_NOTICE("[user] finishes recalibrating your prosthesis, and it now moves as you command once again."),
 		SPAN_NOTICE("[user] finishes recalibrating [target]'s prosthesis, and it now moves as \he commands once again."))
 

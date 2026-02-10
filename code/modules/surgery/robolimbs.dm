@@ -35,7 +35,7 @@
 
 /datum/surgery_step/connect_prosthesis/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/robot_parts/tool, tool_type, datum/surgery/surgery)
 	user.affected_message(target,
-		SPAN_NOTICE("You begin connecting \the [tool] to the prepared stump of [target]'s [parse_zone(target_zone)]."),
+		SPAN_HELPFUL("You begin connecting \the [tool] to the prepared stump of [target]'s [parse_zone(target_zone)]."),
 		SPAN_NOTICE("[user] begins connect \the [tool] to the prepared stump of your [parse_zone(target_zone)]."),
 		SPAN_NOTICE("[user] begins to connect \the [tool] to the prepared stump of [target]'s [parse_zone(target_zone)]."))
 
@@ -43,7 +43,7 @@
 
 /datum/surgery_step/connect_prosthesis/success(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	user.affected_message(target,
-		SPAN_NOTICE("You replace [target]'s severed [parse_zone(target_zone)] with \the [tool]."),
+		SPAN_HELPFUL("You replace [target]'s severed [parse_zone(target_zone)] with \the [tool]."),
 		SPAN_NOTICE("[user] replaces your severed [parse_zone(target_zone)] with \the [tool]."),
 		SPAN_NOTICE("[user] replaces [target]'s severed [parse_zone(target_zone)] with \the [tool]."))
 
@@ -79,7 +79,7 @@
 
 /datum/surgery_step/strenghten_prosthesis_connection/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	user.affected_message(target,
-		SPAN_NOTICE("You start tightening [target]'s new prosthetic [parse_zone(target_zone)]'s connection to \his body."),
+		SPAN_HELPFUL("You start tightening [target]'s new prosthetic [parse_zone(target_zone)]'s connection to \his body."),
 		SPAN_NOTICE("[user] starts to tighten your new prosthetic [parse_zone(target_zone)]'s connection to your body."),
 		SPAN_NOTICE("[user] starts to tighten [target]'s new prosthetic [parse_zone(target_zone)]'s connection to \his body."))
 
@@ -87,7 +87,7 @@
 
 /datum/surgery_step/strenghten_prosthesis_connection/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	user.affected_message(target,
-		SPAN_NOTICE("You firmly attach the prosthesis to [target]'s body."),
+		SPAN_HELPFUL("You firmly attach the prosthesis to [target]'s body."),
 		SPAN_NOTICE("[user] firmly attaches the prosthesis to your body."),
 		SPAN_NOTICE("[user] firmly attaches the prosthesis to [target]'s body."))
 
@@ -117,7 +117,7 @@
 /datum/surgery_step/calibrate_prosthesis/preop(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	var/nerves = (target.species && (target.species.flags & IS_SYNTHETIC)) ? "control wiring" : "nervous system"
 	user.affected_message(target,
-		SPAN_NOTICE("You start calibrating [target]'s prosthesis to \his [nerves]."),
+		SPAN_HELPFUL("You start calibrating [target]'s prosthesis to \his [nerves]."),
 		SPAN_NOTICE("[user] starts calibrating your prosthesis to your [nerves]."),
 		SPAN_NOTICE("[user] starts calibrating [target]'s prosthesis to \his [nerves]."))
 
@@ -125,7 +125,7 @@
 
 /datum/surgery_step/calibrate_prosthesis/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
 	user.affected_message(target,
-		SPAN_NOTICE("You finish calibrating [target]'s prosthesis, and it now moves as \he commands."),
+		SPAN_HELPFUL("You finish calibrating [target]'s prosthesis, and it now moves as \he commands."),
 		SPAN_NOTICE("[user] finishes calibrating your prosthesis, and it now moves as you command."),
 		SPAN_NOTICE("[user] finishes calibrating [target]'s prosthesis, and it now moves as \he commands."))
 
