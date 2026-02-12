@@ -42,8 +42,6 @@
 	var/played = 0
 	var/midi_silenced = 0
 	var/datum/soundOutput/soundOutput
-	var/list/volume_preferences = list(1, 0.5, 1, 0.3,//Game, music, admin midis, lobby music
-	0.7, 0.6, 0.5) //Local, Radio,  Announces - SS220 TTS EDIT
 
 		////////////
 		//SECURITY//
