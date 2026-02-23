@@ -21,6 +21,7 @@
 		list("PRIMARY FIREARMS", -1, null, null),
 		list("M49A Battle Rifle", floor(scale * 5), /obj/item/weapon/gun/rifle/m49a, VENDOR_ITEM_REGULAR),
 		list("M37-17 Pump Shotgun", floor(scale * 5), /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717, VENDOR_ITEM_REGULAR),
+		list("XM51 shotgun", floor(scale * 5), /obj/item/weapon/gun/rifle/xm51/military/withstock, VENDOR_ITEM_REGULAR),
 		list("M39 Submachine Gun", floor(scale * 7), /obj/item/weapon/gun/smg/m39, VENDOR_ITEM_REGULAR),
 		list("M41A Pulse Rifle MK2", floor(scale * 10), /obj/item/weapon/gun/rifle/m41a, VENDOR_ITEM_RECOMMENDED),
 
@@ -705,6 +706,7 @@
 		list("Box of Special Buckshots Shells (12g)", floor(scale * 2), /obj/item/ammo_magazine/shotgun/buckshot/special, MARINE_CAN_BUY_M37_AMMO, VENDOR_ITEM_REGULAR),
 		list("Box of Incendiary Slugs (12g)", floor(scale * 4), /obj/item/ammo_magazine/shotgun/incendiary, MARINE_CAN_BUY_M37_AMMO, VENDOR_ITEM_REGULAR),
 		list("Box of Incendiary Buckshots (12g)", floor(scale * 4), /obj/item/ammo_magazine/shotgun/incendiarybuck, MARINE_CAN_BUY_M37_AMMO, VENDOR_ITEM_REGULAR),
+		list("XM51 shotgun M1771 magazine (16g)", floor(scale * 3), /obj/item/ammo_magazine/rifle/xm51, MARINE_CAN_BUY_M37_AMMO, VENDOR_ITEM_REGULAR),
 
 		list("M39 RESTRICTED AMMUNITION", -1, null, null),
 		list("M39 Extended Magazine (9mm)", floor(scale * 4), /obj/item/ammo_magazine/smg/m39/extended, MARINE_CAN_BUY_M39_AMMO, VENDOR_ITEM_REGULAR),
@@ -1120,7 +1122,7 @@
 		list("M39 Arm Brace", 4, /obj/item/attachable/stock/smg/collapsible/brace, VENDOR_ITEM_REGULAR),
 		list("M39 Stock", 4, /obj/item/attachable/stock/smg, VENDOR_ITEM_REGULAR),
 		list("M41A Solid Stock", 4, /obj/item/attachable/stock/rifle, VENDOR_ITEM_REGULAR),
-		list("M44 Magnum Sharpshooter Stock", 4, /obj/item/attachable/stock/revolver, VENDOR_ITEM_REGULAR)
+		list("M44 Magnum Sharpshooter Stock", 4, /obj/item/attachable/stock/revolver, VENDOR_ITEM_REGULAR),
 		)
 
 //------------ESSENTIAL SETS---------------
