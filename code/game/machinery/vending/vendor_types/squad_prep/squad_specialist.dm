@@ -58,7 +58,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 
 //------------CLOTHING VENDOR---------------
 
-GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
+GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list( // НУЖНЫЙ
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Standard Marine Apparel", 0, list(/obj/item/clothing/under/marine, /obj/item/clothing/shoes/marine/knife, /obj/item/clothing/gloves/marine, /obj/item/device/radio/headset/almayer/marine), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("MRE", 0, /obj/item/storage/box/mre, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
@@ -136,7 +136,9 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		list("Large Magazine Pouch", 10, /obj/item/storage/pouch/magazine/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Large Shotgun Shell Pouch", 10, /obj/item/storage/pouch/shotgun/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("M276 Pattern Combat Toolbelt Rig", 15, /obj/item/storage/belt/gun/utility, null, VENDOR_ITEM_REGULAR),
+		list("Tactical Tools Pouch", 15, /obj/item/storage/pouch/tools/tactical/full, null, VENDOR_ITEM_REGULAR),
 		list("Autoinjector Pouch (Full)", 15, /obj/item/storage/pouch/autoinjector/full, null, VENDOR_ITEM_REGULAR),
+		list("Advanced First Responder Pouch", 15, /obj/item/storage/pouch/first_responder/rmc, null, VENDOR_ITEM_REGULAR),
 
 		list("UTILITIES", 0, null, null, null),
 		list("Roller Bed", 5, /obj/item/roller, null, VENDOR_ITEM_REGULAR),

@@ -2528,7 +2528,7 @@ Defined in conflicts.dm of the #defines folder.
 	aim_speed_mod = CONFIG_GET(number/slowdown_med)
 
 /obj/item/attachable/stock/xm51/military
-	name = "\improper XM51 stock"
+	name = "\improper XM51 military stock"
 	desc = "A specialized stock designed for XM51 shotguns. Helps the user absorb the recoil of the weapon while also reducing scatter."
 	icon_state = "xm51_military_stock"
 	attach_icon = "xm51_military_stock_a"
