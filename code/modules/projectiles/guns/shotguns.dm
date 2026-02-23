@@ -73,7 +73,7 @@ can cause issues with ammo types getting mixed up during the burst.
 		playsound(user, reload_sound, 25, TRUE)
 		if(flags_gun_features & GUN_AMMO_COUNTER)
 			var/chambered = in_chamber ? TRUE : FALSE
-			to_chat(user, SPAN_DANGER("[current_mag.current_rounds][chambered ? "+1" : ""] / [current_mag.max_rounds] ROUNDS REMAINING"))
+			to_chat(user, SPAN_ORANGE("[current_mag.current_rounds][chambered ? "+1" : ""] / [current_mag.max_rounds] ROUNDS REMAINING"))
 	return TRUE
 
 /obj/item/weapon/gun/shotgun/proc/empty_chamber(mob/user)
@@ -87,7 +87,7 @@ can cause issues with ammo types getting mixed up during the burst.
 			new_handful.forceMove(get_turf(src))
 			if(flags_gun_features & GUN_AMMO_COUNTER && user)
 				var/chambered = in_chamber ? TRUE : FALSE //useless, but for consistency
-				to_chat(user, SPAN_DANGER("[current_mag.current_rounds][chambered ? "+1" : ""] / [current_mag.max_rounds] ROUNDS REMAINING"))
+				to_chat(user, SPAN_ORANGE("[current_mag.current_rounds][chambered ? "+1" : ""] / [current_mag.max_rounds] ROUNDS REMAINING"))
 		else
 			if(user)
 				to_chat(user, SPAN_WARNING("[src] is already empty."))
@@ -1397,8 +1397,10 @@ can cause issues with ammo types getting mixed up during the burst.
 
 	in_chamber = null
 	if(current_mag.current_rounds <= 0 && flags_gun_features & GUN_AUTO_EJECTOR)
-		if (user.client?.prefs && (user.client?.prefs?.toggle_prefs & TOGGLE_AUTO_EJECT_MAGAZINE_OFF))
-			update_icon()
+		unload(user, TRUE, TRUE) // We want to quickly autoeject the magazine. This proc does the rest based on magazine type. User can be passed as null.
+		playsound(src, empty_sound, 25, 1)
+		SEND_SIGNAL(user, COMSIG_MOB_GUN_EMPTY, src)
+		update_icon()
 	return 1
 
 /obj/item/weapon/gun/rifle/xm51/replace_magazine(mob/user, obj/item/ammo_magazine/magazine) //Don't chamber a round when reloading.
