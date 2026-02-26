@@ -229,7 +229,6 @@
  * * to_flatten - The alist with sequential numeric keys to extract values from into a normal list.
  * * assert - Whether to assert every key is numeric and in bounds.
  */
-
 /proc/flatten_numeric_alist(alist/to_flatten, assert=TRUE)
 	RETURN_TYPE(/list)
 
