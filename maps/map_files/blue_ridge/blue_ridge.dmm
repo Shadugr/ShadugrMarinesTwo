@@ -898,10 +898,6 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "abU" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer/open{
-	id = "CIC";
-	name = "CIC Shutters"
-	},
 /obj/structure/window/framed/almayer/hull,
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/cryo_cells)
@@ -1035,11 +1031,6 @@
 	pixel_x = 1;
 	pixel_y = -1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_y = 2;
-	pixel_x = 1
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "acl" = (
@@ -1063,26 +1054,19 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
-"acn" = (
-/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
-	pixel_x = -8
-	},
-/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
-	pixel_x = 8
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/cryo_cells)
 "aco" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "acp" = (
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/start/bridge,
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8
+	},
 /obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1;
-	pixel_y = 1
+	icon_state = "SE-out"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -1103,12 +1087,6 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "acs" = (
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/start/bridge,
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_y = 1
-	},
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1
 	},
@@ -1117,21 +1095,16 @@
 "act" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/platoonarmory)
-"acu" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_y = 1
+"acv" = (
+/obj/structure/closet/secure_closet/marine_personal/gp_pilot{
+	job = "Gunship Pilot";
+	pixel_x = 8
 	},
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	light_power = 0.5
+/obj/structure/closet/secure_closet/marine_personal/gp_pilot{
+	job = "Gunship Pilot";
+	pixel_x = -7
 	},
 /turf/open/floor/almayer/plate,
-/area/golden_arrow/cryo_cells)
-"acv" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	light_power = 0.5
-	},
-/turf/open/floor/almayer/edge/smooth/endcap_right/west,
 /area/golden_arrow/cryo_cells)
 "acx" = (
 /obj/structure/cargo_container/uscm/chinook/mid{
@@ -1164,6 +1137,9 @@
 "acC" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.5
 	},
 /turf/open/floor/almayer/emeraldcorner,
 /area/golden_arrow/cryo_cells)
@@ -1275,21 +1251,16 @@
 	icon_state = "N";
 	pixel_y = 2
 	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "acQ" = (
 /obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_y = 1
+	icon_state = "NE-out";
+	pixel_y = 2;
+	pixel_x = 1
 	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -1332,15 +1303,9 @@
 /obj/structure/pipes/vents/scrubber{
 	dir = 4
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SW-out"
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "acW" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
 	pixel_y = 2;
@@ -1348,9 +1313,6 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -1375,9 +1337,6 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SW-out"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -1473,7 +1432,6 @@
 "adj" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/charlie,
-/obj/effect/landmark/start/marine/leader/charlie,
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
@@ -1485,6 +1443,7 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/effect/landmark/start/marine/smartgunner/charlie,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "adk" = (
@@ -1498,13 +1457,8 @@
 /area/golden_arrow/platoonarmory)
 "adm" = (
 /obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/charlie,
-/obj/effect/landmark/start/marine/leader/charlie,
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 8;
-	dir = 8
+/obj/effect/landmark/start/tank_crew{
+	job = /datum/job/command/tank_crew/ai
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -1768,7 +1722,6 @@
 "adN" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/charlie,
-/obj/effect/landmark/start/marine/medic/charlie,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -1777,11 +1730,6 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/cryo_cells)
-"adO" = (
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/charlie,
 /obj/effect/landmark/start/marine/medic/charlie,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -1918,7 +1866,6 @@
 "aee" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/charlie,
-/obj/effect/landmark/start/marine/smartgunner/charlie,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -1927,6 +1874,7 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/effect/landmark/start/marine/charlie,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aef" = (
@@ -1946,11 +1894,11 @@
 "aeh" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/charlie,
-/obj/effect/landmark/start/marine/smartgunner/charlie,
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_y = 1
 	},
+/obj/effect/landmark/start/marine/tl/charlie,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aei" = (
@@ -1987,12 +1935,12 @@
 "aem" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/charlie,
-/obj/effect/landmark/start/marine/tl/charlie,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/effect/landmark/start/marine/charlie,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aen" = (
@@ -2011,24 +1959,26 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "aep" = (
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/charlie,
-/obj/effect/landmark/start/marine/tl/charlie,
 /obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_y = 1
+	icon_state = "NW-out";
+	pixel_y = 2;
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aeq" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/charlie,
-/obj/effect/landmark/start/marine/leader/charlie,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/effect/landmark/start/marine/medic/charlie,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aer" = (
@@ -2053,10 +2003,10 @@
 "aes" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/charlie,
-/obj/effect/landmark/start/marine/leader/charlie,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/landmark/start/marine/leader/charlie,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aet" = (
@@ -2221,12 +2171,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aeN" = (
@@ -2257,7 +2201,6 @@
 "aeP" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/bravo,
-/obj/effect/landmark/start/marine/leader/bravo,
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
@@ -2269,18 +2212,18 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/effect/landmark/start/marine/smartgunner/bravo,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aeQ" = (
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/bravo,
-/obj/effect/landmark/start/marine/leader/bravo,
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 8;
 	dir = 8
 	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/bridge,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aeR" = (
@@ -2389,18 +2332,24 @@
 "afb" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/bravo,
-/obj/effect/landmark/start/marine/medic/bravo,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/effect/landmark/start/marine/smartgunner/bravo,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "afc" = (
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/bravo,
-/obj/effect/landmark/start/marine/medic/bravo,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1;
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_y = 1
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "afd" = (
@@ -2433,12 +2382,12 @@
 "afj" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/bravo,
-/obj/effect/landmark/start/marine/smartgunner/bravo,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/effect/landmark/start/marine/bravo,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "afk" = (
@@ -2475,11 +2424,11 @@
 "afp" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/bravo,
-/obj/effect/landmark/start/marine/smartgunner/bravo,
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_y = 1
 	},
+/obj/effect/landmark/start/marine/tl/bravo,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "afq" = (
@@ -2621,13 +2570,13 @@
 /area/golden_arrow/cryo_cells)
 "afG" = (
 /obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/bravo,
-/obj/effect/landmark/start/marine/tl/bravo,
+/obj/effect/landmark/late_join/delta,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/effect/landmark/start/marine/smartgunner/delta,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "afH" = (
@@ -2681,12 +2630,12 @@
 "afK" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/bravo,
-/obj/effect/landmark/start/marine/leader/bravo,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/effect/landmark/start/marine/medic/bravo,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "afL" = (
@@ -2782,12 +2731,12 @@
 "afY" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/delta,
-/obj/effect/landmark/start/marine/leader/delta,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/effect/landmark/start/marine/medic/delta,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "afZ" = (
@@ -2920,7 +2869,6 @@
 "agm" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/delta,
-/obj/effect/landmark/start/marine/medic/delta,
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
@@ -2932,17 +2880,19 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/effect/landmark/start/marine/smartgunner/delta,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "agn" = (
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/delta,
-/obj/effect/landmark/start/marine/medic/delta,
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 8;
 	dir = 8
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/tank_crew{
+	job = /datum/job/command/tank_crew/ai
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -2952,39 +2902,31 @@
 "agp" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/delta,
-/obj/effect/landmark/start/marine/smartgunner/delta,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/effect/landmark/start/marine/delta,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "agq" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/delta,
-/obj/effect/landmark/start/marine/smartgunner/delta,
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_y = 1
 	},
+/obj/effect/landmark/start/marine/tl/delta,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "agr" = (
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/delta,
-/obj/effect/landmark/start/marine/medic/delta,
 /obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1;
-	pixel_y = 1
+	icon_state = "SE-out"
 	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/cryo_cells)
-"ags" = (
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/delta,
-/obj/effect/landmark/start/marine/medic/delta,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "agt" = (
@@ -3008,9 +2950,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "agy" = (
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/delta,
-/obj/effect/landmark/start/marine/tl/delta,
+/obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
@@ -3154,7 +3094,6 @@
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/hangar)
 "agO" = (
-/obj/effect/landmark/start/marine/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /obj/effect/decal/warning_stripes{
@@ -3162,7 +3101,8 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/landmark/start/marine/alpha,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "agP" = (
 /obj/structure/surface/table/almayer,
@@ -3173,14 +3113,14 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "agQ" = (
-/obj/effect/landmark/start/marine/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_y = 1
 	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/landmark/start/marine/alpha,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "agR" = (
 /obj/structure/bed/chair{
@@ -3204,7 +3144,6 @@
 /turf/open/floor/almayer/bluecorner/north,
 /area/golden_arrow/platoonarmory)
 "agU" = (
-/obj/effect/landmark/start/marine/leader/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /obj/effect/decal/warning_stripes{
@@ -3212,7 +3151,8 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/landmark/start/marine/smartgunner/alpha,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "agW" = (
 /obj/structure/closet/secure_closet/marine_personal/rifleman/s1{
@@ -3282,15 +3222,15 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "ahd" = (
-/obj/effect/landmark/start/marine/medic/alpha,
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/late_join,
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1;
-	pixel_y = 1
+/obj/structure/closet/secure_closet/marine_personal/tank_crew{
+	job = "Tank Crew";
+	pixel_x = 8
 	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/closet/secure_closet/marine_personal/tank_crew{
+	pixel_x = -7;
+	job = "Tank Crew"
+	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "ahe" = (
 /turf/open/floor/almayer/red,
@@ -3369,7 +3309,6 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "ahn" = (
-/obj/effect/landmark/start/marine/smartgunner/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /obj/structure/prop/invuln/overhead_pipe{
@@ -3383,10 +3322,10 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/landmark/start/marine/alpha,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aho" = (
-/obj/effect/landmark/start/marine/smartgunner/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /obj/structure/prop/invuln/overhead_pipe{
@@ -3399,7 +3338,8 @@
 	icon_state = "E";
 	pixel_y = 1
 	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/landmark/start/marine/tl/alpha,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "ahp" = (
 /obj/effect/decal/cleanable/dirt{
@@ -3411,7 +3351,6 @@
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "ahq" = (
-/obj/effect/landmark/start/marine/medic/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /obj/structure/prop/invuln/overhead_pipe{
@@ -3425,28 +3364,28 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/landmark/start/marine/medic/alpha,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "ahr" = (
-/obj/effect/landmark/start/marine/tl/alpha,
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/late_join,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8
+	},
 /obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1;
+	icon_state = "S";
 	pixel_y = 1
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "ahs" = (
-/obj/effect/landmark/start/marine/tl/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_y = 1
 	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/landmark/start/marine/tl/alpha,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aht" = (
 /obj/structure/bed/chair/comfy,
@@ -3651,9 +3590,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supplydrop)
 "ahY" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 1
-	},
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/cryo_cells)
 "ahZ" = (
@@ -3711,9 +3647,6 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -4048,12 +3981,11 @@
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/golden_arrow/medical)
 "ajU" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1;
-	pixel_y = 1
-	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "ajV" = (
@@ -4236,16 +4168,6 @@
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	layer = 2.5;
-	pixel_y = 2;
-	pixel_x = -1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 2
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -6128,10 +6050,11 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/motor_pool)
 "asK" = (
-/obj/effect/landmark/start/marine/leader/alpha,
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/landmark/start/pilot/cas_pilot{
+	job = /datum/job/command/pilot/cas_pilot/ai
+	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "asS" = (
 /obj/structure/pipes/vents/scrubber{
@@ -7972,9 +7895,6 @@
 /obj/structure/pipes/vents/scrubber{
 	dir = 4
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aAJ" = (
@@ -8985,12 +8905,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
-"aEI" = (
-/obj/effect/landmark/start/marine/medic/alpha,
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/late_join,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/cryo_cells)
 "aEK" = (
 /turf/open/floor/almayer/empty/golden_arrow,
 /area/golden_arrow/cargo_shuttle/upper)
@@ -9062,15 +8976,6 @@
 	icon_state = "S"
 	},
 /turf/open/floor/almayer/plate,
-/area/golden_arrow/cryo_cells)
-"aFb" = (
-/obj/structure/machinery/cryopod/big{
-	dir = 8;
-	pixel_x = -15;
-	layer = 3.1
-	},
-/obj/structure/machinery/camera/autoname/golden_arrow,
-/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aFf" = (
 /obj/structure/largecrate/supply/explosives/mortar_he,
@@ -10298,12 +10203,10 @@
 	dir = 8;
 	pixel_x = -10
 	},
-/obj/structure/machinery/cryopod/big{
-	pixel_y = 11;
-	layer = 3.2;
-	pixel_x = -5
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aKt" = (
 /obj/structure/cargo_container/uscm/mid{
@@ -10707,9 +10610,6 @@
 "aMo" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
 	},
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -11599,35 +11499,35 @@
 /turf/open/space/basic,
 /area/golden_arrow/cryo_cells)
 "aQL" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8
+	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_y = 1
 	},
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 8;
-	dir = 8
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 8;
-	dir = 8
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aQQ" = (
-/obj/effect/landmark/start/marine/medic/alpha,
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/late_join,
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 8;
 	dir = 8
 	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aQS" = (
 /obj/item/reagent_container/food/drinks/coffeecup/wy{
@@ -12989,9 +12889,6 @@
 	icon_state = "SW-out";
 	pixel_x = -1
 	},
-/obj/structure/sign/banners/united_americas_flag{
-	pixel_y = 30
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aWx" = (
@@ -14211,11 +14108,6 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "bUF" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1;
-	pixel_y = 1
-	},
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
@@ -14232,6 +14124,10 @@
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
 	light_power = 0.7
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -15594,13 +15490,6 @@
 "emo" = (
 /turf/open/floor/almayer/green/west,
 /area/golden_arrow/cryo_cells)
-"emr" = (
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/start/pilot/cas_pilot{
-	job = /datum/job/command/pilot/cas_pilot/ai
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/cryo_cells)
 "eow" = (
 /turf/open/floor/almayer/emerald/north,
 /area/golden_arrow/platoonarmory)
@@ -16376,17 +16265,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
-"flb" = (
-/obj/structure/closet/secure_closet/marine_personal/tank_crew{
-	pixel_x = -7;
-	job = "Tank Crew"
-	},
-/obj/structure/closet/secure_closet/marine_personal/tank_crew{
-	job = "Tank Crew";
-	pixel_x = 8
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/cryo_cells)
 "flE" = (
 /obj/structure/closet/secure_closet{
 	pixel_x = -9;
@@ -17675,15 +17553,27 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
 "hlN" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
 	dir = 8
 	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8;
+	pixel_x = 11
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	light_power = 0.7
+	},
 /obj/effect/decal/warning_stripes{
-	icon_state = "S"
+	icon_state = "W";
+	pixel_x = -1;
+	pixel_y = 1
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -17957,9 +17847,10 @@
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/motor_pool)
 "hSW" = (
-/obj/effect/landmark/start/marine/leader/alpha,
 /obj/effect/landmark/late_join/alpha,
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/leader/alpha,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "hUm" = (
 /obj/structure/cable/heavyduty{
@@ -21399,16 +21290,15 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supplydrop)
 "nmO" = (
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/late_join,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/start/tank_crew{
-	job = /datum/job/command/tank_crew/ai
-	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/landmark/start/marine/medic/alpha,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "nnZ" = (
 /obj/structure/cable/heavyduty{
@@ -21795,10 +21685,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
+/obj/structure/machinery/camera/autoname/golden_arrow,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "ocy" = (
@@ -21864,12 +21751,6 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SW-out"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -22531,15 +22412,13 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "puw" = (
-/obj/structure/closet/secure_closet/marine_personal/gp_pilot{
-	job = "Gunship Pilot";
-	pixel_x = -7
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
-/obj/structure/closet/secure_closet/marine_personal/gp_pilot{
-	job = "Gunship Pilot";
-	pixel_x = 8
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 30
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "pvh" = (
 /obj/structure/surface/table/almayer,
@@ -25584,14 +25463,17 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
 "tWc" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/charlie,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/effect/landmark/start/marine/smartgunner/charlie,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "tWd" = (
@@ -26567,11 +26449,11 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/lower_cargo)
 "vqW" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	layer = 2.5;
-	pixel_y = 2;
-	pixel_x = -1
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
+	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
+	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -26923,17 +26805,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
-"vKv" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_y = 1
-	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/start/tank_crew{
-	job = /datum/job/command/tank_crew/ai
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/cryo_cells)
 "vLe" = (
 /obj/structure/barricade/handrail/type_b,
 /turf/open/floor/almayer/edge/north,
@@ -28400,10 +28271,6 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 
@@ -29395,7 +29262,7 @@ aEG
 aEG
 aEG
 aEG
-aWh
+aEG
 aWh
 aWh
 aWh
@@ -29572,9 +29439,9 @@ aEG
 aEG
 aEG
 aEG
+aEG
 aWh
-aAK
-arz
+ahr
 aAK
 axr
 aAK
@@ -29595,7 +29462,7 @@ pGP
 aAK
 aRz
 acP
-aAK
+aRd
 aWh
 aEG
 aEG
@@ -29749,20 +29616,20 @@ aEG
 aEG
 aEG
 aEG
+aEG
 aWh
-emr
 akK
-ahr
+agO
 ahn
 agO
 agO
 avb
-agy
+agp
 agp
 agk
 afV
 aXG
-afG
+afj
 afj
 aeY
 aeJ
@@ -29772,7 +29639,7 @@ aee
 adJ
 adh
 acU
-acp
+aRd
 aWh
 aEG
 aEG
@@ -29926,9 +29793,9 @@ aEG
 aEG
 aEG
 aEG
+aEG
 aWh
-tWc
-vqW
+ahD
 aRd
 aZw
 aRd
@@ -30103,8 +29970,8 @@ aEG
 aEG
 aEG
 aEG
+aEG
 aWh
-vKv
 ack
 ahs
 aho
@@ -30121,14 +29988,14 @@ afp
 afa
 aeN
 bOR
-aep
+aeh
 aeh
 adM
 adi
 acW
 acs
 aWh
-aEG
+aWh
 aEG
 aEG
 aEG
@@ -30280,8 +30147,8 @@ aEG
 aEG
 aEG
 aEG
+aEG
 aWh
-aFb
 nZK
 abp
 cIk
@@ -30302,10 +30169,10 @@ abp
 aBw
 aec
 cIk
-hlN
-abp
+aeL
+aRd
+acv
 aWh
-aEG
 aEG
 aEG
 aEG
@@ -30457,8 +30324,8 @@ aEG
 aEG
 aEG
 aEG
+aEG
 aWh
-aAK
 yib
 aAK
 axr
@@ -30480,9 +30347,9 @@ akL
 aAK
 axr
 aeL
-aAK
+aRd
 aWh
-aEG
+aWh
 aEG
 aEG
 aEG
@@ -30634,32 +30501,32 @@ aEG
 aEG
 aEG
 aEG
+aEG
 aWh
+aWw
 nmO
-aAt
-agU
 ahq
-ahd
+agU
 agU
 aNr
 afY
-agr
-agm
 afY
+agm
+afG
 fRC
 afK
-afb
+afK
 afb
 aeP
 aNr
 aeq
 adN
-adN
+tWc
 adj
 acY
-acp
+aRd
+ahd
 aWh
-aEG
 aEG
 aEG
 aEG
@@ -30811,12 +30678,12 @@ aEG
 aEG
 aEG
 aEG
+aEG
 aWh
-ahD
-ahE
+agr
 oPL
-exa
-acQ
+acp
+oPL
 oPL
 prm
 oPL
@@ -30825,18 +30692,18 @@ aQL
 oPL
 akE
 aSB
+ahE
 oPL
-aSB
 exa
 aIf
 oPL
-oPL
-oPL
+ahE
+afc
 exa
 acW
-acu
+aRd
+ahd
 aWh
-aEG
 aEG
 aEG
 aEG
@@ -30988,32 +30855,32 @@ aEG
 aEG
 aEG
 aEG
+aEG
 aWh
-aRd
-aEZ
+puw
 aAK
 aKr
 aAK
 akL
 aAU
 aAK
-akL
+aEZ
 anJ
 akL
 aMo
 aAK
-akL
+aEZ
 aAK
 axr
 abh
 aAK
-akL
+aEZ
 aAK
 axr
 aAH
-aAK
+acq
 aWh
-aEG
+aWh
 aEG
 aEG
 aEG
@@ -31165,32 +31032,32 @@ aEG
 aEG
 aEG
 aEG
+aEG
 aWh
-aRd
 aEZ
 hSW
 aQQ
-aEI
+asK
 asK
 aAU
 afZ
-ags
+aEZ
 agn
-afZ
+adm
 aPL
 afL
-afc
-afc
+aEZ
+acy
 aeQ
 abh
 aes
-adO
-adO
-adm
-aih
+aEZ
 acy
+aeQ
+aih
+aRd
+vqW
 aWh
-aEG
 aEG
 aEG
 aEG
@@ -31342,7 +31209,7 @@ ahl
 aEG
 aEG
 aEG
-aWh
+aEG
 aWh
 aWw
 abW
@@ -31351,23 +31218,23 @@ acb
 abW
 aAt
 abW
-acb
-bUF
+aep
+hlN
 ahi
 aiL
 aOs
 ajU
-aOs
+agy
 aje
 aKH
 aOs
-aOs
 ajU
+agy
 aus
 ofs
-abW
+adt
+vqW
 aWh
-aEG
 aEG
 aEG
 aEG
@@ -31542,9 +31409,9 @@ adW
 adW
 aog
 adW
-acv
+adW
+vqW
 aWh
-aEG
 aEG
 aEG
 aEG
@@ -31721,7 +31588,7 @@ aGT
 adW
 ahY
 aWh
-aEG
+aWh
 aEG
 aEG
 aEG
@@ -33468,7 +33335,7 @@ aEG
 aEG
 kuk
 abU
-flb
+ahK
 aBk
 jtC
 aBk
@@ -33490,7 +33357,7 @@ aBk
 jtC
 aBk
 aBk
-acn
+ahK
 abU
 kuk
 aEG
@@ -33645,7 +33512,7 @@ aEG
 aEG
 kuk
 abU
-flb
+ahK
 aBk
 jtC
 aBk
@@ -33667,7 +33534,7 @@ gDf
 jtC
 aBk
 aBk
-acn
+ahK
 abU
 kuk
 aEG
@@ -33822,7 +33689,7 @@ aWh
 aWh
 aWh
 aWh
-puw
+aog
 aBk
 jtC
 awk
@@ -33844,7 +33711,7 @@ emo
 fiV
 aBk
 aBk
-acn
+ahK
 abU
 kuk
 aEG

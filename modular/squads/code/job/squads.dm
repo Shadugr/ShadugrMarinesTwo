@@ -14,22 +14,32 @@
 	// Добавочные офицеры после каждого отряда
 	var/staff_per_squad = 1
 
-	/// После скольких READY игроков открывается этот отряд.
+	/// После какого количества готовых игроков открывается этот отряд.
 	var/ready_players_usable
 	/// Связь с платуном по MAIN_SHIP_PLATOON, чтобы не добавляло лишние отряды в другие режимы.
 	var/platoon_associated_type
 
 // В проке идет проверка, но нет пехоты для корректного удаления из отряда.
-/datum/squad/forget_marine_in_squad(mob/living/carbon/human/M)
-	. = ..()
-	if(GET_DEFAULT_ROLE(M.job) == JOB_SQUAD_MARINE)
-		num_riflemen--
+/datum/squad/marine/apply_modular_forget_role_counters(mob/living/carbon/human/M)
+	var/default_role = GET_DEFAULT_ROLE(M?.job)
+	switch(default_role)
+		if(JOB_SQUAD_MARINE)
+			num_riflemen = max(0, num_riflemen - 1)
+		if(JOB_SQUAD_RTO)
+			num_rto = max(0, num_rto - 1)
 
-/datum/squad/proc/try_usable_squad()
 
+// Основные отряды. Фактическая численность определяется суммой ролевых лимитов max_*.
 /datum/squad/marine/alpha
 	equipment_color = "#db1d1d"
 	chat_color = "#db1d1d"
+	max_riflemen = 6
+	max_engineers = 4
+	max_medics = 2
+	max_specialists = 4
+	max_tl = 2
+	max_smartgun = 2
+	max_leaders = 1
 
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
@@ -42,23 +52,16 @@
 	roundstart = TRUE
 	active = TRUE
 	squad_type = "Section"
-	usable = FALSE // Включается при ready_players_usable готовых игроков
-	ready_players_usable = 10
+	usable = FALSE // Включается при достижении ready_players_usable готовых игроков
+	ready_players_usable = 12
 	platoon_associated_type = /datum/squad/marine/alpha
-
-
-/datum/squad/marine/charlie
-	equipment_color = "#c864c8"
-	chat_color = "#ff96ff"
-	access = list(ACCESS_MARINE_ALPHA, ACCESS_MARINE_CHARLIE)
-	minimap_color = MINIMAP_SQUAD_CHARLIE
-	use_stripe_overlay = FALSE
-	roundstart = TRUE
-	active = TRUE
-	squad_type = "Section"
-	usable = FALSE // Включается при ready_players_usable готовых игроков
-	ready_players_usable = 28 // Поменяли с дельта, т.к. дельта приоритет выше, т.к. пехотный отряд.
-	platoon_associated_type = /datum/squad/marine/alpha
+	max_riflemen = 6
+	max_engineers = 4
+	max_medics = 2
+	max_specialists = 4
+	max_tl = 2
+	max_smartgun = 2
+	max_leaders = 1
 
 
 /datum/squad/marine/delta
@@ -70,14 +73,41 @@
 	roundstart = TRUE
 	active = TRUE
 	squad_type = "Section"
-	usable = FALSE // Включается при ready_players_usable готовых игроков
-	ready_players_usable = 20
+	usable = FALSE // Включается при достижении ready_players_usable готовых игроков
+	ready_players_usable = 24
 	platoon_associated_type = /datum/squad/marine/alpha
+	max_riflemen = 6
+	max_engineers = 4
+	max_medics = 2
+	max_specialists = 4
+	max_tl = 2
+	max_smartgun = 2
+	max_leaders = 1
 
+
+/datum/squad/marine/charlie
+	equipment_color = "#c864c8"
+	chat_color = "#ff96ff"
+	access = list(ACCESS_MARINE_ALPHA, ACCESS_MARINE_CHARLIE)
+	minimap_color = MINIMAP_SQUAD_CHARLIE
+	use_stripe_overlay = FALSE
+	roundstart = TRUE
+	active = TRUE
+	squad_type = "Section"
+	usable = FALSE // Включается при достижении ready_players_usable готовых игроков
+	ready_players_usable = 36 // Поменяли с дельта, т.к. дельта приоритет выше, т.к. пехотный отряд.
+	platoon_associated_type = /datum/squad/marine/alpha
+	max_riflemen = 6
+	max_engineers = 4
+	max_medics = 2
+	max_specialists = 4
+	max_tl = 2
+	max_smartgun = 2
+	max_leaders = 1
 
 // Предложение как можно переименовать отряды:
-// #define SQUAD_MARINE_1_RENAME "Assault A-Sct"
-// #define SQUAD_MARINE_2_RENAME "Auxiliary Tech B-Sct"
-// #define SQUAD_MARINE_3_RENAME "Auxiliary Care C-Sct"
-// #define SQUAD_MARINE_4_RENAME "Assault D-Sct"
-// #define SQUAD_MARINE_5_RENAME "Support E-Sct"
+// #define SQUAD_MARINE_1_RENAME "Штурмовой А-отряд"
+// #define SQUAD_MARINE_2_RENAME "Технический B-отряд"
+// #define SQUAD_MARINE_3_RENAME "Медицинский C-отряд"
+// #define SQUAD_MARINE_4_RENAME "Штурмовой D-отряд"
+// #define SQUAD_MARINE_5_RENAME "Поддержка E-отряд"
