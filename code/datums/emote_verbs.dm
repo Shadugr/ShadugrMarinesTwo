@@ -57,6 +57,11 @@
 	set category = "Emotes"
 	emote("golfclap", intentional = TRUE)
 
+/mob/living/carbon/human/verb/emote_facepalm()
+	set name = "▷ Фейспалм "
+	set category = "Emotes"
+	emote("facepalm", intentional = TRUE)
+
 /mob/living/carbon/human/verb/emote_clap()
 	set name = "▷ Хлопать "
 	set category = "Emotes"
@@ -217,11 +222,6 @@
 	set name = "◦ Ухмыльнуться "
 	set category = "Emotes"
 	emote("grin", intentional = TRUE)
-
-/mob/living/carbon/human/verb/emote_facepalm()
-	set name = "◦ Фейспалм "
-	set category = "Emotes"
-	emote("facepalm", intentional = TRUE)
 
 /mob/living/carbon/human/verb/emote_giggle()
 	set name = "◦ Хихикать "

@@ -79,7 +79,10 @@
 /datum/emote/living/carbon/human/facepalm
 	key = "facepalm"
 	key_third_person = "facepalms"
-	message = "делает фейспалм."
+	message = "бьет себя по лбу."
+	sound = 'sound/misc/sound_effects_hit_punch.ogg'
+	cooldown = 5 SECONDS
+	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
 
 /datum/emote/living/carbon/human/faint
 	key = "faint"
