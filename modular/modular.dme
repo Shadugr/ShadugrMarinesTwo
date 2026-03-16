@@ -23,3 +23,4 @@
 #include "cyrillic_fixes/_cyrillic_fixes.dme"
 #include "translations/_translations.dme"
 #include "halo/_halo.dme"
+#include "localization/_localization.dme"
