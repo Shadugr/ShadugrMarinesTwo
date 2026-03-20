@@ -1,5 +1,6 @@
 #define TTS_SEED_DEFAULT_ANNOUNCE /datum/tts_seed/coqui/andrew_chipper
 #define TTS_SEED_ARES_ANNOUNCE /datum/tts_seed/coqui/viktor_eka
+#define TTS_SEED_COVENANT_ANNOUNCE /datum/tts_seed/coqui/viktor_eka
 #define TTS_SEED_YAUTJA_ANNOUNCE /datum/tts_seed/coqui/zacharie_aimilios
 #define TTS_SEED_QUEEN_MOTHER_ANNOUNCE /datum/tts_seed/coqui/brenda_stern
 
@@ -34,6 +35,10 @@
 /datum/announcer/ares
 	tts_seed = TTS_SEED_ARES_ANNOUNCE
 	sound_effect = SOUND_EFFECT_RADIO_ROBOT
+
+/datum/announcer/covenant
+	tts_seed = TTS_SEED_COVENANT_ANNOUNCE
+	sound_effect = SOUND_EFFECT_RADIO
 
 /datum/announcer/queen_mother
 	tts_seed = TTS_SEED_QUEEN_MOTHER_ANNOUNCE

@@ -1068,6 +1068,10 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out"
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 2
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "acq" = (
@@ -1959,17 +1963,12 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "aep" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	pixel_y = 2;
-	pixel_x = -1
+/obj/structure/bed/chair{
+	dir = 1;
+	pixel_y = 3
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SW-out";
-	pixel_x = -1
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/cryo_cells)
+/turf/open/floor/almayer/orange/north,
+/area/golden_arrow/dorms)
 "aeq" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/charlie,
@@ -2768,7 +2767,7 @@
 	dir = 2;
 	pixel_y = 3
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer/red,
 /area/golden_arrow/dorms)
 "agd" = (
 /obj/structure/cable/heavyduty{
@@ -3408,21 +3407,16 @@
 /turf/open/floor/almayer/red/north,
 /area/golden_arrow/cryo_cells)
 "ahw" = (
-/obj/structure/filingcabinet/chestdrawer{
-	density = 0;
-	pixel_x = 5;
-	pixel_y = 16
+/obj/structure/window/framed/almayer/hull,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "CIC";
+	name = "Brief Shutters"
 	},
-/obj/item/ashtray/bronze{
-	pixel_x = 6;
-	pixel_y = 17
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "Brief Shutters";
+	name = "Brief Shutters"
 	},
-/obj/structure/reagent_dispensers/water_cooler/walk_past{
-	pixel_x = -8;
-	pixel_y = 15
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/plate,
+/turf/open/space/basic,
 /area/golden_arrow/platoon_commander_rooms)
 "ahx" = (
 /turf/open/floor/almayer/red/north,
@@ -3470,6 +3464,7 @@
 	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
 	name = "Surgery Cleaner"
 	},
+/obj/item/stack/sheet/metal/large_stack,
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/golden_arrow/medical)
 "ahC" = (
@@ -3489,11 +3484,12 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "ahE" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out"
+/obj/structure/bed/chair{
+	dir = 1;
+	pixel_y = 3
 	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/cryo_cells)
+/turf/open/floor/almayer/emerald/north,
+/area/golden_arrow/dorms)
 "ahF" = (
 /obj/structure/machinery/door/poddoor/railing{
 	id = "garrow_vehicle_elevator_one"
@@ -3986,6 +3982,11 @@
 	icon_state = "SW-out";
 	pixel_x = -1
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 2;
+	pixel_x = -1
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "ajV" = (
@@ -4096,16 +4097,7 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
 "aky" = (
-/obj/structure/surface/table/almayer,
-/obj/item/notepad/black{
-	pixel_y = 6;
-	pixel_x = -6
-	},
-/obj/item/tool/pen{
-	pixel_x = 5;
-	pixel_y = 4
-	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/red/east,
 /area/golden_arrow/dorms)
 "akC" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
@@ -5374,6 +5366,14 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
+"apz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair{
+	dir = 2;
+	pixel_y = 3
+	},
+/turf/open/floor/almayer/red,
+/area/golden_arrow/dorms)
 "apA" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -5897,12 +5897,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "arO" = (
-/obj/structure/machinery/photocopier{
-	pixel_y = 1;
-	density = 0;
-	pixel_x = -1
-	},
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer/edge/smooth/endcap_left,
 /area/golden_arrow/platoon_commander_rooms)
 "arQ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -6478,11 +6473,8 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "auG" = (
-/obj/structure/platform_decoration{
-	dir = 4
-	},
-/turf/open/floor/almayer/mono,
-/area/golden_arrow/platoonprep)
+/turf/open/floor/almayer/edge/smooth/southwest,
+/area/golden_arrow/platoon_commander_rooms)
 "auH" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -6511,6 +6503,10 @@
 /area/golden_arrow/supply)
 "auO" = (
 /obj/structure/machinery/light/double/blue/golden_arrow,
+/obj/structure/bed/chair{
+	dir = 1;
+	pixel_y = 3
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "auP" = (
@@ -7102,14 +7098,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "axS" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
-	req_one_access = list(12,19)
-	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	id = "CIC";
-	name = "CIC Lockdown Shutters"
-	},
-/turf/open/floor/almayer/test_floor4,
+/turf/open/floor/almayer/silvercorner,
 /area/golden_arrow/platoon_commander_rooms)
 "axT" = (
 /obj/effect/decal/cleanable/dirt{
@@ -7379,7 +7368,9 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
 "ayP" = (
-/turf/open/floor/almayer/plate,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal,
+/turf/open/floor/almayer/silverfull,
 /area/golden_arrow/platoon_commander_rooms)
 "ayS" = (
 /obj/effect/decal/warning_stripes{
@@ -8816,7 +8807,17 @@
 /area/golden_arrow/hangar)
 "aEq" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/device/megaphone,
+/obj/structure/window/reinforced/toughened,
+/obj/structure/window/reinforced/toughened{
+	dir = 8
+	},
+/obj/structure/machinery/door_control{
+	pixel_x = 6;
+	id = "BRIEF";
+	name = "Brief Lockdown";
+	req_access = list(19);
+	pixel_y = 8
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_commander_rooms)
 "aEr" = (
@@ -8925,22 +8926,12 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "aEO" = (
-/obj/structure/window/reinforced/toughened,
-/obj/item/paper_bin{
-	pixel_y = 9;
-	pixel_x = -8
-	},
-/obj/structure/surface/table/almayer,
-/obj/item/clipboard{
-	pixel_x = 6;
-	pixel_y = 3
-	},
-/obj/item/tool/pen{
-	pixel_y = 7;
-	pixel_x = 3
-	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/mono,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 8
+	},
+/turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/platoon_commander_rooms)
 "aES" = (
 /obj/structure/bed/roller/hospital_empty/bigrollerempty,
@@ -9576,10 +9567,12 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aHw" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 1
+/obj/structure/bed/chair/comfy{
+	buckling_y = 2;
+	dir = 8;
+	pixel_y = 2
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/silver/west,
 /area/golden_arrow/platoon_commander_rooms)
 "aHx" = (
 /obj/item/weapon/twohanded/folded_metal_chair{
@@ -9951,7 +9944,10 @@
 /turf/open/space/basic,
 /area/space)
 "aJa" = (
-/obj/structure/machinery/disposal,
+/obj/structure/bed/chair{
+	dir = 2;
+	pixel_y = 3
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "aJe" = (
@@ -10205,6 +10201,10 @@
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -10653,8 +10653,14 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
 "aMA" = (
-/obj/structure/bed/chair/office/dark,
-/turf/open/floor/almayer/plate,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7;
+	pixel_x = -6;
+	pixel_y = 3;
+	layer = 2.97
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_left/west,
 /area/golden_arrow/platoon_commander_rooms)
 "aMC" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -11139,11 +11145,15 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aPh" = (
-/obj/structure/platform_decoration{
-	dir = 8
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
 	},
 /turf/open/floor/almayer/mono,
-/area/golden_arrow/platoonprep)
+/area/golden_arrow/platoon_commander_rooms)
 "aPk" = (
 /obj/structure/platform/kutjevo/rock{
 	pixel_x = 0;
@@ -11526,6 +11536,10 @@
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -12474,10 +12488,11 @@
 /turf/open/floor/almayer/edge/smooth/endcap_left/west,
 /area/golden_arrow/cryo_cells)
 "aUl" = (
-/obj/structure/bed/chair/office/dark{
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/overwatch/almayer{
 	dir = 4
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/green/east,
 /area/golden_arrow/dorms)
 "aUo" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -13814,6 +13829,19 @@
 /obj/structure/closet/emcloset,
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/platoonprep)
+"byN" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7;
+	pixel_x = -6;
+	pixel_y = 3;
+	layer = 2.97
+	},
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
 "byT" = (
 /obj/structure/barricade/handrail,
 /obj/structure/barricade/handrail{
@@ -13835,21 +13863,8 @@
 /turf/open/floor/almayer/empty/golden_arrow/vehicle_one,
 /area/golden_arrow/motor_pool)
 "bCo" = (
-/obj/item/paper_bin{
-	pixel_y = 9;
-	pixel_x = -8
-	},
-/obj/item/paper{
-	pixel_y = 5;
-	pixel_x = -4
-	},
-/obj/structure/surface/table/almayer,
-/obj/item/tool/pen{
-	pixel_y = 7;
-	pixel_x = 3
-	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer/silverfull,
 /area/golden_arrow/platoon_commander_rooms)
 "bDB" = (
 /obj/effect/decal/cleanable/dirt{
@@ -14127,6 +14142,11 @@
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 2;
 	pixel_x = -1
 	},
 /turf/open/floor/almayer/plate,
@@ -15785,15 +15805,9 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/lower_cargo)
 "eES" = (
-/obj/structure/machinery/computer/emails{
-	dir = 1;
-	pixel_y = 4
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	req_one_access = list(12,19)
 	},
-/obj/structure/window/reinforced/toughened,
-/obj/structure/window/reinforced/toughened{
-	dir = 8
-	},
-/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
 "eFS" = (
@@ -15806,16 +15820,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "eFT" = (
-/obj/item/paper/crumpled{
-	layer = 2.7;
-	pixel_y = -10;
-	pixel_x = 5
-	},
-/obj/item/paper/crumpled{
-	pixel_y = 9;
-	pixel_x = 10
-	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/silverfull,
 /area/golden_arrow/platoon_commander_rooms)
 "eGp" = (
 /obj/item/bedsheet/purple{
@@ -16301,7 +16306,10 @@
 /turf/open/floor/almayer/orangefull,
 /area/golden_arrow/supply)
 "fpt" = (
-/turf/open/floor/almayer,
+/obj/structure/bed/chair/comfy{
+	dir = 1
+	},
+/turf/open/floor/almayer/silver/north,
 /area/golden_arrow/platoon_commander_rooms)
 "fqq" = (
 /obj/structure/machinery/power/smes/buildable,
@@ -16467,10 +16475,13 @@
 /turf/open/floor/almayer/aicore/glowing,
 /area/golden_arrow/ai_interface)
 "fKv" = (
-/obj/structure/platform_decoration{
-	dir = 1
+/obj/structure/window/framed/almayer/hull,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	name = "Brief Shutters";
+	dir = 4;
+	id = "Brief Shutters"
 	},
-/turf/open/floor/almayer/mono,
+/turf/open/space/basic,
 /area/golden_arrow/platoon_commander_rooms)
 "fLv" = (
 /obj/structure/platform{
@@ -16742,7 +16753,7 @@
 	dir = 1;
 	pixel_y = 3
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "gjs" = (
 /obj/structure/barricade/handrail,
@@ -17052,24 +17063,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "gFC" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	light_power = 0.3;
-	brightness = 9
-	},
-/obj/item/paper/crumpled{
-	layer = 2.7;
-	pixel_y = 5;
-	pixel_x = -4
-	},
-/obj/item/paper/crumpled{
-	pixel_y = 9;
-	pixel_x = 10
-	},
-/obj/item/paper/crumpled{
-	pixel_y = 17;
-	pixel_x = -3
-	},
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/platoon_commander_rooms)
 "gGG" = (
 /obj/structure/machinery/power/apc/power/north,
@@ -17361,7 +17355,7 @@
 	icon_state = "door_warning";
 	dir = 4
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/platoon_commander_rooms)
 "gVg" = (
 /obj/structure/roof/cargocrane_tracks/vertical{
@@ -17465,28 +17459,10 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "hdV" = (
-/obj/structure/filingcabinet{
-	density = 0;
-	pixel_x = -8;
-	pixel_y = 16
+/obj/structure/bed/chair/comfy{
+	dir = 4
 	},
-/obj/structure/filingcabinet{
-	density = 0;
-	pixel_x = 7;
-	pixel_y = 16
-	},
-/obj/structure/flora/pottedplant{
-	icon_state = "pottedplant_17";
-	pixel_y = 3;
-	pixel_x = -10;
-	layer = 3.6
-	},
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25;
-	dir = 8;
-	brightness = 7
-	},
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer/silver/east,
 /area/golden_arrow/platoon_commander_rooms)
 "hhe" = (
 /obj/structure/largecrate/supply/explosives/himat_antipersonnel,
@@ -17533,10 +17509,6 @@
 /obj/structure/sign/banners/usa_flag{
 	pixel_x = -15;
 	pixel_y = 64
-	},
-/obj/structure/bed/chair{
-	dir = 2;
-	pixel_y = 3
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
@@ -17699,7 +17671,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/platoonprep)
+/area/golden_arrow/platoon_commander_rooms)
 "hGr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -17733,12 +17705,12 @@
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/supply)
 "hKL" = (
-/obj/item/paper/crumpled{
-	layer = 2.7;
-	pixel_y = -10;
-	pixel_x = 5
+/obj/structure/window/framed/almayer/hull,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "Brief Shutters";
+	name = "Brief Shutters"
 	},
-/turf/open/floor/almayer,
+/turf/open/space/basic,
 /area/golden_arrow/platoon_commander_rooms)
 "hKW" = (
 /obj/item/device/megaphone,
@@ -18017,9 +17989,7 @@
 /turf/closed/wall/almayer/outer/gear,
 /area/golden_arrow/cargo_shuttle/upper)
 "ifq" = (
-/obj/structure/platform_decoration,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer/edge/northwest,
 /area/golden_arrow/platoon_commander_rooms)
 "ihf" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -18698,12 +18668,8 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
 "jbv" = (
-/obj/structure/machinery/computer/secure_data/noaccess{
-	dir = 4
-	},
-/obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer/edge/smooth/endcap_left,
 /area/golden_arrow/platoon_commander_rooms)
 "jbJ" = (
 /obj/effect/decal/cleanable/dirt{
@@ -19284,13 +19250,8 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "kgq" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	light_power = 0.6;
-	dir = 4;
-	brightness = 9
-	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer/edge/northeast,
 /area/golden_arrow/platoon_commander_rooms)
 "kgw" = (
 /obj/effect/decal/warning_stripes{
@@ -20382,6 +20343,10 @@
 	light_power = 0.7;
 	pixel_y = 6
 	},
+/obj/structure/bed/chair{
+	dir = 2;
+	pixel_y = 3
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "lQq" = (
@@ -20569,6 +20534,10 @@
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
+"mgN" = (
+/obj/item/stack/sandbags_empty/full,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/supply)
 "mhB" = (
 /obj/structure/toilet{
 	dir = 4
@@ -21076,6 +21045,18 @@
 	},
 /turf/open/floor/almayer/blue/southwest,
 /area/golden_arrow/supply)
+"mSQ" = (
+/obj/structure/surface/table/almayer,
+/obj/item/notepad/black{
+	pixel_y = 6;
+	pixel_x = -6
+	},
+/obj/item/tool/pen{
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer/green/northeast,
+/area/golden_arrow/dorms)
 "mWi" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	brightness = 9
@@ -21407,6 +21388,12 @@
 /obj/structure/machinery/door/airlock/almayer/secure{
 	req_access = null
 	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	name = "Brief Lockdown";
+	id = "BRIEF";
+	req_access = list(19)
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "nyw" = (
@@ -21493,6 +21480,10 @@
 /area/golden_arrow/prep_hallway)
 "nEn" = (
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/window/reinforced/toughened,
+/obj/structure/window/reinforced/toughened{
+	dir = 4
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_commander_rooms)
 "nEv" = (
@@ -21624,6 +21615,9 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
+"nRV" = (
+/turf/open/floor/almayer/green/north,
+/area/golden_arrow/dorms)
 "nUJ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -22193,8 +22187,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "oRK" = (
-/obj/structure/flora/pottedplant,
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer/edge/smooth/southeast,
 /area/golden_arrow/platoon_commander_rooms)
 "oTo" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -22520,6 +22513,17 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
+"pyC" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 9
+	},
+/obj/structure/bed/chair{
+	dir = 2;
+	pixel_y = 3
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
 "pyZ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -22541,7 +22545,7 @@
 /area/golden_arrow/hangar)
 "pzQ" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/silvercorner/north,
 /area/golden_arrow/platoon_commander_rooms)
 "pCI" = (
 /obj/structure/platform,
@@ -22849,15 +22853,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
 "pZs" = (
-/obj/structure/machinery/computer/emails{
-	pixel_y = 4;
-	pixel_x = 5
-	},
-/obj/structure/window/reinforced/toughened{
-	dir = 8
-	},
-/obj/structure/surface/table/almayer,
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer/edge/smooth/endcap_left/west,
 /area/golden_arrow/platoon_commander_rooms)
 "pZH" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -23309,12 +23305,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supplydrop)
 "qES" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/bed/chair{
-	dir = 2;
-	pixel_y = 3
-	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer/green/south,
 /area/golden_arrow/dorms)
 "qFB" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -23423,23 +23414,8 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "qPk" = (
-/obj/item/paper_bin{
-	pixel_y = 9;
-	pixel_x = -8
-	},
-/obj/item/ashtray/plastic{
-	icon_state = "ashtray_full_bl";
-	pixel_x = 9;
-	pixel_y = 2
-	},
-/obj/item/trash/cigbutt{
-	pixel_y = 10;
-	pixel_x = 1;
-	randpixel = 0
-	},
-/obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/platoon_commander_rooms)
 "qPu" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
@@ -23665,6 +23641,13 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
+"rhd" = (
+/obj/structure/bed/chair{
+	dir = 2;
+	pixel_y = 3
+	},
+/turf/open/floor/almayer/blue,
+/area/golden_arrow/dorms)
 "rhh" = (
 /obj/structure/machinery/cm_vending/clothing/engi/bravo{
 	req_access = list();
@@ -24508,9 +24491,20 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "svr" = (
-/obj/structure/bed/chair/office/dark,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/plate,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7;
+	pixel_y = 6
+	},
+/obj/structure/phone_base/overwatch{
+	phone_category = "Command";
+	phone_id = "Brief Room";
+	name = "Brief Room";
+	pixel_x = -22;
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/edge/north,
 /area/golden_arrow/platoon_commander_rooms)
 "svL" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -24671,6 +24665,14 @@
 	},
 /turf/open/floor/almayer/orange,
 /area/golden_arrow/supply)
+"sLZ" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/tableflag{
+	pixel_y = 0;
+	layer = 5
+	},
+/turf/open/floor/almayer/green/southeast,
+/area/golden_arrow/dorms)
 "sMB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -24737,11 +24739,13 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "sTA" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 8;
-	layer = 3.25
+/obj/structure/machinery/door_control{
+	pixel_x = -5;
+	id = "Brief Shutters";
+	name = "Brief Shutters";
+	pixel_y = 0
 	},
-/turf/open/floor/almayer/plate,
+/turf/closed/wall/almayer/outer,
 /area/golden_arrow/platoon_commander_rooms)
 "sTP" = (
 /obj/effect/decal/warning_stripes{
@@ -24841,22 +24845,8 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/engineering)
 "tkm" = (
-/obj/structure/window/reinforced/toughened,
-/obj/item/paper_bin{
-	pixel_y = 9;
-	pixel_x = -8
-	},
-/obj/structure/surface/table/almayer,
-/obj/item/prop{
-	name = "Empty Reaper Red";
-	icon = 'icons/obj/items/drinks.dmi';
-	icon_state = "reaper";
-	desc = "A strong Japanese beer that is marketed as 'daring' and 'adventurous'. Considering the label is quite literally the universal sign for 'HAZARD', it's safe to say drinking enough of this will be enough of a daring adventure to make you move up your next appointment with your doctor regarding your weeping liver.";
-	pixel_x = 10;
-	pixel_y = 15;
-	layer = 3.75
-	},
-/turf/open/floor/almayer/mono,
+/obj/structure/bed/chair/comfy,
+/turf/open/floor/almayer/silver,
 /area/golden_arrow/platoon_commander_rooms)
 "tkr" = (
 /obj/structure/machinery/photocopier{
@@ -25103,12 +25093,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
 "tDA" = (
-/obj/structure/surface/table/almayer,
-/obj/item/prop/tableflag{
-	pixel_y = 0;
-	layer = 5
-	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/emerald/east,
 /area/golden_arrow/dorms)
 "tEc" = (
 /obj/effect/decal/cleanable/dirt{
@@ -25521,7 +25506,10 @@
 /area/golden_arrow/supply)
 "tXX" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/plate,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.5
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_left,
 /area/golden_arrow/platoon_commander_rooms)
 "tYa" = (
 /obj/structure/largecrate/supply/explosives/mortar_incend,
@@ -25590,6 +25578,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"uiv" = (
+/turf/open/floor/almayer/orange/east,
+/area/golden_arrow/dorms)
 "ujj" = (
 /obj/structure/machinery/light/small/red{
 	dir = 8
@@ -25607,6 +25598,8 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
+/obj/structure/window/reinforced/toughened,
+/obj/item/device/megaphone,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_commander_rooms)
 "ulq" = (
@@ -26010,6 +26003,10 @@
 /obj/item/lightstick/red/variant/planted,
 /turf/open/floor/almayer_hull/outerhull_dir/west,
 /area/space)
+"uPO" = (
+/obj/item/stack/sandbags_empty/full,
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "uPR" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/vents/scrubber{
@@ -27174,7 +27171,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/platoonprep)
+/area/golden_arrow/platoon_commander_rooms)
 "wtY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
@@ -27182,6 +27179,17 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"wuv" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 9
+	},
+/obj/structure/bed/chair{
+	dir = 1;
+	pixel_y = 3
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
 "wvU" = (
 /obj/structure/window/framed/almayer/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
@@ -27559,13 +27567,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/lower_cargo)
-"wOV" = (
-/obj/item/paper/crumpled{
-	pixel_y = 9;
-	pixel_x = 10
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/platoon_commander_rooms)
 "wPI" = (
 /turf/open/floor/almayer/uscm/directional/up_down/west,
 /area/golden_arrow/prep_hallway)
@@ -27790,6 +27791,11 @@
 /area/golden_arrow/cryo_cells)
 "xjm" = (
 /obj/structure/window/framed/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	name = "Brief Shutters";
+	dir = 4;
+	id = "Brief Shutters"
+	},
 /turf/open/floor/plating,
 /area/golden_arrow/platoon_commander_rooms)
 "xlL" = (
@@ -27873,6 +27879,9 @@
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
+"xyN" = (
+/turf/open/floor/almayer/blue/east,
+/area/golden_arrow/dorms)
 "xyT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -28085,17 +28094,8 @@
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/hangar)
 "xQS" = (
-/obj/structure/machinery/computer/emails{
-	dir = 1;
-	pixel_y = 4
-	},
-/obj/structure/window/reinforced/toughened,
-/obj/structure/window/reinforced/toughened{
-	dir = 8
-	},
-/obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer/silvercorner/west,
 /area/golden_arrow/platoon_commander_rooms)
 "xRn" = (
 /obj/structure/largecrate/random/case{
@@ -28133,21 +28133,14 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
 "xXR" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/faxmachine/uscm/command/capt{
-	pixel_y = 7
-	},
-/obj/item/device/flashlight/lamp/on{
-	pixel_y = -8;
-	pixel_x = 7
-	},
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer/silvercorner/east,
 /area/golden_arrow/platoon_commander_rooms)
 "xZe" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/computer/overwatch/almayer{
-	dir = 4
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 9
 	},
+/obj/structure/machinery/disposal,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "xZy" = (
@@ -30692,12 +30685,12 @@ aQL
 oPL
 akE
 aSB
-ahE
+prm
 oPL
 exa
 aIf
 oPL
-ahE
+prm
 afc
 exa
 acW
@@ -30864,17 +30857,17 @@ aAK
 akL
 aAU
 aAK
-aEZ
+aAU
 anJ
 akL
 aMo
 aAK
-aEZ
+aAU
 aAK
 axr
 abh
 aAK
-aEZ
+aAU
 aAK
 axr
 aAH
@@ -31041,17 +31034,17 @@ asK
 asK
 aAU
 afZ
-aEZ
+aAU
 agn
 adm
 aPL
 afL
-aEZ
+aAU
 acy
 aeQ
 abh
 aes
-aEZ
+aAU
 acy
 aeQ
 aih
@@ -31218,7 +31211,7 @@ acb
 abW
 aAt
 abW
-aep
+aAt
 hlN
 ahi
 aiL
@@ -34545,7 +34538,7 @@ aBN
 aCR
 aIR
 aVO
-aum
+mgN
 uww
 abn
 aum
@@ -34917,7 +34910,7 @@ aum
 tQr
 rBG
 afz
-afz
+uPO
 afz
 afz
 afz
@@ -35669,9 +35662,9 @@ avq
 aLP
 kNp
 kNp
-kNp
-avq
-kNp
+nRV
+byN
+qES
 kNp
 kNp
 aLP
@@ -35769,13 +35762,13 @@ aEG
 aEG
 eNJ
 kuk
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+aDh
+aDh
+aDh
+fKv
+fKv
+aDh
+aDh
 ahl
 axt
 apS
@@ -35844,13 +35837,13 @@ mbc
 lPW
 aoX
 aoX
-aoX
+agc
 kNp
-kNp
+mSQ
 aUl
+sLZ
 kNp
-kNp
-aLZ
+ahE
 aLZ
 aLZ
 auO
@@ -35946,13 +35939,13 @@ aEG
 aEG
 kuk
 kuk
-aDh
-aDh
-aDh
-aDh
-aDh
-aDh
-aDh
+hKL
+ifq
+aMA
+pZs
+pZs
+aMA
+auG
 ahl
 amb
 afz
@@ -36018,19 +36011,19 @@ aFR
 aaI
 abF
 afv
-aFK
+aJa
+aoX
 aoX
 agc
-aoX
 kNp
 aky
-xZe
+kNp
 tDA
 kNp
+ahE
+aLZ
 aLZ
 ggp
-aLZ
-aFK
 afv
 eGp
 kNp
@@ -36123,10 +36116,10 @@ aEG
 aEG
 kuk
 kuk
-aDh
-aDh
-aDh
-aDh
+ahw
+aaK
+axS
+hdV
 hdV
 xXR
 jbv
@@ -36142,7 +36135,7 @@ tEm
 afz
 apS
 afz
-afz
+uPO
 ahJ
 afz
 afz
@@ -36195,19 +36188,19 @@ afv
 afv
 afv
 afv
-aFK
+aJa
 aoX
-qES
 aMV
+apz
 kNp
+alw
 kNp
+alw
 kNp
-kNp
-kNp
+ahE
+aLZ
 aLZ
 ggp
-aLZ
-aFK
 afv
 aSg
 kNp
@@ -36301,12 +36294,12 @@ aDr
 exb
 kuk
 aDh
-ahw
+gyk
+tkm
+eFT
+ayP
 fpt
-fpt
-pzQ
-fpt
-sTA
+arO
 ahl
 aAy
 aUM
@@ -36374,16 +36367,16 @@ vbQ
 afv
 aFK
 hkv
-agc
-aoX
 kNp
-alw
 kNp
-alw
 kNp
-aLZ
-ggp
-aLZ
+xyN
+kNp
+uiv
+kNp
+kNp
+kNp
+kNp
 aFK
 afv
 aQY
@@ -36479,10 +36472,10 @@ aDr
 kuk
 aDh
 svr
-eES
-pZs
-aHw
-wOV
+tkm
+eFT
+eFT
+fpt
 tXX
 ahl
 ayr
@@ -36549,19 +36542,19 @@ alp
 hcJ
 awL
 afv
-aFK
+aJa
 aoX
-agc
 aoX
+rhd
 kNp
 alw
 kNp
 alw
 kNp
+aep
+aLZ
 aLZ
 ggp
-aLZ
-aFK
 afv
 eGp
 kNp
@@ -36654,13 +36647,13 @@ rHl
 rue
 aDh
 aDh
-aDh
-ayP
+sTA
+aaK
 tkm
 bCo
 eFT
-hKL
-gFC
+fpt
+arO
 ahl
 aTE
 aTG
@@ -36729,13 +36722,13 @@ afv
 lPW
 aoX
 aMV
-aoX
+rhd
 kNp
 kNp
 kNp
 kNp
 kNp
-aLZ
+aep
 aLZ
 aLZ
 auO
@@ -36832,9 +36825,9 @@ aDh
 aDh
 tmN
 tmN
-aMA
+aaK
 xQS
-pZs
+aHw
 aHw
 pzQ
 arO
@@ -36904,18 +36897,18 @@ aat
 aCi
 afv
 aJa
-ngb
-kNp
+pyC
+aoX
+rhd
 hbe
 hbe
-kNp
-ngb
-kNp
+xZe
 hbe
 hbe
-kNp
-ngb
-aFK
+aep
+aLZ
+wuv
+ggp
 afv
 eGp
 hbe
@@ -37012,10 +37005,10 @@ tmN
 kgq
 aEO
 qPk
-fpt
+gFC
 gTN
 oRK
-aDQ
+aDh
 aDQ
 aDQ
 aDQ
@@ -37083,13 +37076,13 @@ afv
 afv
 afv
 afv
-axw
-aBo
-afv
-afv
 afv
 axw
 aBo
+afv
+axw
+aBo
+afv
 afv
 afv
 afv
@@ -37192,7 +37185,7 @@ xjm
 xjm
 nxj
 tmN
-aDQ
+aDh
 afQ
 aDQ
 aDQ
@@ -37260,13 +37253,13 @@ kNp
 yhA
 kNp
 kNp
-alW
-alW
+kNp
 alW
 alW
 aad
 alW
 alW
+kNp
 kNp
 kNp
 kNp
@@ -37368,8 +37361,8 @@ gbz
 aBB
 aBB
 aaM
+eES
 lGH
-auG
 kIR
 gPu
 kIR
@@ -37540,12 +37533,12 @@ aoC
 lID
 lID
 azr
-axS
+xJl
 aPf
 ltE
 lID
-ifq
-ieS
+pqs
+aBB
 aPh
 okP
 hOU
@@ -38071,7 +38064,7 @@ aPU
 aBe
 aGf
 ngD
-axS
+xJl
 aPf
 lID
 lID
@@ -38252,9 +38245,9 @@ xJl
 aPf
 lID
 ltE
-fKv
+aBB
+eES
 iRi
-auG
 oyq
 avw
 avw
@@ -38429,9 +38422,9 @@ tmN
 pLu
 pqs
 aCA
-ifq
+pqs
+aBB
 ieS
-aPh
 ivd
 aVW
 kIR

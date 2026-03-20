@@ -79,8 +79,8 @@ GLOBAL_LIST_INIT(cm_vending_gear_tl, list(
 	))
 
 /obj/structure/machinery/cm_vending/gear/tl
-	name = "ColMarTech Fireteam Leader Gear Rack"
-	desc = "An automated gear rack for fireteam leaders."
+	name = "ColMarTech Group Leader Gear Rack"
+	desc = "An automated gear rack for group leaders."
 	icon_state = "intel_gear"
 	show_points = TRUE
 	req_access = list(ACCESS_MARINE_TL_PREP)
@@ -97,7 +97,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_tl, list(
 		list("M4 Pattern Armor", 0, /obj/item/clothing/suit/storage/marine/medium/rto, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("MRE", 0, /obj/item/storage/box/mre, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
 		list("Map", 0, /obj/item/map/current_map, MARINE_CAN_BUY_KIT, VENDOR_ITEM_MANDATORY),
-		list("Essential Fireteam Leader Utilities", 0, /obj/effect/essentials_set/tl, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Essential Group Leader Utilities", 0, /obj/effect/essentials_set/tl, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
 		list("WEBBINGS FOR ARMOR (CHOOSE 1)", 0, null, null, null),
 		list("M3 Pattern Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
@@ -147,8 +147,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_tl, list(
 
 //MARINE_CAN_BUY_SHOES MARINE_CAN_BUY_UNIFORM currently not used
 /obj/structure/machinery/cm_vending/clothing/tl
-	name = "ColMarTech Fireteam Leader Equipment Rack"
-	desc = "An automated rack hooked up to a colossal storage of fireteam leader standard-issue equipment."
+	name = "ColMarTech Group Leader Equipment Rack"
+	desc = "An automated rack hooked up to a colossal storage of group leader standard-issue equipment."
 	req_access = list(ACCESS_MARINE_TL_PREP)
 	vendor_role = list(JOB_SQUAD_TEAM_LEADER)
 
