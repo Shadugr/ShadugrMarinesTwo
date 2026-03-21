@@ -247,3 +247,18 @@
 	SSassets.transport.dont_mutate_filenames = TRUE
 	message_admins("[key_name_admin(usr)] disabled CDN asset transport")
 	log_admin("[key_name(usr)] disabled CDN asset transport")
+
+/datum/admins/proc/latejoin_toggle()
+	set name = "Toggle Latejoin"
+	set desc = "Enable/disable latejoin"
+	set category = "Server.Round"
+
+	if(!check_rights(R_SERVER) || !SSticker.mode)
+		return
+
+	if(GLOB.enter_allowed)
+		GLOB.enter_allowed = FALSE
+		message_admins("Disabled latejoin!")
+	else
+		GLOB.enter_allowed = TRUE
+		message_admins("Enabled latejoin!")

@@ -37,9 +37,7 @@
 	new /obj/item/ammo_magazine/rocket(src)
 	new /obj/item/ammo_magazine/rocket/ap(src)
 	new /obj/item/ammo_magazine/rocket/wp(src)
-	new /obj/item/explosive/plastic(src)
-	new /obj/item/explosive/plastic(src)
-	// loader
+	new /obj/item/clothing/glasses/night/ghillie_goggles(src)
 	new /obj/item/storage/box/kit/loader(src)
 
 /obj/item/storage/box/kit/loader

@@ -213,6 +213,7 @@ GLOBAL_LIST_INIT(admin_verbs_server, list(
 	/datum/admins/proc/togglejoin,
 	/client/proc/toggle_cdn,
 	/datum/admins/proc/toggle_intro,
+	/datum/admins/proc/latejoin_toggle,
 ))
 
 GLOBAL_LIST_INIT(admin_verbs_debug, list(

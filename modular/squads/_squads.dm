@@ -8,7 +8,7 @@
 
 /datum/modpack/squads/initialize()
 	. = ..()
-	SSticker.OnRoundstart(CALLBACK(src, PROC_REF(schedule_latejoin_disable)))
+	// SSticker.OnRoundstart(CALLBACK(src, PROC_REF(schedule_latejoin_disable)))
 
 /datum/modpack/squads/post_initialize()
 	. = ..()
@@ -19,8 +19,7 @@
 
 /datum/modpack/squads/proc/schedule_latejoin_disable()
 	var/latejoin_disable_delay_minutes = CONFIG_GET(number/latejoin_disable_roundstart_minutes)
-	if(latejoin_disable_delay_minutes > 0)
-		addtimer(CALLBACK(src, PROC_REF(disable_latejoin)), latejoin_disable_delay_minutes MINUTES)
+	addtimer(CALLBACK(src, PROC_REF(disable_latejoin)), latejoin_disable_delay_minutes MINUTES)
 
 /datum/modpack/squads/proc/disable_latejoin()
 	GLOB.enter_allowed = FALSE
