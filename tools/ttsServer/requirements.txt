@@ -5,4 +5,4 @@ torchaudio>=2.0.0
 soundfile>=0.12.1
 pydub>=0.25.1
 Flask>=2.2.5
-numpy<2
+numpy>=1.26.0
