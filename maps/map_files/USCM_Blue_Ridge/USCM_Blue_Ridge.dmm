@@ -437,10 +437,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
+/obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "squadarmory";
-	name = "\improper Gear Lockers"
+	dir = 4
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
@@ -3138,10 +3137,6 @@
 	},
 /turf/open/floor/almayer/orange,
 /area/golden_arrow/platoonarmory)
-"agT" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/bluecorner/north,
-/area/golden_arrow/platoonarmory)
 "agU" = (
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
@@ -3772,8 +3767,13 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "aiQ" = (
-/turf/open/floor/almayer/redcorner,
-/area/golden_arrow/platoonarmory)
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4;
+	pixel_x = 2
+	},
+/turf/open/floor/almayer/red/east,
+/area/golden_arrow/platoonprep)
 "aiT" = (
 /turf/open/space/basic,
 /turf/open/floor/almayer_hull/outerhull_dir/northeast,
@@ -4249,12 +4249,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
-"alf" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/open/floor/almayer/orangecorner/north,
-/area/golden_arrow/platoonarmory)
 "all" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/southwest,
@@ -4556,12 +4550,6 @@
 	opacity = 0
 	},
 /area/golden_arrow/platoon_commander_rooms)
-"amw" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/open/floor/almayer/orangecorner/east,
-/area/golden_arrow/platoonarmory)
 "amy" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -5213,7 +5201,7 @@
 	icon_state = "door_warning";
 	dir = 8
 	},
-/turf/open/floor/almayer/redcorner/north,
+/turf/open/floor/almayer/red/west,
 /area/golden_arrow/platoonarmory)
 "aoX" = (
 /obj/structure/bed/chair{
@@ -6510,8 +6498,13 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "auP" = (
-/turf/open/floor/almayer/emeraldcorner/west,
-/area/golden_arrow/platoonarmory)
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4;
+	pixel_x = 2
+	},
+/turf/open/floor/almayer/emerald/east,
+/area/golden_arrow/platoonprep)
 "auT" = (
 /obj/structure/cargo_container/horizontal/blue/bottom{
 	pixel_x = -46;
@@ -6650,9 +6643,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"avO" = (
-/turf/open/floor/almayer/emeraldcorner/east,
-/area/golden_arrow/platoonarmory)
 "avT" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -7063,10 +7053,8 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor{
 	name = "\improper Medical Storage Room"
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 2;
-	id = "squadarmory";
-	name = "\improper Gear Lockers"
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "squadarmory"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/medical)
@@ -7138,8 +7126,21 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "axW" = (
-/turf/open/floor/almayer/redcorner/west,
-/area/golden_arrow/platoonarmory)
+/obj/structure/machinery/door_control{
+	pixel_x = 6;
+	id = "BRIEF";
+	name = "Brief Lockdown";
+	req_access = list(19);
+	pixel_y = 31
+	},
+/obj/structure/machinery/door_control{
+	pixel_x = -6;
+	id = "Brief Shutters";
+	name = "Brief Shutters";
+	pixel_y = 31
+	},
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/platoon_commander_rooms)
 "axX" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -7267,7 +7268,7 @@
 	icon_state = "door_warning";
 	dir = 8
 	},
-/turf/open/floor/almayer/emeraldcorner/west,
+/turf/open/floor/almayer/emerald/west,
 /area/golden_arrow/platoonarmory)
 "ayA" = (
 /obj/structure/machinery/landinglight/ds1/delayone,
@@ -7494,12 +7495,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
-"azv" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/open/floor/almayer/bluecorner/west,
-/area/golden_arrow/platoonarmory)
 "azw" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -7746,10 +7741,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/hangar)
-"aAo" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/emeraldcorner,
-/area/golden_arrow/platoonarmory)
 "aAp" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door";
@@ -7796,7 +7787,7 @@
 	dir = 4;
 	pixel_x = 2
 	},
-/turf/open/floor/almayer/edge/smooth/endcap_right/east,
+/turf/open/floor/almayer/orange/east,
 /area/golden_arrow/platoonprep)
 "aAy" = (
 /obj/structure/phone_base{
@@ -7853,12 +7844,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 1
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "or1privacyshutter";
-	name = "\improper Emergency Shutter"
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
+	},
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "or1privacyshutter"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/medical)
@@ -8674,10 +8664,8 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/platoonprep)
 "aDR" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 2;
-	id = "squadarmory";
-	name = "\improper Gear Lockers"
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "squadarmory"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/medical)
@@ -9265,10 +9253,9 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
+/obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "squadarmory";
-	name = "\improper Gear Lockers"
+	dir = 4
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
@@ -9831,7 +9818,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/open/floor/almayer/orange/north,
+/turf/open/floor/almayer/orange/northwest,
 /area/golden_arrow/platoonarmory)
 "aIC" = (
 /obj/structure/machinery/door/poddoor/railing{
@@ -10360,8 +10347,13 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aLk" = (
-/turf/open/floor/almayer/bluecorner/east,
-/area/golden_arrow/platoonarmory)
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4;
+	pixel_x = 2
+	},
+/turf/open/floor/almayer/blue/east,
+/area/golden_arrow/platoonprep)
 "aLm" = (
 /obj/effect/decal/siding{
 	icon_state = "siding2"
@@ -10688,7 +10680,7 @@
 	icon_state = "door_warning";
 	dir = 8
 	},
-/turf/open/floor/almayer/emerald/north,
+/turf/open/floor/almayer/emerald/northwest,
 /area/golden_arrow/platoonarmory)
 "aMQ" = (
 /obj/structure/platform/strata/metal{
@@ -11819,7 +11811,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/open/floor/almayer/blue,
+/turf/open/floor/almayer/blue/southwest,
 /area/golden_arrow/platoonarmory)
 "aRJ" = (
 /obj/effect/decal/medical_decals{
@@ -12119,7 +12111,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/golden_arrow/platoonarmory)
 "aSv" = (
-/turf/open/floor/almayer/orangecorner/west,
+/turf/open/floor/almayer/orange,
 /area/golden_arrow/platoonarmory)
 "aSw" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
@@ -12265,12 +12257,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/golden_arrow/medical)
-"aTh" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/open/floor/almayer/bluecorner,
-/area/golden_arrow/platoonarmory)
 "aTi" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -12511,7 +12497,7 @@
 /area/golden_arrow/platoon_commander_rooms)
 "aUv" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/orangecorner,
+/turf/open/floor/almayer/orange,
 /area/golden_arrow/platoonarmory)
 "aUy" = (
 /obj/structure/machinery/cm_vending/sorted/tech/tool_storage{
@@ -12663,10 +12649,9 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
+/obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "squadarmory";
-	name = "\improper Gear Lockers"
+	dir = 4
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
@@ -13482,9 +13467,6 @@
 "aZG" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
-"aZH" = (
-/turf/open/floor/almayer/emeraldcorner/north,
-/area/golden_arrow/platoonarmory)
 "aZL" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 1
@@ -13740,8 +13722,16 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "btA" = (
-/turf/open/floor/almayer/redcorner/east,
-/area/golden_arrow/platoonarmory)
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4;
+	pixel_x = 2
+	},
+/turf/open/floor/almayer/orange/east,
+/area/golden_arrow/platoonprep)
 "bug" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -15018,7 +15008,7 @@
 	icon_state = "door_warning";
 	dir = 8
 	},
-/turf/open/floor/almayer/orangecorner/west,
+/turf/open/floor/almayer/orange/west,
 /area/golden_arrow/platoonarmory)
 "dAo" = (
 /obj/effect/decal/warning_stripes{
@@ -15340,10 +15330,9 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
+/obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "squadarmory";
-	name = "\improper Gear Lockers"
+	dir = 4
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
@@ -16934,7 +16923,7 @@
 	icon_state = "door_warning";
 	dir = 8
 	},
-/turf/open/floor/almayer/red,
+/turf/open/floor/almayer/red/southwest,
 /area/golden_arrow/platoonarmory)
 "gug" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep{
@@ -18981,10 +18970,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
+/obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "squadarmory";
-	name = "\improper Gear Lockers"
+	dir = 4
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
@@ -21663,7 +21651,7 @@
 /area/golden_arrow/platoonarmory)
 "nXv" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/redcorner/north,
+/turf/open/floor/almayer/red/north,
 /area/golden_arrow/platoonarmory)
 "nXP" = (
 /obj/effect/decal/cleanable/dirt{
@@ -22804,7 +22792,7 @@
 	dir = 4;
 	pixel_x = 2
 	},
-/turf/open/floor/almayer/edge/smooth/endcap_right/east,
+/turf/open/floor/almayer/blue/east,
 /area/golden_arrow/platoonprep)
 "pWS" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
@@ -24407,10 +24395,9 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
+/obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "squadarmory";
-	name = "\improper Gear Lockers"
+	dir = 4
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
@@ -24738,15 +24725,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"sTA" = (
-/obj/structure/machinery/door_control{
-	pixel_x = -5;
-	id = "Brief Shutters";
-	name = "Brief Shutters";
-	pixel_y = 0
-	},
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/platoon_commander_rooms)
 "sTP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -24986,10 +24964,8 @@
 	name = "\improper Armored vehicle depot";
 	req_one_access_txt = "19;27"
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 2;
-	id = "squadarmory";
-	name = "\improper Gear Lockers"
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "squadarmory"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
@@ -27311,7 +27287,7 @@
 	icon_state = "door_warning";
 	dir = 8
 	},
-/turf/open/floor/almayer/bluecorner/north,
+/turf/open/floor/almayer/blue/west,
 /area/golden_arrow/platoonarmory)
 "wGV" = (
 /obj/effect/decal/warning_stripes{
@@ -36647,8 +36623,8 @@ rHl
 rue
 aDh
 aDh
-sTA
-aaK
+aDh
+axW
 tkm
 bCo
 eFT
@@ -38431,15 +38407,15 @@ kIR
 kIR
 aAO
 aAO
-aAx
+aLk
 pVB
 cdF
 pXW
 udB
 tZl
 qjn
-aAx
-aAx
+auP
+auP
 aAO
 muF
 aAO
@@ -38447,14 +38423,14 @@ dEp
 xRn
 bYz
 aAO
-aAx
-aAx
+aiQ
+aiQ
 rjC
 pXW
 qgb
 mNu
 umj
-pVB
+btA
 aAx
 vnE
 aDQ
@@ -39138,17 +39114,17 @@ tmN
 bMS
 ssW
 lPm
-agT
+cty
 aDf
-azv
+aDL
 lPm
 ksv
 act
 pcZ
 lPm
-aZH
+eow
 aDf
-auP
+mvw
 lPm
 aSC
 act
@@ -39156,13 +39132,13 @@ aRK
 lPm
 nXv
 moW
-axW
+gsQ
 lPm
 avc
 act
 epO
 lPm
-alf
+nAF
 aDf
 aSv
 lPm
@@ -39500,7 +39476,7 @@ gzS
 act
 ovl
 lPm
-aBt
+eow
 aMK
 pKQ
 act
@@ -39510,7 +39486,7 @@ act
 act
 vgS
 aBt
-pJV
+gsQ
 lPm
 avc
 act
@@ -39846,31 +39822,31 @@ aEG
 act
 olf
 lPm
-aLk
+arh
 moW
-aTh
+aDL
 lPm
 tVw
 act
 tFf
 lPm
-avO
+eow
 moW
-aAo
+eXC
 lPm
 cqk
 act
 pSQ
 lPm
-btA
+ayn
 aOp
-aiQ
+gsQ
 lPm
 dBq
 act
 dAo
 lPm
-amw
+nAF
 moW
 aUv
 lPm

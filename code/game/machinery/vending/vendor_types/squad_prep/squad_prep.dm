@@ -912,6 +912,10 @@
 		list("Kelotane Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless, VENDOR_ITEM_REGULAR),
 		list("Tricordrazine Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, VENDOR_ITEM_REGULAR),
 		list("Tramadol Injector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless, VENDOR_ITEM_REGULAR),
+		list("Bicaridine Pill Packet", round(scale * 15), /obj/item/storage/pill_bottle/packet/bicaridine, VENDOR_ITEM_REGULAR),
+		list("Kelotane Pill Packet", round(scale * 15), /obj/item/storage/pill_bottle/packet/kelotane, VENDOR_ITEM_REGULAR),
+		list("Tricordrazine Pill Packet", round(scale * 15), /obj/item/storage/pill_bottle/packet/tricordrazine, VENDOR_ITEM_REGULAR),
+		list("Tramadol Pill Packet", round(scale * 15), /obj/item/storage/pill_bottle/packet/tramadol, VENDOR_ITEM_REGULAR),
 
 		list("TOOLS", -1, null, null),
 		list("Entrenching Tool (ET)", round(scale * 2), /obj/item/tool/shovel/etool/folded, VENDOR_ITEM_REGULAR),
