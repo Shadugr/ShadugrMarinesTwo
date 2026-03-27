@@ -1,7 +1,9 @@
 # TODO
 
-- [x] Определить update-target и базовую историю текущей ветки.
-- [x] Проверить repo guidance для HALO update/sync задач.
-- [x] Выполнить merge `upstream/master` в `split/pr62-02-ai-squad-spawn-species`.
-- [x] Разрешить все конфликты и проверить итоговый diff.
-- [x] Зафиксировать evidence и результаты проверок.
+- [x] Проверить текущую ветку, remotes и чистоту рабочего дерева.
+- [x] Обновить refs из remotes через `git fetch --all --prune`.
+- [x] Вмержить `upstream/master` в `various_fixes`.
+- [x] Проверить `git status` и `git diff --check`.
+- [x] Отправить `various_fixes` на `origin`.
+- [x] Переставить локальный `master` на `upstream/master` без checkout.
+- [x] Форс-пушнуть `origin/master` на commit `upstream/master`.

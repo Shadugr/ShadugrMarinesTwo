@@ -157,6 +157,19 @@
 	html_link = ""
 	color = "white"
 
+// SS220 EDIT - START
+/obj/item/map/mackay_station
+	name = "\improper Station Map"
+	desc = "A labeled blueprint of OWP Mackay Station."
+	html_link = ""
+	color = "white"
+
+/obj/item/map/oni_digsite_451
+	name = "\improper Digsite Map"
+	desc = "A labeled blueprint of what seems to resemble a digsite of some kind, most of the details are censored by black ink."
+	html_link = ""
+	color = "white"
+
 /obj/item/map/taipei
 	name = "\improper Taipei Way-Station map"
 	desc = "A labelled print out of the anterior scan of Taipei Station, An unassuming waystation."
@@ -170,7 +183,6 @@
 	html_link = ""
 	color = "cyan"
 
-// SS220 EDIT - START
 /obj/item/map/lv_671
 	name = "\improper LV-671 Map"
 	desc = "An orbital scan printout of the LV-671 colony."
@@ -256,6 +268,32 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 //used by marine equipment machines to spawn the correct map.
 /obj/item/map/current_map
 
+/obj/item/map/current_map/proc/apply_map_data(obj/item/map/source_map)
+	name = source_map.name
+	desc = source_map.desc
+	desc_lore = source_map.desc_lore
+	html_link = source_map.html_link
+	color = source_map.color
+
+/obj/item/map/current_map/proc/should_suppress_missing_map_runtime(datum/map_config/ground_map_config)
+	if(!ground_map_config)
+		return TRUE
+
+	if(ground_map_config.map_name == MAP_RUNTIME || ground_map_config.map_name == MAP_CHINOOK)
+		return TRUE
+
+	var/datum/map_config/ship_map_config = SSmapping?.configs?[SHIP_MAP]
+	if(!ship_map_config)
+		return FALSE
+
+	if(ground_map_config == ship_map_config)
+		return TRUE
+
+	return ground_map_config.config_filename == ship_map_config.config_filename \
+		&& ground_map_config.map_name == ship_map_config.map_name \
+		&& ground_map_config.map_path == ship_map_config.map_path \
+		&& "[ground_map_config.map_file]" == "[ship_map_config.map_file]"
+
 /obj/item/map/current_map/Initialize(mapload, ...)
 	. = ..()
 
@@ -273,27 +311,19 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		if(!config_map)
 			config_map = new map_type()
 			created_config_map = TRUE
-		name = config_map.name
-		desc = config_map.desc
-		desc_lore = config_map.desc_lore
-		html_link = config_map.html_link
-		color = config_map.color
+		apply_map_data(config_map)
 		if(created_config_map)
 			qdel(config_map)
 		return
 	// SS220 EDIT - END
 
 	var/obj/item/map/map = resolve_current_map_type(ground_map_config)
-	if (!map && (map_name == MAP_RUNTIME || map_name == MAP_CHINOOK || (map_name in SHIP_MAP_NAMES)))
+	if(!map && should_suppress_missing_map_runtime(ground_map_config))
 		return // "Maps" we don't have maps for so we don't need to throw a runtime for (namely in unit_testing)
 	if(!map)
 		log_runtime("Unable to resolve current map item for [map_name || "null map_name"] (type: [ground_map_config?.map_item_type || "null"], config: [ground_map_config?.config_filename || "unknown"])")
 		return
-	name = map.name
-	desc = map.desc
-	desc_lore = map.desc_lore
-	html_link = map.html_link
-	color = map.color
+	apply_map_data(map)
 
 // Landmark - Used for mapping. Will spawn the appropriate map for each gamemode (LV map items will spawn when LV is the gamemode, etc)
 /obj/effect/landmark/map_item

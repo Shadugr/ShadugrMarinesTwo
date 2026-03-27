@@ -416,7 +416,6 @@
 	desc = "An object crafted out of branches, twigs, and twine rope that seem to form a miniature pyramid. It leaves you with an ominous feeling."
 	w_class = SIZE_LARGE
 
-
 // Massive Digger by dimdimich1996
 
 /obj/structure/prop/invuln/dense/excavator

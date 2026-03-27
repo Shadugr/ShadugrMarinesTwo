@@ -1484,3 +1484,50 @@
       \u0434\u043E\u0432"
   - refactor: "\u041E\u0442\u0440\u0435\u0444\u0430\u043A\u0442\u043E\u0440\u0438\u043B\
       \ Squads modular"
+2026-03-26:
+  PhantornRU:
+  - mapadd: 'Ported HALO map content from upstream PRs #46, #96, and #107 into SS220/BandaTroopers.'
+  - mapadd: Added Mackay Station, Mackay Station (Shipmap), ONI Digsite 451, and Traxus
+      Gamma Zone to local HALO map rotation/config surfaces.
+  - mapadd: Added Pelican shuttle/dropship payload and the supporting HALO map assets
+      required by the imported content.
+  - maptweak: Adapted Mackay Station shipmap to SS220/BandaTroopers HALO platoon routing
+      and local HALO shipmap fallback behavior.
+  - code_imp: Added local compatibility support for Traxus industrial airlocks, HALO
+      secure five-tile poddoors, and Pelican-specific shuttle integrations.
+  - bugfix: Converted imported Mackay/ONI/tram shuttle DMM payload to TGM and cleaned
+      Mackay/stationhangar escapepod turf path usage for maplint compatibility.
+2026-03-27:
+  PhantornRU:
+  - rscadd: "\u041E\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u044B \u0432 \u043E\u0431\
+      \u043D\u043E\u0432\u043B\u0451\u043D\u043D\u043E\u043C `#49` zombie/hAI/xeno-AI\
+      \ \u043F\u0430\u043A\u0435\u0442\u044B, \u0432\u043A\u043B\u044E\u0447\u0430\
+      \u044F Warrior Drone, ARES laptop prop, Human AI preset follow-up \u0438 RU\
+      \ xeno AI actions."
+  - admin: "\u0421\u043E\u0445\u0440\u0430\u043D\u0435\u043D\u044B \u0438\u0437\u043C\
+      \u0435\u043D\u0435\u043D\u0438\u044F \u0432 Game Master \u0438 admin tooling,\
+      \ \u043E\u0442\u043D\u043E\u0441\u044F\u0449\u0438\u0435\u0441\u044F \u043A\
+      \ zombie/hAI/xeno-AI scope, \u0431\u0435\u0437 map/faction bundle."
+  - balance: "\u0421\u043E\u0445\u0440\u0430\u043D\u0435\u043D\u044B \u0438\u0437\u043C\
+      \u0435\u043D\u0435\u043D\u0438\u044F \u0431\u0430\u043B\u0430\u043D\u0441\u0430\
+      \ \u0438 \u043F\u043E\u0432\u0435\u0434\u0435\u043D\u0438\u044F \u0437\u043E\
+      \u043C\u0431\u0438, xeno-related follow-up \u0438 supporting combat logic \u0438\
+      \u0437 \u043E\u0441\u0442\u0430\u0432\u0448\u0435\u0433\u043E\u0441\u044F scope."
+  - code_imp: "Split \u0431\u044B\u0432\u0448\u0438\u0439 mixed `various_fixes` \u043D\
+      \u0430 \u0434\u0432\u0430 \u043D\u0435\u0437\u0430\u0432\u0438\u0441\u0438\u043C\
+      \u044B\u0445 PR, \u043F\u0440\u0438 \u044D\u0442\u043E\u043C \u0432 \u044D\u0442\
+      \u043E\u043C PR \u043E\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u044B \u0442\
+      \u043E\u043B\u044C\u043A\u043E zombie/hAI/xeno-AI \u0438 generic integration\
+      \ fixes, \u043D\u0443\u0436\u043D\u044B\u0435 \u044D\u0442\u043E\u0439 \u0432\
+      \u0435\u0442\u043A\u0435."
+  - bugfix: "\u0423\u0431\u0440\u0430\u043D\u044B split-only \u0437\u0430\u0432\u0438\
+      \u0441\u0438\u043C\u043E\u0441\u0442\u0438 \u043D\u0430 FIL/CANC radio-support\
+      \ \u0438\u0437 remaining-\u0432\u0435\u0442\u043A\u0438 \u0438 \u0437\u0430\u043A\
+      \u0440\u044B\u0442\u044B compile-cleanup \u0445\u0432\u043E\u0441\u0442\u044B\
+      \ \u0432 `ai_management_menu.dm`."
+  - ui: "\u0421\u043E\u0445\u0440\u0430\u043D\u0451\u043D HumanAISpawner \u0438 \u0441\
+      \u0432\u044F\u0437\u0430\u043D\u043D\u044B\u0439 TGUI scope, \u043E\u0442\u043D\
+      \u043E\u0441\u044F\u0449\u0438\u0439\u0441\u044F \u043A `#1239` \u0438 remaining\
+      \ integration."
+  PiroMage:
+  - rscadd: Added something

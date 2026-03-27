@@ -128,7 +128,7 @@
 /obj/item/storage/box/guncase/heavy/m92_upp/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "uppbigcasealt_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
 		overlays += image(icon, "m92uppcase_lid")
 		return
@@ -407,7 +407,7 @@
 /obj/item/storage/box/guncase/heavy/smg/type64/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "uppbigcasealt_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
 		overlays += image(icon, "t64case_lid")
 		return
@@ -520,7 +520,7 @@
 /obj/item/storage/box/guncase/heavy/sniper/svd_iff/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "uppbigcasealt_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
 		overlays += image(icon, "t88case_lid")
 		return

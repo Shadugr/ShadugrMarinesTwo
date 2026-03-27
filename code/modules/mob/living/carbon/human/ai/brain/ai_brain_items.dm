@@ -393,6 +393,11 @@
 	SIGNAL_HANDLER
 	invalidate_nearby_item_search()
 	invalidate_halo_runtime_caches()
+	if(iszombie(tied_human))
+		return
+
+	if(iszombie(tied_human))
+		return
 
 	if(dropped == primary_weapon)
 		var/datum/firearm_appraisal/current_gun_data = gun_data

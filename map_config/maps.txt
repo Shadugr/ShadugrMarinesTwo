@@ -117,9 +117,27 @@ endmap
 map binhai_supply_station
 endmap
 
+map lv671
+endmap
+
+map oil_depot
+endmap
+
+map derelict_almayer_infested
+endmap
+
 # SS220 EDIT - START: HALO ground map rotation
 map halo_new_irvine
 	default # SS220 EDIT
+endmap
+
+map mackay_station
+endmap
+
+map oni_digsite_451
+endmap
+
+map traxus_gamma_zone
 endmap
 # SS220 EDIT - END
 map lv671
