@@ -1,8 +1,11 @@
-# Coqui AI TTS (XTTS v2) requirements - using idiap fork
-coqui-tts[codec]>=0.24.0
-torch>=2.0.0
-torchaudio>=2.0.0
-soundfile>=0.12.1
-pydub>=0.25.1
-Flask>=2.2.5
-numpy>=1.26.0
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+numpy<2
+torch==2.5.1+cu121
+torchaudio==2.5.1+cu121
+
+transformers>=4.47,<5
+coqui-tts>=0.24,<1.0
+flask>=3.0,<4.0
+pydub>=0.25,<1.0
+soundfile>=0.12,<1.0

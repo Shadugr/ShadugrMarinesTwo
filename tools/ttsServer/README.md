@@ -1,105 +1,93 @@
 ## Описание
-Это self-hosted версия TTS сервера на основе Coqui AI TTS (XTTS v2).
+
+Self-hosted TTS сервер на основе [Coqui AI TTS (форк Idiap)](https://github.com/idiap/coqui-ai-TTS) с моделью XTTS v2.
+Поддерживает множество голосов, русский язык и звуковые эффекты (радио, робот, мегафон и др.).
 
 ## Требования
 
-Python 3.10 - 3.11 (Coqui TTS требует Python 3.10+)
-
-- ffmpeg (Устанавливать вручную)
-- TTS (Coqui AI TTS)
-- torch
-- soundfile
-- pydub
-- flask
-
-Подробнее в `requirements.txt`
+- Python 3.10 - 3.11
+- NVIDIA GPU с поддержкой CUDA (рекомендуется) или CPU
+- ffmpeg (для звуковых эффектов и конвертации аудио)
 
 ## Установка
 
-1. Воспользуйтесь в командной строке, открытой в папке tools\ttsServer:
+1. Установите зависимости:
    ```
    pip install -r requirements.txt
    ```
-   Или воспользуйтесь файлом `install_requirements.bat`
+   Или через `install_requirements.bat`
 
-2. Если не установлен ffmpeg, установите его: https://ffmpeg.org/download.html
-   Или через: `winget install ffmpeg`
-
-3. При первом запуске модель XTTS v2 будет скачана автоматически (~1.5GB)
-
-## Как пользоваться
-
-1. Включите в конфигурации билда в `config.txt`:
+2. Установите ffmpeg, если ещё не установлен:
    ```
-   TTS_TOKEN_SILERO mytoken
-   TTS_URL_SILERO http://127.0.0.1:5000/tts/
-   TTS_ENABLED
-   TTS_CACHE
+   winget install ffmpeg
    ```
+   Или скачайте вручную: https://ffmpeg.org/download.html
+   и добавьте папку `bin` в переменную PATH.
 
-2. Запустите сервер:
-   ```
-   python tts_server.py
-   ```
-   Или через `launch_server.bat`
+3. При первом запуске модель XTTS v2 скачается автоматически (~1.8GB).
 
-3. Сервер выведет URL для подключения (по умолчанию `http://127.0.0.1:5000/tts/`)
-
-## Голоса (Speakers)
-
-XTTS v2 содержит множество встроенных голосов. Для просмотра доступных голосов:
-- Откройте в браузере: `http://127.0.0.1:5000/speakers/`
-- Или при запуске сервера в консоли выведется список
-
-Примеры голосов в XTTS v2:
-- Claribel Dervla (женский)
-- Daisy Studious (женский)
-- Gracie Wise (женский)
-- Tammie Ema (женский)
-- Alison Dietlinde (женский)
-- Ana Florence (женский)
-- Annmarie Nele (женский)
-- Badr Odhiambo (мужской)
-- Dionisio Schuyler (мужской)
-- Royston Min (мужской)
-- Viktor Eka (мужской)
-- И другие...
-
-## GPU Ускорение
-
-Если у вас есть NVIDIA GPU с CUDA, сервер автоматически использует GPU для ускорения.
-Для CPU-only работы модель также работает, но медленнее.
-
-## Примечания
-
-- Первый запрос может быть медленнее из-за "прогрева" модели
-- Производительность зависит от вашего оборудования
-- На CPU ожидайте задержки 1-3 секунды, на GPU 0.3-1 секунда
-
-## Решение возможных проблем
+## Запуск
 
 ```
-Ругается на Numpy:
-pip install "numpy<2"
+python tts_server.py
+```
+Или через `launch_server.bat`.
 
-Не устанавливается TTS:
-Используйте Python 3.10 или 3.11
+Сервер запустится на `http://127.0.0.1:5000/`.
 
-Ошибка CUDA out of memory:
-Используйте CPU режим или уменьшите длину текста
+## Настройка билда
 
-Модель не скачивается:
-Проверьте интернет-соединение, модель ~1.5GB
+Добавьте в `config.txt` проекта:
+```
+TTS_TOKEN_SILERO mytoken
+TTS_URL_SILERO http://127.0.0.1:5000/tts/
+TTS_ENABLED
+TTS_CACHE
 ```
 
-## Установка FFmpeg
+## API эндпоинты
 
-1. Скачайте FFmpeg: https://ffmpeg.org/download.html
-2. Распакуйте в папку, например `C:\ffmpeg`
-3. Добавьте `C:\ffmpeg\bin` в переменную PATH
-4. Проверьте: `ffmpeg -version`
+| Метод | URL | Описание |
+|-------|-----|----------|
+| POST | `/tts/` | Генерация речи |
+| GET | `/speakers/` | Список доступных голосов |
+| GET | `/status/` | Статус сервера и очереди |
+
+## Голоса
+
+XTTS v2 содержит множество встроенных голосов. Полный список доступен по адресу `http://127.0.0.1:5000/speakers/` после запуска сервера.
+
+Некоторые примеры:
+- Claribel Dervla, Daisy Studious, Gracie Wise (женские)
+- Badr Odhiambo, Dionisio Schuyler, Viktor Eka (мужские)
+
+## Звуковые эффекты
+
+Передаются через параметр `effect` в POST-запросе:
+
+| Код | Эффект |
+|-----|--------|
+| 0 | Без эффекта |
+| 1 | Радио |
+| 2 | Робот |
+| 3 | Радио + Робот |
+| 4 | Мегафон |
+| 5 | Мегафон + Робот |
+| 6 | Хайвмайнд |
+
+Для работы эффектов требуется установленный ffmpeg.
+
+## Решение проблем
+
+**Ошибка NumPy:** убедитесь, что установлен `numpy<2` (указан в requirements.txt).
+
+**Ошибка `isin_mps_friendly` / transformers:** нужна версия `transformers>=4.47,<5` (указана в requirements.txt).
+
+**CUDA out of memory:** уменьшите длину текста или используйте CPU.
+
+**Модель не скачивается:** проверьте интернет-соединение, модель весит ~1.8GB.
 
 ## Авторство
 
-- Coqui TTS: https://github.com/idiap/coqui-ai-TTS
-- Оригинальный код Silero сервера: https://github.com/Vladisvell
+- Coqui TTS (форк Idiap): https://github.com/idiap/coqui-ai-TTS
+- Оригинальный Silero сервер: https://github.com/Vladisvell
