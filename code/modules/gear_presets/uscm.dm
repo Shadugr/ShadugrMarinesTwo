@@ -1083,7 +1083,7 @@
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/specialist(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/specialist(new_human), WEAR_JACKET)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/preloaded(new_human), WEAR_J_STORE)
@@ -1215,7 +1215,7 @@
 	rank = JOB_TANK_CREW
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "CRMN"
-	skills = /datum/skills/tank_crew
+	skills = /datum/skills/vehicle_crew
 	minimap_icon = "vc"
 
 /datum/equipment_preset/uscm/tank/load_status(mob/living/carbon/human/new_human)
