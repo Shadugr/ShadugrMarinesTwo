@@ -129,7 +129,7 @@
 				continue
 			if(medal.recipient_name != new_human.real_name)
 				continue
-			if(medal.recipient_role != new_human.job)
+			if(medal.recipient_role != new_human.job && !(medal.recipient_role == "Engineer" && new_human.job == "Rifleman"))
 				continue
 
 			var/obj/item/clothing/accessory/medal/given_medal

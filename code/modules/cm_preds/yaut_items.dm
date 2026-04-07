@@ -729,6 +729,26 @@
 		log_attack("[key_name(user)] has armed \a [src] at [get_location_in_text(user)].")
 		user.drop_held_item()
 
+/obj/item/hunting_trap/attackby(obj/item/attacking_item, mob/user)
+	if(HAS_TRAIT(user, TRAIT_YAUTJA_TECH))
+		disarm(user)
+
+	if(HAS_TRAIT(attacking_item, TRAIT_TOOL_MULTITOOL))
+		if(user == trapped_mob)
+			to_chat(user, SPAN_WARNING("After you try to disarm [src], it shocks you!"))
+			return
+		else
+			user.visible_message(SPAN_NOTICE("[user] begins uncrimping the hydraulic lines."),
+			SPAN_NOTICE("You begin to disarm \the [src]."))
+			if(!do_after(user, 160 * user.get_skill_duration_multiplier(SKILL_ENGINEER), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+				return
+			playsound(src, 'sound/items/crowbar.ogg', 25, 1)
+			disarm(user)
+			src.Destroy()
+			message_all_yautja("Unauthorized deactivation of the hunting trap in [get_area_name(loc)]!")
+	else
+		to_chat(user, SPAN_NOTICE("You'll need a multitool to disarm [src]."))
+
 /obj/item/hunting_trap/attack_hand(mob/living/carbon/human/user)
 	if(HAS_TRAIT(user, TRAIT_YAUTJA_TECH))
 		disarm(user)

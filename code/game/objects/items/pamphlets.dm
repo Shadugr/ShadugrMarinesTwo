@@ -154,19 +154,15 @@
 	bypass_pamphlet_limit = TRUE
 
 /obj/item/pamphlet/skill/engi/can_use(mob/living/carbon/human/user)
-	var/specialist_skill = user.skills.get_skill_level(SKILL_SPEC_WEAPONS)
 	var/engineer_skill = user.skills.get_skill_level(SKILL_ENGINEER)
-	if(engineer_skill == SKILL_ENGINEER_ENGI)
+	var/construction_skill = user.skills.get_skill_level(SKILL_CONSTRUCTION)
+	if(engineer_skill == SKILL_ENGINEER_ENGI && construction_skill == SKILL_CONSTRUCTION_MASTER)
 		to_chat(user, SPAN_WARNING("You don't need to use this! Give it to another marine to make them engineer."))
-		return FALSE
-
-	if(specialist_skill != SKILL_SPEC_DEFAULT)
-		to_chat(user, SPAN_WARNING("You're already a engineer! Give this to a lesser trained marine."))
 		return FALSE
 
 	if(user.job != JOB_SQUAD_MARINE)
 		to_chat(user, SPAN_WARNING("Only squad riflemen can use this."))
-		return
+		return FALSE
 
 	var/obj/item/card/id/ID = user.get_idcard()
 	if(!ID) //not wearing an ID

@@ -257,7 +257,7 @@
 	charge = 3000
 	charge_max = 3000
 
-	cloak_alpha = 10
+	cloak_alpha = 5
 
 	var/exploding = 0
 	var/disc_timer = 0
