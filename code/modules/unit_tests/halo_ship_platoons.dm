@@ -157,6 +157,9 @@
 			human.assigned_squad = allocate(squad_type)
 	if(key_name)
 		human.key = key_name
+		var/player_ckey = ckey(key_name)
+		human.ckey = player_ckey
+		human.persistent_ckey = player_ckey
 
 /datum/unit_test/halo_equip_test/proc/prepare_test_human_for_squad(mob/living/carbon/human/human, preset_type = /datum/equipment_preset, preset_assignment = null)
 	var/datum/equipment_preset/preset = allocate(preset_type)
@@ -684,9 +687,14 @@
 	TEST_ASSERT(medic_two_id.access.Find(alpha_squad.squad_two_access), "The second HALO medic did not receive SQ2 access.")
 
 /datum/unit_test/halo_ship_platoons_halo_medic_vendor_roles
-	parent_type = /datum/unit_test/halo_contract_test
+	parent_type = /datum/unit_test/halo_integration_test
 
 /datum/unit_test/halo_ship_platoons_halo_medic_vendor_roles/Run()
+	configure_test_ship_platoon(/datum/squad/marine/halo/unsc/alpha)
+
+	var/datum/authority/branch/role/role_authority = GLOB.RoleAuthority
+	TEST_ASSERT_NOTNULL(role_authority, "RoleAuthority was unavailable for HALO medic vendor routing testing.")
+
 	var/obj/structure/machinery/cm_vending/clothing/medic/unsc/clothing_vendor = allocate(/obj/structure/machinery/cm_vending/clothing/medic/unsc, run_loc_floor_top_right)
 	var/obj/structure/machinery/cm_vending/gear/medic_chemical/unsc/chemical_vendor = allocate(/obj/structure/machinery/cm_vending/gear/medic_chemical/unsc, run_loc_floor_top_right)
 
@@ -705,6 +713,26 @@
 			break
 
 	TEST_ASSERT(has_biofoam, "HALO medic chemical vendor list no longer includes a biofoam medical bottle.")
+
+	var/obj/structure/machinery/cm_vending/sorted/medical/marinemed/source_medical_vendor = track_test_atom(allocate(/obj/structure/machinery/cm_vending/sorted/medical/marinemed, run_loc_floor_top_right))
+	TEST_ASSERT_NOTNULL(source_medical_vendor, "Failed to allocate the source medbay vendor for HALO ship-surface replacement testing.")
+
+	var/unsc_family = role_authority.get_ship_surface_family(/datum/squad/marine/halo/unsc/alpha)
+	TEST_ASSERT_NOTNULL(unsc_family, "Failed to resolve the HALO UNSC ship-surface family key for medbay vendor replacement testing.")
+
+	var/obj/structure/machinery/cm_vending/sorted/medical/unsc/medical_vendor = role_authority.replace_ship_surface_fixture(source_medical_vendor, unsc_family)
+	track_test_atom(medical_vendor)
+	TEST_ASSERT_NOTNULL(medical_vendor, "HALO medbay vendor replacement did not produce a UNSC target vendor.")
+	TEST_ASSERT_EQUAL(medical_vendor.type, /obj/structure/machinery/cm_vending/sorted/medical/unsc, "Marine medbay vendor did not swap into the HALO UNSC medbay vendor.")
+	TEST_ASSERT(length(medical_vendor.listed_products) > 0, "HALO UNSC medical vendor replacement initialized with an empty product list.")
+
+	var/has_syringe = FALSE
+	for(var/list/entry as anything in medical_vendor.listed_products)
+		if(length(entry) >= 3 && entry[3] == /obj/item/reagent_container/syringe/halo)
+			has_syringe = TRUE
+			break
+
+	TEST_ASSERT(has_syringe, "HALO UNSC medical vendor lost its syringe stock after zero-scale normalization.")
 
 /datum/unit_test/halo_ship_platoons_halo_job_locker_claims
 	parent_type = /datum/unit_test/halo_integration_test
@@ -810,4 +838,90 @@
 
 	TEST_ASSERT_EQUAL(count_personal_locker_contents_by_exact_type(unsc_locker, /obj/item/clothing/under/marine/crew/command), 1, "The UNSC platoon commander locker should contain the HALO command uniform.")
 	TEST_ASSERT_EQUAL(count_personal_locker_contents_by_exact_type(odst_locker, /obj/item/clothing/under/marine/crew/command), 1, "The ODST platoon commander locker should contain the HALO command uniform.")
-// SS220 EDIT - END
+
+/datum/unit_test/halo_ship_platoons/halo_unsc_crew_headsets_and_access
+	parent_type = /datum/unit_test/halo_integration_test
+
+/datum/unit_test/halo_ship_platoons/halo_unsc_crew_headsets_and_access/Run()
+	configure_test_ship_platoon(/datum/squad/marine/halo/unsc/alpha)
+
+	var/datum/authority/branch/role/role_authority = GLOB.RoleAuthority
+	TEST_ASSERT_NOTNULL(role_authority, "RoleAuthority was unavailable for HALO shipboard headset testing.")
+	var/datum/equipment_preset/unsc_crew/generic/crew_preset = new
+	var/datum/equipment_preset/unsc_crew/command/xo/cpt/captain_preset = new
+	var/datum/equipment_preset/unsc_crew/flight/officer/flight_preset = new
+	var/crew_title = crew_preset.assignment || crew_preset.rank
+	var/captain_title = captain_preset.assignment || captain_preset.rank
+	var/flight_title = flight_preset.assignment || flight_preset.rank
+	var/crew_headset_type = /obj/item/device/radio/headset/almayer/marine/solardevils/unsc/crew
+	var/unsc_command_headset_type = /obj/item/device/radio/headset/almayer/marine/solardevils/unsc/command
+	var/odst_command_headset_type = /obj/item/device/radio/headset/almayer/marine/solardevils/unsc/command/odst
+	var/main_platoon_channel = GLOB.main_platoon_name
+	TEST_ASSERT_NOTNULL(main_platoon_channel, "HALO shipboard headset test could not resolve the active platoon channel label.")
+
+	TEST_ASSERT_EQUAL(role_authority.get_active_halo_shipboard_headset_type(crew_title), crew_headset_type, "HALO UNSC crew roles no longer resolve to the shared crew headset type.")
+	TEST_ASSERT_EQUAL(role_authority.get_active_halo_shipboard_headset_type(captain_title), unsc_command_headset_type, "HALO UNSC command roles no longer resolve to the shared command headset type.")
+
+	var/mob/living/carbon/human/crewman = create_test_human("HALO UNSC Crewman", crew_title)
+	arm_equipment(crewman, /datum/equipment_preset/unsc_crew/generic, FALSE, TRUE)
+	var/obj/item/device/radio/headset/crew_headset = crewman.get_type_in_ears(/obj/item/device/radio/headset)
+	TEST_ASSERT(istype(crew_headset, crew_headset_type), "HALO UNSC crewman did not receive the crew headset variant with squad channels.")
+	TEST_ASSERT(crew_headset.channels[main_platoon_channel], "HALO UNSC crewman headset does not expose the active platoon channel.")
+	TEST_ASSERT_EQUAL(crew_headset.frequency, 1501, "HALO UNSC crewman headset lost the expected UNSC shipboard frequency.")
+
+	var/mob/living/carbon/human/captain = create_test_human("HALO UNSC Captain", captain_title)
+	arm_equipment(captain, /datum/equipment_preset/unsc_crew/command/xo/cpt, FALSE, TRUE)
+	var/obj/item/device/radio/headset/captain_headset = captain.get_type_in_ears(/obj/item/device/radio/headset)
+	var/obj/item/card/id/captain_id = captain.get_idcard()
+	TEST_ASSERT(istype(captain_headset, unsc_command_headset_type), "HALO UNSC captain did not receive the command-capable crew headset variant.")
+	TEST_ASSERT(captain_headset.channels[main_platoon_channel], "HALO UNSC captain headset does not expose the active platoon channel.")
+	TEST_ASSERT(captain_headset.channels[RADIO_CHANNEL_COMMAND], "HALO UNSC captain headset lost command channel access.")
+	TEST_ASSERT(captain_id?.access.Find(ACCESS_MARINE_CO), "HALO UNSC captain lost ACCESS_MARINE_CO.")
+	TEST_ASSERT(captain_id?.access.Find(ACCESS_MARINE_DROPSHIP), "HALO UNSC captain lost dropship/weapons access.")
+
+	var/mob/living/carbon/human/flight_officer = create_test_human("HALO UNSC Flight Officer", flight_title)
+	arm_equipment(flight_officer, /datum/equipment_preset/unsc_crew/flight/officer, FALSE, TRUE)
+	var/obj/item/device/radio/headset/flight_headset = flight_officer.get_type_in_ears(/obj/item/device/radio/headset)
+	var/obj/item/card/id/flight_id = flight_officer.get_idcard()
+	TEST_ASSERT(istype(flight_headset, unsc_command_headset_type), "HALO UNSC flight officer did not receive the command-capable crew headset variant.")
+	TEST_ASSERT(flight_headset.channels[main_platoon_channel], "HALO UNSC flight officer headset does not expose the active platoon channel.")
+	TEST_ASSERT(flight_id?.access.Find(ACCESS_MARINE_DROPSHIP), "HALO UNSC flight officer lost dropship access.")
+
+	configure_test_ship_platoon(/datum/squad/marine/halo/odst/alpha)
+	TEST_ASSERT_EQUAL(role_authority.get_active_halo_shipboard_headset_type(captain_title), odst_command_headset_type, "HALO ODST command roles no longer resolve to the shared ODST command headset type.")
+
+	var/mob/living/carbon/human/odst_captain = create_test_human("HALO ODST Captain", captain_title)
+	arm_equipment(odst_captain, /datum/equipment_preset/unsc_crew/command/xo/cpt, FALSE, TRUE)
+	var/obj/item/device/radio/headset/odst_headset = odst_captain.get_type_in_ears(/obj/item/device/radio/headset)
+	TEST_ASSERT(istype(odst_headset, odst_command_headset_type), "HALO ODST ship profile did not swap shipboard command headset to the ODST variant.")
+	TEST_ASSERT_EQUAL(odst_headset.frequency, 1503, "HALO ODST ship profile did not keep the expected ODST shipboard frequency.")
+
+/datum/unit_test/halo_ship_platoons/zombie_species_transition_restores_intrinsics
+	parent_type = /datum/unit_test/halo_integration_test
+
+/datum/unit_test/halo_ship_platoons/zombie_species_transition_restores_intrinsics/Run()
+	var/mob/living/carbon/human/zombie = create_test_human("HALO Zombie Spawn", JOB_SQUAD_MARINE)
+
+	var/obj/item/clothing/head/helmet/marine/helmet = allocate(/obj/item/clothing/head/helmet/marine, run_loc_floor_top_right)
+	var/obj/item/clothing/gloves/marine/gloves = allocate(/obj/item/clothing/gloves/marine, run_loc_floor_top_right)
+	var/obj/item/clothing/glasses/sunglasses/sunglasses = allocate(/obj/item/clothing/glasses/sunglasses, run_loc_floor_top_right)
+	var/obj/item/clothing/mask/gas/mask = allocate(/obj/item/clothing/mask/gas, run_loc_floor_top_right)
+
+	zombie.equip_to_slot_or_del(helmet, WEAR_HEAD, TRUE)
+	zombie.equip_to_slot_or_del(gloves, WEAR_HANDS, TRUE)
+	zombie.equip_to_slot_or_del(sunglasses, WEAR_EYES, TRUE)
+	zombie.equip_to_slot_or_del(mask, WEAR_FACE, TRUE)
+
+	zombie.strip_weapons()
+	qdel(zombie.gloves)
+	if(zombie.glasses && !istype(zombie.glasses, /obj/item/clothing/glasses/zombie_eyes))
+		qdel(zombie.glasses)
+	qdel(zombie.wear_mask)
+	zombie.set_species(SPECIES_ZOMBIE)
+
+	TEST_ASSERT(istype(zombie.l_hand, /obj/item/weapon/zombie_claws), "Zombie species transition no longer restores the intrinsic left claw.")
+	TEST_ASSERT(istype(zombie.r_hand, /obj/item/weapon/zombie_claws), "Zombie species transition no longer restores the intrinsic right claw.")
+	TEST_ASSERT_EQUAL(zombie.r_hand.icon_state, "claw_r", "Zombie species transition no longer restores the right claw icon state.")
+	TEST_ASSERT(istype(zombie.glasses, /obj/item/clothing/glasses/zombie_eyes), "Zombie species transition no longer restores zombie eyes after stripping eyewear.")
+	TEST_ASSERT_NULL(zombie.gloves, "Zombie species transition should strip gloves from the resulting zombie.")
+	TEST_ASSERT_NULL(zombie.wear_mask, "Zombie species transition should strip masks from the resulting zombie.")
