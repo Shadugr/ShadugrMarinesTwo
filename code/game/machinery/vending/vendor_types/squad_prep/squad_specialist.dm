@@ -4,6 +4,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 		list("WEAPONS SPECIALIST SETS (CHOOSE 1)", 0, null, null, null),
 		list("Rocketeer Set", 0, /obj/item/storage/box/spec/rocketeer, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Heavy Grenadier Set", 0, /obj/item/storage/box/spec/heavy_grenadier, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("SHARP Operator Set", 0, /obj/item/storage/box/spec/sharp_operator, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Pyro Set", 0, /obj/item/storage/box/spec/pyro, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Scout-Sniper (Spotter) Set", 0, /obj/item/storage/box/spec/spotter, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Scout-Sniper (Shooter)", 0, /obj/item/storage/box/spec/sniper, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),

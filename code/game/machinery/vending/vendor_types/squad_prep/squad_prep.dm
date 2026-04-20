@@ -51,7 +51,6 @@
 		list("M41A Folding Stock", floor(scale * 3), /obj/item/attachable/stock/rifle/collapsible, VENDOR_ITEM_REGULAR),
 		list("Rail Flashlight", floor(scale * 6), /obj/item/attachable/flashlight, VENDOR_ITEM_RECOMMENDED),
 		list("Underbarrel Flashlight Grip", floor(scale * 6), /obj/item/attachable/flashlight/grip, VENDOR_ITEM_RECOMMENDED),
-		list("Underslung Grenade Launcher", floor(scale * 3), /obj/item/attachable/attached_gun/grenade, VENDOR_ITEM_REGULAR), //They already get these as on-spawns, might as well formalize some spares.
 
 		list("UTILITIES", -1, null, null),
 		list("M5 Bayonet", floor(scale * 15), /obj/item/attachable/bayonet, VENDOR_ITEM_REGULAR),
@@ -165,6 +164,8 @@
 		list("M276 Pattern General Revolver Holster Rig", floor(scale * 5), /obj/item/storage/belt/gun/m44, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern M82F Holster Rig", floor(scale * 2), /obj/item/storage/belt/gun/flaregun, VENDOR_ITEM_REGULAR),
 		list("M276 G8-A General Utility Pouch", floor(scale * 5), /obj/item/storage/backpack/general_belt, VENDOR_ITEM_REGULAR),
+		list("M276 pattern M39 holster rig", floor(scale * 1), /obj/item/storage/large_holster/m39, VENDOR_ITEM_REGULAR),
+		list("M276 Shotgun scabbard", floor(scale * 1), /obj/item/storage/large_holster/m37, VENDOR_ITEM_REGULAR),
 
 		list("RECOMMENDED POUCHES", -1, null, null, null),
 		list("First-Aid Pouch", floor(scale * 10), /obj/item/storage/pouch/firstaid, VENDOR_ITEM_RECOMMENDED),
@@ -877,6 +878,10 @@
 		list("M44 Marksman Speed Loader (.44)", floor(scale * 3), /obj/item/ammo_magazine/revolver/marksman, VENDOR_ITEM_REGULAR),
 		list("SU-6 Smartpistol Magazine (.45)", floor(scale * 5), /obj/item/ammo_magazine/pistol/smart, VENDOR_ITEM_REGULAR),
 		list("Nailgun magazine (7x45mm)", floor(scale * 3), /obj/item/ammo_magazine/smg/nailgun, VENDOR_ITEM_REGULAR),
+
+		list("GRENADES", -1, null, null),
+		list("M40 HEDP grenade packet", floor(scale * 1), /obj/item/storage/box/packet/high_explosive, VENDOR_ITEM_REGULAR),
+		list("M47 HSDP grenade packet", floor(scale * 1), /obj/item/storage/box/packet/smoke, VENDOR_ITEM_REGULAR),
 		)
 
 //--------------SQUAD ARMAMENTS VENDOR--------------
@@ -933,7 +938,7 @@
 
 		list("FLARE AND LIGHT", -1, null, null),
 		list("Combat Flashlight", round(scale * 5), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
-		list("Box of Flashlight", round(scale * 1), /obj/item/ammo_box/magazine/misc/flashlight, VENDOR_ITEM_REGULAR),
+		list("Box of Combat Flashlight", round(scale * 1), /obj/item/ammo_box/magazine/misc/flashlight/combat, VENDOR_ITEM_REGULAR),
 		list("Box of Flares", round(scale * 1), /obj/item/ammo_box/magazine/misc/flares, VENDOR_ITEM_REGULAR),
 		list("M94 Marking Flare Pack", round(scale * 10), /obj/item/storage/box/flare, VENDOR_ITEM_REGULAR),
 		list("M89-S Signal Flare Pack", round(scale * 1), /obj/item/storage/box/flare/signal, VENDOR_ITEM_REGULAR),
@@ -1251,6 +1256,7 @@
 		list("XM-VESG-1 Flamer Nozzle", 4, /obj/item/attachable/attached_gun/flamer_nozzle, VENDOR_ITEM_REGULAR),
 		list("U7 Underbarrel Shotgun", 4, /obj/item/attachable/attached_gun/shotgun, VENDOR_ITEM_REGULAR),
 		list("Underbarrel Extinguisher", 4, /obj/item/attachable/attached_gun/extinguisher, VENDOR_ITEM_REGULAR),
+		list("PN 30mm underslung grenade launcher", 2, /obj/item/attachable/attached_gun/grenade/mk1, VENDOR_ITEM_REGULAR),
 		list("Vertical Grip", 6, /obj/item/attachable/verticalgrip, VENDOR_ITEM_REGULAR),
 
 		list("STOCK", -1, null, null),

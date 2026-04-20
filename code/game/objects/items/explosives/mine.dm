@@ -937,9 +937,6 @@
 /obj/item/explosive/mine/sharp/proc/set_mine_mode(mode)
 	mine_mode = mode
 
-/obj/item/explosive/mine/sharp/attackby(obj/item/W, mob/user)
-	return
-
 /obj/item/explosive/mine/sharp/set_tripwire()
 	if(!active && !tripwire)
 		for(var/direction in CARDINAL_ALL_DIRS)

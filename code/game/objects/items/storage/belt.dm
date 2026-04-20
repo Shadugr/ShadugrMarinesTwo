@@ -2499,8 +2499,8 @@
 	item_state_slots = list(
 		WEAR_L_HAND = "utility",
 		WEAR_R_HAND = "utility")
-	storage_slots = 10
-	max_storage_space = 10
+	storage_slots = 12
+	max_storage_space = 12
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle/sharp/explosive,
 		/obj/item/ammo_magazine/rifle/sharp/flechette,

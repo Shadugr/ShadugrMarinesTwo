@@ -5594,18 +5594,9 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
-	name = "First Platoon Ready Bay Blast Door";
-	closed_layer = 3.3;
-	layer = 3.3;
-	open_layer = 3.3;
-	id = "squadblastdoor"
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 8;
+/obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "squadarmory";
-	name = "\improper Gear Lockers"
+	dir = 4
 	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/platoonarmory)
@@ -9488,18 +9479,9 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
-	name = "First Platoon Ready Bay Blast Door";
-	closed_layer = 3.3;
-	layer = 3.3;
-	open_layer = 3.3;
-	id = "squadblastdoor"
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 8;
+/obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "squadarmory";
-	name = "\improper Gear Lockers"
+	dir = 4
 	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/platoonarmory)
@@ -15775,18 +15757,9 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
-	name = "First Platoon Ready Bay Blast Door";
-	closed_layer = 3.3;
-	layer = 3.3;
-	open_layer = 3.3;
-	id = "squadblastdoor"
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 8;
+/obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "squadarmory";
-	name = "\improper Gear Lockers"
+	dir = 4
 	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/platoonarmory)
@@ -17381,18 +17354,9 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
-	name = "First Platoon Ready Bay Blast Door";
-	closed_layer = 3.3;
-	layer = 3.3;
-	open_layer = 3.3;
-	id = "squadblastdoor"
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 8;
+/obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "squadarmory";
-	name = "\improper Gear Lockers"
+	dir = 4
 	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/platoonarmory)
@@ -17897,18 +17861,9 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
-	name = "First Platoon Ready Bay Blast Door";
-	closed_layer = 3.3;
-	layer = 3.3;
-	open_layer = 3.3;
-	id = "squadblastdoor"
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 8;
+/obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "squadarmory";
-	name = "\improper Gear Lockers"
+	dir = 4
 	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/platoonarmory)
@@ -18691,18 +18646,9 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
-	name = "First Platoon Ready Bay Blast Door";
-	closed_layer = 3.3;
-	layer = 3.3;
-	open_layer = 3.3;
-	id = "squadblastdoor"
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 8;
+/obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "squadarmory";
-	name = "\improper Gear Lockers"
+	dir = 4
 	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/platoonarmory)
@@ -25348,18 +25294,9 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
-	name = "First Platoon Ready Bay Blast Door";
-	closed_layer = 3.3;
-	layer = 3.3;
-	open_layer = 3.3;
-	id = "squadblastdoor"
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 8;
+/obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "squadarmory";
-	name = "\improper Gear Lockers"
+	dir = 4
 	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/platoonarmory)

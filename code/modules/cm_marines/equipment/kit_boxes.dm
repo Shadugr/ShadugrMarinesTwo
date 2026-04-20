@@ -173,6 +173,7 @@
 	new /obj/item/ammo_magazine/rifle/sharp/flechette(src)
 	new /obj/item/ammo_magazine/rifle/sharp/flechette(src)
 	new /obj/item/ammo_magazine/rifle/sharp/flechette(src)
+	new /obj/item/ammo_magazine/rifle/sharp/track(src)
 	new /obj/item/storage/belt/marine/sharp(src)
 	new /obj/item/clothing/gloves/marine/M3G(src)
 	new /obj/item/clothing/suit/marine/M3G(src)
