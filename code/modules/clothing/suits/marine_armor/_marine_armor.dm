@@ -986,6 +986,39 @@
 	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
 	unacidable = TRUE
 	light_range = 5
+	var/list/m3g_back = list(
+		/obj/item/storage/large_holster/machete,
+	)
+
+/obj/item/clothing/suit/marine/M3G/sharp
+	name = "\improper M3-G4-S grenadier armor"
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SHARP_HARNESS
+
+/obj/item/clothing/suit/marine/M3G/sharp/equipped(mob/user, slot, silent)
+	. = ..()
+
+	if(slot == WEAR_JACKET)
+		RegisterSignal(user, COMSIG_HUMAN_ATTEMPTING_EQUIP, PROC_REF(check_equipping_m3g))
+
+/obj/item/clothing/suit/marine/M3G/sharp/unequipped(mob/user, slot)
+	. = ..()
+
+	UnregisterSignal(user, COMSIG_HUMAN_ATTEMPTING_EQUIP)
+
+/obj/item/clothing/suit/marine/M3G/sharp/proc/check_equipping_m3g(mob/living/carbon/human/equipping_human, obj/item/equipping_item, slot)
+	SIGNAL_HANDLER
+
+	if(slot != WEAR_BACK)
+		return
+
+	if(is_type_in_list(equipping_item, m3g_back))
+		return
+
+	. = COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP
+
+	if(equipping_item.flags_equip_slot == SLOT_BACK)
+		to_chat(equipping_human, SPAN_WARNING("You can't equip [equipping_item] on your back while wearing [src]."))
+		return
 
 /obj/item/clothing/suit/marine/specialist
 	name = "\improper B18 defensive armor"

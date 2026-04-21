@@ -564,6 +564,16 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_OFF
 
+/obj/item/weapon/gun/rifle/sharp/able_to_fire(mob/user)
+	. = ..()
+	if(.)
+		if(!ishuman(user))
+			return FALSE
+		var/mob/living/carbon/human/H = user
+		if(!H.wear_suit || !(H.wear_suit.flags_inventory & SHARP_HARNESS))
+			balloon_alert(user, "harness required")
+			return FALSE
+
 /datum/action/item_action/sharp/action_activate()
 	. = ..()
 	var/obj/item/weapon/gun/rifle/sharp/dartlauncher = holder_item

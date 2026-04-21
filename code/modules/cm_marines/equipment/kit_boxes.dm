@@ -176,7 +176,7 @@
 	new /obj/item/ammo_magazine/rifle/sharp/track(src)
 	new /obj/item/storage/belt/marine/sharp(src)
 	new /obj/item/clothing/gloves/marine/M3G(src)
-	new /obj/item/clothing/suit/marine/M3G(src)
+	new /obj/item/clothing/suit/marine/M3G/sharp(src)
 	new /obj/item/clothing/head/helmet/marine/grenadier(src)
 	new /obj/item/device/multitool(src)
 

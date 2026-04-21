@@ -161,6 +161,8 @@
 #define SMARTGUN_HARNESS (1<<12)
 ///Whether wearing this headset grants you the ability to use the IFF targetting system of the smartgun
 #define SMARTGUN_OPTIC (1<<13)
+/// Whether wearing this suit grants you the ability to fire SHARP
+#define SHARP_HARNESS (1<<14)
 
 //SUITS AND HELMETS====================================================================================
 
