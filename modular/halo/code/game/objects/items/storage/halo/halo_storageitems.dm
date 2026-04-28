@@ -167,6 +167,13 @@
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/splint(src)
 
+/obj/item/storage/belt/shotgun/unsc
+	name = "\improper M276 pattern shotgun shell loading rig"
+
+/obj/item/storage/belt/shotgun/unsc/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/handful/shotgun/buckshot_unsc(src)
+
 //======================
 // POUCHES
 //======================
@@ -203,6 +210,15 @@
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/splint(src)
+
+/obj/item/storage/pouch/medkit/unsc/full_bio/fill_preset_inventory()
+	new /obj/item/storage/syringe_case/unsc/burnguard(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/primeable/biofoam(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/primeable/biofoam(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/glass/beaker/unsc/tramadol(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone/halo(src)
 
 //======================
 // HOLSTER POUCHES
@@ -334,7 +350,7 @@
 /obj/item/storage/large_holster/spnkr/filled/launcher/fill_preset_inventory()
 	for(var/i = 1 to 2)
 		new /obj/item/ammo_magazine/spnkr(src)
-	handle_item_insertion(new /obj/item/weapon/gun/halo_launcher/spnkr())
+	handle_item_insertion(new /obj/item/weapon/gun/halo_launcher/spnkr/unloaded())
 	update_icon()
 
 /obj/item/storage/backpack/marine/ammo_rack/spnkr
@@ -403,11 +419,7 @@
 	storage_slots = 5
 
 /obj/item/storage/unsc_speckit/spnkr/fill_preset_inventory()
-	new /obj/item/ammo_magazine/spnkr(src)
-	new /obj/item/ammo_magazine/spnkr(src)
-	new /obj/item/ammo_magazine/spnkr(src)
-	new /obj/item/storage/large_holster/spnkr(src)
-	new /obj/item/weapon/gun/halo_launcher/spnkr/unloaded(src)
+	new /obj/item/storage/large_holster/spnkr/filled/launcher(src)
 
 /obj/item/storage/unsc_speckit/srs99
 	name = "кейс комплекта SRS99-AM"
@@ -501,7 +513,7 @@
 	SIGNAL_HANDLER
 	if(source != grenade_scatter_owner || source.belt != src)
 		return
-	if(!issangheili(source) && !isunggoy(source))
+	if(!issangheili(source) && !isunggoy(source) && !isruuhtian(source))
 		return
 
 	INVOKE_ASYNC(src, PROC_REF(scatter_stored_grenades), source, get_turf(source))
@@ -610,3 +622,30 @@
 	name = "\improper спецоперативный патронташ унггоя-ультры"
 	icon_state = "gruntbelt_specops_ultra"
 	item_state = "gruntbelt_specops_ultra"
+
+/obj/item/storage/belt/marine/covenant/ruuhtian
+	name = "\improper Ruuhtian combat belt"
+	desc = "A modular belt for Kig-Yar field gear and ammunition."
+	icon_state = "ruuhtian_minor"
+	item_state = "belt_minor"
+	item_icons = list(
+		WEAR_WAIST = 'icons/halo/mob/humans/onmob/clothing/ruuhtian/belts.dmi'
+		)
+
+/obj/item/storage/belt/marine/covenant/ruuhtian/minor
+	name = "\improper Ruuhtian Minor combat belt"
+	desc = "A light combat belt for Kig-Yar skirmishers."
+	icon_state = "ruuhtian_minor"
+	item_state = "ruuhtian_minor"
+
+/obj/item/storage/belt/marine/covenant/ruuhtian/major
+	name = "\improper Ruuhtian Major combat belt"
+	desc = "A veteran combat belt for Kig-Yar skirmishers."
+	icon_state = "ruuhtian_major"
+	item_state = "ruuhtian_major"
+
+/obj/item/storage/belt/marine/covenant/ruuhtian/ultra
+	name = "\improper Ruuhtian Ultra combat belt"
+	desc = "An elite combat belt for Kig-Yar line veterans."
+	icon_state = "ruuhtian_ultra"
+	item_state = "ruuhtian_ultra"
