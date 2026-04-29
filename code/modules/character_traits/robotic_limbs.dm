@@ -1,6 +1,5 @@
 /datum/character_trait_group/robo_limb
 	trait_group_name = "Robotic Limb"
-	mutually_exclusive = TRUE
 	base_type = /datum/character_trait_group/robo_limb
 
 /datum/character_trait/robo_limb

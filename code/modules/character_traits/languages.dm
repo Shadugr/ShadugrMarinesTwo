@@ -19,6 +19,7 @@
 
 /datum/character_trait_group/language
 	trait_group_name = "Languages"
+	mutually_exclusive = TRUE
 
 /datum/character_trait/language/russian
 	language_name = LANGUAGE_RUSSIAN

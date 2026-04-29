@@ -8,6 +8,7 @@
 	max_tl = 2
 	max_smartgun = 2
 	max_leaders = 1
+	max_rto = 1
 
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
@@ -30,6 +31,7 @@
 	max_tl = 2
 	max_smartgun = 2
 	max_leaders = 1
+	max_rto = 1
 
 /datum/squad/marine/delta
 	equipment_color = "#4148c8"
@@ -50,6 +52,7 @@
 	max_tl = 2
 	max_smartgun = 2
 	max_leaders = 1
+	max_rto = 1
 
 /datum/squad/marine/charlie
 	equipment_color = "#c864c8"
@@ -70,3 +73,4 @@
 	max_tl = 2
 	max_smartgun = 2
 	max_leaders = 1
+	max_rto = 1

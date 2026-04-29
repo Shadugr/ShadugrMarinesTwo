@@ -254,7 +254,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_medic, list(
 		/obj/item/roller/medevac,
 		/obj/item/bodybag/cryobag,
 		/obj/item/bodybag/cryobag,
-		/obj/item/device/encryptionkey/med,
 	)
 
 GLOBAL_LIST_INIT(cm_vending_clothing_upp_medic, list(

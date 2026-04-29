@@ -763,6 +763,12 @@
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
 	initial_keys = list(/obj/item/device/encryptionkey/public)
 
+/obj/item/device/radio/headset/almayer/marine/solardevils/med
+	initial_keys = list(/obj/item/device/encryptionkey/med, /obj/item/device/encryptionkey/public)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/rto
+	initial_keys = list(/obj/item/device/encryptionkey/jtac, /obj/item/device/encryptionkey/public)
+
 /obj/item/device/radio/headset/almayer/marine/solardevils/seclead
 	initial_keys = list(/obj/item/device/encryptionkey/squadlead, /obj/item/device/encryptionkey/public)
 

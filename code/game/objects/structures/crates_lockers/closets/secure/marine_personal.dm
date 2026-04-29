@@ -50,6 +50,22 @@
 /obj/structure/closet/secure_closet/marine_personal/corpsman
 	job = JOB_SQUAD_MEDIC
 
+/obj/structure/closet/secure_closet/marine_personal/corpsman/spawn_gear()
+	new /obj/item/clothing/under/marine(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/med(src)
+
+/obj/structure/closet/secure_closet/marine_personal/rto
+	job = JOB_SQUAD_RTO
+
+/obj/structure/closet/secure_closet/marine_personal/rto/spawn_gear()
+	new /obj/item/clothing/under/marine(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/rto(src)
+	new /obj/item/device/binoculars/fire_support/uscm(src)
+	new /obj/item/storage/box/flare/signal(src)
+	new /obj/item/storage/box/flare/signal(src)
+
 /obj/structure/closet/secure_closet/marine_personal/squad_leader
 	job = JOB_SQUAD_TEAM_LEADER
 
@@ -75,6 +91,22 @@
 	new /obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber(src)
 	new /obj/item/clothing/shoes/marine/knife(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/pltco(src)
+
+/obj/structure/closet/secure_closet/marine_personal/tank_crew
+	job = JOB_TANK_CREW
+
+/obj/structure/closet/secure_closet/marine_personal/tank_crew/spawn_gear()
+	new /obj/item/clothing/under/marine(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/vc(src)
+
+/obj/structure/closet/secure_closet/marine_personal/gp_pilot
+	job = JOB_CAS_PILOT
+
+/obj/structure/closet/secure_closet/marine_personal/gp_pilot/spawn_gear()
+	new /obj/item/clothing/under/marine(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/po(src)
 
 // ==UPP== //
 
@@ -244,19 +276,3 @@
 
 /obj/structure/closet/secure_closet/marine_personal/rmc/troop_commander
 	job = JOB_TWE_RMC_LIEUTENANT
-
-/obj/structure/closet/secure_closet/marine_personal/tank_crew
-	job = JOB_TANK_CREW
-
-/obj/structure/closet/secure_closet/marine_personal/tank_crew/spawn_gear()
-	new /obj/item/clothing/under/marine(src)
-	new /obj/item/clothing/shoes/marine/knife(src)
-	new /obj/item/device/radio/headset/almayer/marine/solardevils/vc(src)
-
-/obj/structure/closet/secure_closet/marine_personal/gp_pilot
-	job = JOB_CAS_PILOT
-
-/obj/structure/closet/secure_closet/marine_personal/gp_pilot/spawn_gear()
-	new /obj/item/clothing/under/marine(src)
-	new /obj/item/clothing/shoes/marine/knife(src)
-	new /obj/item/device/radio/headset/almayer/marine/solardevils/po(src)

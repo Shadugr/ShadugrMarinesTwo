@@ -166,7 +166,6 @@
 	icon_off = "secureoff-spec"
 
 /obj/structure/closet/secure_closet/marine_personal/rto
-	job = JOB_SQUAD_RTO
 	icon = 'modular/squads/icons/closet.dmi'
 	icon_state = "secure1-rto"
 	icon_closed = "secure-rto"
@@ -174,12 +173,6 @@
 	icon_opened = "secureopen-rto"
 	icon_broken = "securebroken-rto"
 	icon_off = "secureoff-rto"
-
-/obj/structure/closet/secure_closet/marine_personal/rto/spawn_gear()
-	. = ..()
-	new /obj/item/device/binoculars/fire_support/uscm(src)
-	new /obj/item/storage/box/flare/signal(src)
-	new /obj/item/storage/box/flare/signal(src)
 
 /obj/structure/closet/secure_closet/marine_personal/squad_leader
 	icon = 'modular/squads/icons/closet.dmi'

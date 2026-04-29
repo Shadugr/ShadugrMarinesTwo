@@ -22,7 +22,7 @@
 	var/ready = 0
 	var/damage_heal_threshold = 12 //This is the maximum non-oxy damage the defibrillator will heal to get a patient above -100, in all categories
 	var/datum/effect_system/spark_spread/spark_system = new /datum/effect_system/spark_spread
-	var/charge_cost = 66 //How much energy is used.
+	var/charge_cost = 0 //How much energy is used.
 	var/obj/item/cell/dcell = null
 	var/datum/effect_system/spark_spread/sparks = new
 	var/defib_cooldown = 0 //Cooldown for toggling the defib
@@ -262,7 +262,7 @@
 	min_heart_damage_dealt = 0
 	max_heart_damage_dealt = 0
 	damage_heal_threshold = 40
-	charge_cost = 198
+	charge_cost = 0
 
 /obj/item/device/defibrillator/compact
 	name = "compact defibrillator"
@@ -271,4 +271,4 @@
 	icon_state = "compact_defib"
 	item_state = "adv_defib"
 	w_class = SIZE_SMALL
-	charge_cost = 99
+	charge_cost = 0

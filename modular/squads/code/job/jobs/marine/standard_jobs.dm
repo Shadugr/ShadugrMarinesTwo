@@ -16,6 +16,10 @@
 	total_positions = 2
 	spawn_positions = 2
 
+/datum/job/marine/standard/ai/rto
+	total_positions = 1
+	spawn_positions = 1
+
 // Лидер группы
 /datum/job/marine/tl
 	total_positions = 2

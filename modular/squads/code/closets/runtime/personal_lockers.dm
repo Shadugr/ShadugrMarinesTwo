@@ -149,7 +149,7 @@
 			given_medal.recipient_rank = medal.recipient_role
 			given_medal.medal_citation = medal.citation
 
-	spawn_profile_personal_weapon(locker, new_human, real_client)
+	// spawn_profile_personal_weapon(locker, new_human, real_client)
 
 /datum/equipment_preset/proc/normalize_profile_personal_weapon_choice(chosen_weapon, list/personal_weapon_profile)
 	var/list/personal_weapon_options = personal_weapon_profile?["options"] || GLOB.personal_weapons_list
