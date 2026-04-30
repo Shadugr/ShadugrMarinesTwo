@@ -32,7 +32,7 @@
 /obj/structure/closet/secure_closet/marine_personal/rto/spawn_gear()
 	new /obj/item/clothing/under/marine(src)
 	new /obj/item/clothing/shoes/marine/knife(src)
-	new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/rto(src)
 	need_check_content = TRUE
 	new /obj/item/storage/pouch/sling/rto(src)
 	new /obj/item/storage/box/flare/signal(src)
