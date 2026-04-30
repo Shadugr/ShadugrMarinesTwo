@@ -75,5 +75,6 @@
 		GLOB.language_keys[".[lowertext(convert_en_key_to_ru_key(L.key))]"] = initial(L.name)
 		GLOB.language_keys["#[lowertext(convert_en_key_to_ru_key(L.key))]"] = initial(L.name)
 		GLOB.language_keys["№[lowertext(convert_en_key_to_ru_key(L.key))]"] = initial(L.name)
+		GLOB.language_keys["![lowertext(convert_en_key_to_ru_key(L.key))]"] = initial(L.name)
 
 		GLOB.language_keys["№[lowertext(L.key)]"] = initial(L.name)
