@@ -1,7 +1,7 @@
 /obj/item/clothing/under/marine/covenant
 	name = "нижний комбинезон"
 	desc = "Нижний костюм Ковенанта. Вы не должны это видеть."
-	icon = 'icons/halo/obj/items/clothing/covenant/under.dmi'
+	icon = 'modular/halo/icons/halo/obj/items/clothing/covenant/under.dmi'
 	icon_state = "sangheili_undersuit"
 	item_state = "sangheili_undersuit"
 	worn_state = "sangheili_undersuit"
@@ -13,7 +13,7 @@
 /obj/item/clothing/under/marine/covenant/sangheili
 	name = "\improper комбинезон сангхейли"
 	desc = "Высокотехнологичный комбинезон, в основном повторяющий форму тела носителя. Благодаря вплетённым слоям наноламинатной брони он обеспечивает достойную защиту при высокой гибкости, позволяя владельцу действовать агрессивно и при этом не оставаться без прикрытия. Продвинутые магнитные проекторы костюма способны с большой силой фиксировать на нём элементы брони."
-	icon = 'icons/halo/obj/items/clothing/covenant/under.dmi'
+	icon = 'modular/halo/icons/halo/obj/items/clothing/covenant/under.dmi'
 	icon_state = "sangheili_undersuit"
 	item_state = "sangheili_undersuit"
 	worn_state = "sangheili_undersuit"
@@ -23,10 +23,17 @@
 	item_state_slots = list()
 
 	item_icons = list(
-		WEAR_BODY = 'icons/halo/mob/humans/onmob/clothing/sangheili/uniforms.dmi',
-		WEAR_L_HAND = 'icons/halo/mob/humans/onmob/items_lefthand_halo.dmi',
-		WEAR_R_HAND = 'icons/halo/mob/humans/onmob/items_righthand_halo.dmi'
+		WEAR_BODY = 'modular/halo/icons/halo/mob/humans/onmob/clothing/sangheili/uniforms.dmi',
+		WEAR_L_HAND = 'modular/halo/icons/halo/mob/humans/onmob/items_lefthand_halo.dmi',
+		WEAR_R_HAND = 'modular/halo/icons/halo/mob/humans/onmob/items_righthand_halo.dmi'
 	)
+
+/obj/item/clothing/under/marine/covenant/sangheili/fullbody
+	flags_jumpsuit = null
+	flags_armor_protection = BODY_FLAG_ALL_BUT_HEAD
+	icon_state = "sangheili_undersuit_2"
+	item_state = "sangheili_undersuit_2"
+	worn_state = "sangheili_undersuit_2"
 
 /obj/item/clothing/under/marine/covenant/unggoy
 	name = "\improper магнитная разгрузка унггоя"
@@ -41,9 +48,9 @@
 	item_state_slots = list()
 
 	item_icons = list(
-		WEAR_BODY = 'icons/halo/mob/humans/onmob/clothing/unggoy/uniforms.dmi',
-		WEAR_L_HAND = 'icons/halo/mob/humans/onmob/items_lefthand_halo.dmi',
-		WEAR_R_HAND = 'icons/halo/mob/humans/onmob/items_righthand_halo.dmi'
+		WEAR_BODY = 'modular/halo/icons/halo/mob/humans/onmob/clothing/unggoy/uniforms.dmi',
+		WEAR_L_HAND = 'modular/halo/icons/halo/mob/humans/onmob/items_lefthand_halo.dmi',
+		WEAR_R_HAND = 'modular/halo/icons/halo/mob/humans/onmob/items_righthand_halo.dmi'
 	)
 
 /obj/item/clothing/under/marine/covenant/ruuhtian
@@ -58,7 +65,7 @@
 	item_state_slots = list()
 
 	item_icons = list(
-		WEAR_BODY = 'icons/halo/mob/humans/onmob/clothing/ruuhtian/uniforms.dmi',
-		WEAR_L_HAND = 'icons/halo/mob/humans/onmob/items_lefthand_halo.dmi',
-		WEAR_R_HAND = 'icons/halo/mob/humans/onmob/items_righthand_halo.dmi'
+		WEAR_BODY = 'modular/halo/icons/halo/mob/humans/onmob/clothing/ruuhtian/uniforms.dmi',
+		WEAR_L_HAND = 'modular/halo/icons/halo/mob/humans/onmob/items_lefthand_halo.dmi',
+		WEAR_R_HAND = 'modular/halo/icons/halo/mob/humans/onmob/items_righthand_halo.dmi'
 	)

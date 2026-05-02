@@ -38,12 +38,12 @@
 	stun_reduction = 2
 	knock_out_reduction = 2
 
-	icobase = 'icons/halo/mob/humans/species/spartan/r_spartan.dmi'
-	deform = 'icons/halo/mob/humans/species/spartan/r_spartan.dmi'
-	eye_icon = 'icons/halo/mob/humans/species/spartan/eyes.dmi'
-	dam_icon = 'icons/halo/mob/humans/species/spartan/dam_spartan.dmi'
-	blood_mask = 'icons/halo/mob/humans/species/spartan/blood_mask.dmi'
-	icon_template = 'icons/mob/humans/template_64.dmi'
+	icobase = 'modular/halo/icons/halo/mob/humans/species/spartan/r_spartan.dmi'
+	deform = 'modular/halo/icons/halo/mob/humans/species/spartan/r_spartan.dmi'
+	eye_icon = 'modular/halo/icons/halo/mob/humans/species/spartan/eyes.dmi'
+	dam_icon = 'modular/halo/icons/halo/mob/humans/species/spartan/dam_spartan.dmi'
+	blood_mask = 'modular/halo/icons/halo/mob/humans/species/spartan/blood_mask.dmi'
+	icon_template = 'modular/halo/icons/mob/humans/template_64.dmi'
 
 /datum/species/spartan/New()
 	..()
@@ -51,18 +51,18 @@
 		WEAR_R_HAND = list("[NORTH]" = list("x" = 1, "y" = 4), "[EAST]" = list("x" = 1, "y" = 4), "[SOUTH]" = list("x" = -1, "y" = 4), "[WEST]" = list("x" = 1, "y" = 4)),
 		WEAR_L_HAND = list("[NORTH]" = list("x" = -1, "y" = 4), "[EAST]" = list("x" = 1, "y" = 4), "[SOUTH]" = list("x" = 1, "y" = 4), "[WEST]" = list("x" = 1, "y" = 4)),
 		WEAR_WAIST = list("[NORTH]" = list("x" = 0, "y" = 6), "[EAST]" = list("x" = 0, "y" = 6), "[SOUTH]" = list("x" = 0, "y" = 6), "[WEST]" = list("x" = 1, "y" = 6)),
-		WEAR_HEAD = list("[NORTH]" = list("x" = 0, "y" = 10), "[EAST]" = list("x" = 0, "y" = 10), "[SOUTH]" = list("x" = 0, "y" = 10), "[WEST]" = list("x" = 0, "y" = 10)),
-		WEAR_FACE = list("[NORTH]" = list("x" = 0, "y" = 10), "[EAST]" = list("x" = 1, "y" = 10), "[SOUTH]" = list("x" = 0, "y" = 10), "[WEST]" = list("x" = 1, "y" = 10)),
-		WEAR_EYES = list("[NORTH]" = list("x" = 0, "y" = 10), "[EAST]" = list("x" = 1, "y" = 10), "[SOUTH]" = list("x" = 0, "y" = 10), "[WEST]" = list("x" = 1, "y" = 10)),
+		WEAR_HEAD = list("[NORTH]" = list("x" = 0, "y" = 7), "[EAST]" = list("x" = 0, "y" = 7), "[SOUTH]" = list("x" = 0, "y" = 7), "[WEST]" = list("x" = 0, "y" = 7)),
+		WEAR_FACE = list("[NORTH]" = list("x" = 0, "y" = 7), "[EAST]" = list("x" = 1, "y" = 7), "[SOUTH]" = list("x" = 0, "y" = 7), "[WEST]" = list("x" = 1, "y" = 7)),
+		WEAR_EYES = list("[NORTH]" = list("x" = 0, "y" = 7), "[EAST]" = list("x" = 1, "y" = 7), "[SOUTH]" = list("x" = 0, "y" = 7), "[WEST]" = list("x" = 1, "y" = 7)),
 		WEAR_ID = list("[NORTH]" = list("x" = 0, "y" = 6), "[EAST]" = list("x" = 1, "y" = 6), "[SOUTH]" = list("x" = 0, "y" = 6), "[WEST]" = list("x" = 1, "y" = 6)),
 		WEAR_BACK = list("[NORTH]" = list("x" = 0, "y" = 7), "[EAST]" = list("x" = -2, "y" = 7), "[SOUTH]" = list("x" = 0, "y" = 7), "[WEST]" = list("x" = 3, "y" = 7)),
 		WEAR_J_STORE = list("[NORTH]" = list("x" = 0, "y" = 7), "[EAST]" = list("x" = -2, "y" = 7), "[SOUTH]" = list("x" = 0, "y" = 7), "[WEST]" = list("x" = 3, "y" = 7)),
 		WEAR_IN_JACKET = list("[NORTH]" = list("x" = 0, "y" = 7), "[EAST]" = list("x" = 1, "y" = 7), "[SOUTH]" = list("x" = 0, "y" = 7), "[WEST]" = list("x" = 1, "y" = 7)),
-		WEAR_L_EAR = list("[NORTH]" = list("x" = 0, "y" = 10), "[EAST]" = list("x" = 1, "y" = 10), "[SOUTH]" = list("x" = 0, "y" = 10), "[WEST]" = list("x" = 1, "y" = 10)),
-		WEAR_R_EAR = list("[NORTH]" = list("x" = 0, "y" = 10), "[EAST]" = list("x" = 1, "y" = 10), "[SOUTH]" = list("x" = 0, "y" = 10), "[WEST]" = list("x" = 1, "y" = 10)),
+		WEAR_L_EAR = list("[NORTH]" = list("x" = 0, "y" = 7), "[EAST]" = list("x" = 1, "y" = 7), "[SOUTH]" = list("x" = 0, "y" = 7), "[WEST]" = list("x" = 1, "y" = 7)),
+		WEAR_R_EAR = list("[NORTH]" = list("x" = 0, "y" = 7), "[EAST]" = list("x" = 1, "y" = 7), "[SOUTH]" = list("x" = 0, "y" = 7), "[WEST]" = list("x" = 1, "y" = 7)),
 		WEAR_ACCESSORY = list("[NORTH]" = list("x" = 0, "y" = 7), "[EAST]" = list("x" = 0, "y" = 7), "[SOUTH]" = list("x" = 0, "y" = 7), "[WEST]" = list("x" = 0, "y" = 7)),
 		WEAR_IN_ACCESSORY = list("[NORTH]" = list("x" = 0, "y" = 7), "[EAST]" = list("x" = 0, "y" = 7), "[SOUTH]" = list("x" = 0, "y" = 7), "[WEST]" = list("x" = 0, "y" = 7)),
-		WEAR_IN_HELMET = list("[NORTH]" = list("x" = 0, "y" = 10), "[EAST]" = list("x" = 0, "y" = 10), "[SOUTH]" = list("x" = 0, "y" = 10), "[WEST]" = list("x" = 0, "y" = 10))
+		WEAR_IN_HELMET = list("[NORTH]" = list("x" = 0, "y" = 7), "[EAST]" = list("x" = 0, "y" = 7), "[SOUTH]" = list("x" = 0, "y" = 7), "[WEST]" = list("x" = 0, "y" = 7))
 	)
 
 /datum/species/spartan/post_species_loss(mob/living/carbon/human/H)
@@ -116,3 +116,6 @@
 	spartan.AddComponent(/datum/component/leaping, _leap_range = 4, _leap_cooldown = 4 SECONDS, _leaper_allow_pass_flags = PASS_OVER|PASS_MOB_THRU)
 	spartan.AddComponent(/datum/component/jump, _jump_duration = 0.75 SECONDS, _jump_cooldown = 1 SECONDS, _jump_height = 32, _jump_sound = 'sound/weapons/thudswoosh.ogg', _jump_flags = JUMP_SPIN, _jumper_allow_pass_flags = PASS_OVER|PASS_MOB_THRU)
 	return ..()
+
+/mob/living/carbon/human/spartan/Initialize(mapload)
+	. = ..(mapload, new_species = SPECIES_SPARTAN)

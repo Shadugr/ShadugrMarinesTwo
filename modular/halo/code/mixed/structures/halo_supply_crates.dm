@@ -9,7 +9,6 @@
 	supplies = list(
 		/obj/item/ammo_box/magazine/unsc/ma5c = 1,
 		/obj/item/ammo_box/magazine/unsc/ma5b = 1,
-		/obj/item/ammo_box/magazine/unsc/br55 = 1,
 	)
 
 /obj/structure/largecrate/supply/ammo/halo/marksman

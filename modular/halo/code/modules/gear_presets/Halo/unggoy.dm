@@ -281,28 +281,28 @@
 	name = parent_type::name + " (Plasma Pistol)"
 
 /datum/equipment_preset/covenant/unggoy/specops/plasma_pistol/load_gear(mob/living/carbon/human/new_human)
-	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/stealth/unggoy_specops, /obj/item/storage/belt/marine/covenant/unggoy/specops)
+	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/unggoy/cloaking/specops, /obj/item/storage/belt/marine/covenant/unggoy/specops)
 	add_plasma_pistol_package(new_human)
 
 /datum/equipment_preset/covenant/unggoy/specops/needler
 	name = parent_type::name + " (Needler)"
 
 /datum/equipment_preset/covenant/unggoy/specops/needler/load_gear(mob/living/carbon/human/new_human)
-	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/stealth/unggoy_specops, /obj/item/storage/belt/marine/covenant/unggoy/specops)
+	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/unggoy/cloaking/specops, /obj/item/storage/belt/marine/covenant/unggoy/specops)
 	add_needler_package(new_human)
 
 /datum/equipment_preset/covenant/unggoy/specops/plasma_rifle
 	name = parent_type::name + " (Plasma Rifle)"
 
 /datum/equipment_preset/covenant/unggoy/specops/plasma_rifle/load_gear(mob/living/carbon/human/new_human)
-	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/stealth/unggoy_specops, /obj/item/storage/belt/marine/covenant/unggoy/specops)
+	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/unggoy/cloaking/specops, /obj/item/storage/belt/marine/covenant/unggoy/specops)
 	add_plasma_rifle_package(new_human)
 
 /datum/equipment_preset/covenant/unggoy/specops/cloaking
 	name = parent_type::name + " (Plasma Rifle) !!CLOAKED!!"
 
 /datum/equipment_preset/covenant/unggoy/specops/cloaking/load_gear(mob/living/carbon/human/new_human)
-	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/stealth/unggoy_specops, /obj/item/storage/belt/marine/covenant/unggoy/specops)
+	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/unggoy/cloaking/specops, /obj/item/storage/belt/marine/covenant/unggoy/specops)
 	add_plasma_rifle_package(new_human)
 
 /datum/equipment_preset/covenant/unggoy/specops/lesser
@@ -318,6 +318,20 @@
 	languages = list(LANGUAGE_SANGHEILI, LANGUAGE_UNGGOY)
 
 /datum/equipment_preset/covenant/unggoy/specops/lesser/load_gear(mob/living/carbon/human/new_human)
+	add_grunt_specops(new_human)
+	add_plasma_pistol_package(new_human)
+
+/datum/equipment_preset/covenant/unggoy/specops/lesser/needler
+	name = parent_type::name + " (Needler)"
+
+/datum/equipment_preset/covenant/unggoy/specops/lesser/needler/load_gear(mob/living/carbon/human/new_human)
+	add_grunt_specops(new_human)
+	add_needler_package(new_human)
+
+/datum/equipment_preset/covenant/unggoy/specops/lesser/plasma_rifle
+	name = parent_type::name + " (Plasma Rifle)"
+
+/datum/equipment_preset/covenant/unggoy/specops/lesser/plasma_rifle/load_gear(mob/living/carbon/human/new_human)
 	add_grunt_specops(new_human)
 	add_plasma_rifle_package(new_human)
 
@@ -345,28 +359,28 @@
 	name = parent_type::name + " (Plasma Pistol)"
 
 /datum/equipment_preset/covenant/unggoy/specops_ultra/plasma_pistol/load_gear(mob/living/carbon/human/new_human)
-	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/stealth/unggoy_specops/ultra, /obj/item/storage/belt/marine/covenant/unggoy/specops_ultra)
+	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/unggoy/cloaking/specops_ultra, /obj/item/storage/belt/marine/covenant/unggoy/specops_ultra)
 	add_plasma_pistol_package(new_human)
 
 /datum/equipment_preset/covenant/unggoy/specops_ultra/needler
 	name = parent_type::name + " (Needler)"
 
 /datum/equipment_preset/covenant/unggoy/specops_ultra/needler/load_gear(mob/living/carbon/human/new_human)
-	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/stealth/unggoy_specops/ultra, /obj/item/storage/belt/marine/covenant/unggoy/specops_ultra)
+	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/unggoy/cloaking/specops_ultra, /obj/item/storage/belt/marine/covenant/unggoy/specops_ultra)
 	add_needler_package(new_human)
 
 /datum/equipment_preset/covenant/unggoy/specops_ultra/plasma_rifle
 	name = parent_type::name + " (Plasma Rifle)"
 
 /datum/equipment_preset/covenant/unggoy/specops_ultra/plasma_rifle/load_gear(mob/living/carbon/human/new_human)
-	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/stealth/unggoy_specops/ultra, /obj/item/storage/belt/marine/covenant/unggoy/specops_ultra)
+	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/unggoy/cloaking/specops_ultra, /obj/item/storage/belt/marine/covenant/unggoy/specops_ultra)
 	add_plasma_rifle_package(new_human)
 
 /datum/equipment_preset/covenant/unggoy/specops_ultra/cloaking
 	name = parent_type::name + " (Plasma Rifle) !!CLOAKED!!"
 
 /datum/equipment_preset/covenant/unggoy/specops_ultra/cloaking/load_gear(mob/living/carbon/human/new_human)
-	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/stealth/unggoy_specops/ultra, /obj/item/storage/belt/marine/covenant/unggoy/specops_ultra)
+	equip_unggoy_basics(new_human, /obj/item/clothing/suit/marine/unggoy/cloaking/specops_ultra, /obj/item/storage/belt/marine/covenant/unggoy/specops_ultra)
 	add_plasma_rifle_package(new_human)
 
 // Deacon
@@ -414,8 +428,8 @@
 // AI-ONLY ROLES
 
 /datum/equipment_preset/covenant/unggoy/ai
-	name = "Унггой AI"
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	name = "Унггой боевой шаблон"
+	flags = EQUIPMENT_PRESET_STUB
 	idtype = /obj/item/card/id/covenant
 	access = list(ACCESS_MARINE_PREP)
 	languages = list(LANGUAGE_SANGHEILI, LANGUAGE_UNGGOY)
@@ -444,6 +458,7 @@
 
 /datum/equipment_preset/covenant/unggoy/ai/minor_plasma
 	name = "Унггой-минор (плазма)"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_COV_MINOR
 	rank = JOB_COV_MINOR
 	paygrades = list(PAY_SHORT_COV_MINOR = JOB_PLAYTIME_TIER_0)
@@ -460,6 +475,7 @@
 
 /datum/equipment_preset/covenant/unggoy/ai/minor_needler
 	name = "Унггой-минор (игольник)"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_COV_MINOR
 	rank = JOB_COV_MINOR
 	paygrades = list(PAY_SHORT_COV_MINOR = JOB_PLAYTIME_TIER_0)
@@ -477,6 +493,7 @@
 
 /datum/equipment_preset/covenant/unggoy/ai/major_plasma
 	name = "Унггой-мажор (плазма)"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_COV_MAJOR
 	rank = JOB_COV_MAJOR
 	paygrades = list(PAY_SHORT_COV_MAJOR = JOB_PLAYTIME_TIER_0)
@@ -493,6 +510,7 @@
 
 /datum/equipment_preset/covenant/unggoy/ai/major_needler
 	name = "Унггой-мажор (игольник)"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_COV_MAJOR
 	rank = JOB_COV_MAJOR
 	paygrades = list(PAY_SHORT_COV_MAJOR = JOB_PLAYTIME_TIER_0)
@@ -510,6 +528,7 @@
 
 /datum/equipment_preset/covenant/unggoy/ai/heavy_plasma
 	name = "Унггой-тяжелый (плазменная винтовка)"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_COV_HEAVY
 	rank = JOB_COV_HEAVY
 	paygrades = list(PAY_SHORT_COV_HEAVY = JOB_PLAYTIME_TIER_0)
@@ -524,6 +543,7 @@
 
 /datum/equipment_preset/covenant/unggoy/ai/heavy_needler
 	name = "Унггой-тяжелый (игольник)"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_COV_HEAVY
 	rank = JOB_COV_HEAVY
 	paygrades = list(PAY_SHORT_COV_HEAVY = JOB_PLAYTIME_TIER_0)
@@ -538,7 +558,8 @@
 	add_ai_injectors(new_human, list(/obj/item/reagent_container/hypospray/autoinjector/kelotane/halo, /obj/item/reagent_container/hypospray/autoinjector/oxycodone/halo))
 
 /datum/equipment_preset/covenant/unggoy/ai/ultra
-	name = "Унггой-ультра (AI)"
+	name = "Унггой-ультра (плазма)"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_COV_ULTRA
 	rank = JOB_COV_ULTRA
 	paygrades = list(PAY_SHORT_COV_ULTRA = JOB_PLAYTIME_TIER_0)
@@ -553,6 +574,7 @@
 
 /datum/equipment_preset/covenant/unggoy/ai/support_medical
 	name = "Унггой поддержки (медик)"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_COV_MAJOR
 	rank = JOB_COV_MAJOR
 	paygrades = list(PAY_SHORT_COV_MAJOR = JOB_PLAYTIME_TIER_0)
@@ -569,6 +591,7 @@
 
 /datum/equipment_preset/covenant/unggoy/ai/specops_plasma
 	name = "Унггой SpecOps (плазма)"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_COV_SPECOPS
 	rank = JOB_COV_SPECOPS
 	paygrades = list(PAY_SHORT_COV_MAJOR = JOB_PLAYTIME_TIER_0)
@@ -584,6 +607,7 @@
 
 /datum/equipment_preset/covenant/unggoy/ai/specops_needler
 	name = "Унггой SpecOps (игольник)"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_COV_SPECOPS
 	rank = JOB_COV_SPECOPS
 	paygrades = list(PAY_SHORT_COV_MAJOR = JOB_PLAYTIME_TIER_0)
@@ -599,7 +623,8 @@
 	add_ai_injectors(new_human, list(/obj/item/reagent_container/hypospray/autoinjector/kelotane/halo, /obj/item/reagent_container/hypospray/autoinjector/oxycodone/halo))
 
 /datum/equipment_preset/covenant/unggoy/ai/specops_ultra
-	name = "Унггой SpecOps-ультра (AI)"
+	name = "Унггой SpecOps-ультра (плазма)"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_COV_SPECOPS_ULTRA
 	rank = JOB_COV_SPECOPS_ULTRA
 	paygrades = list(PAY_SHORT_COV_ULTRA = JOB_PLAYTIME_TIER_0)
@@ -615,6 +640,7 @@
 
 /datum/equipment_preset/covenant/unggoy/ai/deacon_command
 	name = "Унггой-дьякон (командный)"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_COV_DEACON
 	rank = JOB_COV_DEACON
 	paygrades = list(PAY_SHORT_COV_DEACON = JOB_PLAYTIME_TIER_0)
@@ -631,6 +657,7 @@
 
 /datum/equipment_preset/covenant/unggoy/ai/suicide_bomber
 	name = "Унггой-смертник"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_COV_MINOR
 	rank = JOB_COV_MINOR
 	paygrades = list(PAY_SHORT_COV_MINOR = JOB_PLAYTIME_TIER_0)
