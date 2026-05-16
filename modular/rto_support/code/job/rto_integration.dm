@@ -35,7 +35,6 @@
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/rto(src)
 	need_check_content = TRUE
 	new /obj/item/storage/pouch/sling/rto(src)
-	new /obj/item/clothing/glasses/night/ghillie_goggles(src)
 
 /mob/living/carbon/human/proc/equip_rto_support_binocular_kit(pouch_type = /obj/item/storage/pouch/sling/rto, binocular_type = null)
 	if(!istype(src))
